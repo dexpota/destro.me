@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+
+<!-- <div class="row">
+  <div class="col-sm-12 text-center">
+    <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre">
+  </div>
+</div> -->
+
+<div class="row" style="margin-top: 1.5em">
+  <div class="col-sm-12 text-center">
+    <ul class="list-inline">
+      <li>
+        <a href="https://linkedin.com/" target="_blank">
+          <i style="color: #0077b5" class="fa fa-linkedin fa-3x"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.github.com/" target="_blank">
+          <i style="color: #000" class="fa fa-github fa-3x"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/" target="_blank">
+          <i style="color: #d34836" class="fa fa-google fa-3x"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <p class="lead text-justify"> Hi! I am Fabrizio Destro, an engineer who loves <b>Computer Graphics</b> and Computer Vision.
+      I enjoy programming in <b>C++</b> and <b>Python</b>, but I am always looking forward to experiment with new stuff.
+      I am gonna use this site to post about some personal projects and stuff I enjoy.
+      You can contact me on linkedin, github or google, your call.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h3> Sezione temporanea per appunti </h3>
+    <ul>
+      <li>Skills, linguaggi di programmazione librerie e programmi</li>
+      <li>Projects, progetti software che sto realizzando</li>
+      <li>Altre cose, progetti di making, progetti di rendering</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+    <h2 class="text-center">Skills</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Languages and libraries <small> some of the languages and libraries I've been working with.</small></h3>
+        <p> list di linguaggi con cui ho lavorato in ordine </p>
+        <ul>
+          <li> <b>C++</b> and <b>Python</b></li>
+          <li> <b>Java</b> and <b>C#</b></li>
+          <li> <b>full stack web development</b></li>
+        </ul>
+
+        <p> lista di librerie con cui ho lavorato </p>
+        <ul>
+          <li> C++, qt4 qt5 boost opengl</li>
+          <li> python, numpy matplotlib</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Software <small> some of the languages and libraries I've been working with.</small></h3>
+        <p> list di linguaggi con cui ho lavorato in ordine </p>
+        <ul>
+          <li><b>Blender</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Statistics <small> because at the end of the day we all care about how much code we write</small></h3>
+        <ul>
+          <li> <b>c++</b> 30.000 lines of code (30%). </li>
+        </ul>
+        <p> * these data is generated automatically with only the help of <b>python</b>, learn more</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <h2 class="text-center">Title</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Projects <small> some of the projects I am working on</small></h3>
+        <ul>
+          {% for project in site.projects %}
+            <li>
+              <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
+            </li>
+          {% endfor %}
+          <li><b>torus</b> a simple offline rendering engine. </li>
+          <li><b>dds</b> a simple offline rendering engine. </li>
+          <li><b>bc</b> a simple offline rendering engine. </li>
+          <li><b>bc</b> a simple offline rendering engine. </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <h2 class="text-center">Other stuff</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Making</h3>
+        <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
+        <ul>
+          <li><b>torus</b> a simple offline rendering engine. </li>
+          <img src="http://placehold.it/350x150" class="center-block img-responsive" alt="Cinque Terre">
+          {% for making in site.making %}
+            <li>
+              <a href="{{ making.url }}">{{ making.title }}</a> {{ making.name }} {{ making.description }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Modelling</h3>
+        <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
+        <ul>
+          <li><b>torus</b> a simple offline rendering engine. </li>
+          <img src="http://placehold.it/350x150" class="center-block img-responsive" alt="Cinque Terre">
+          {% for modelling in site.modelling %}
+            <li>
+              <a href="{{ modelling.url }}">{{ modelling.title }}</a> {{ modelling.name }} {{ modelling.description }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
