@@ -42,7 +42,7 @@ layout: default
     <p class="lead text-justify"> Hi! I am Fabrizio Destro, an engineer who loves <b>Computer Graphics</b> and Computer Vision.
       I enjoy programming in <b>C++</b> and <b>Python</b>, but I am always looking forward to experiment with new stuff.
       I am gonna use this site to post about some personal projects and stuff I enjoy.
-      You can contact me on linkedin, github or google, your call.</p>
+      You can contact me on linkedin, github or google.</p>
   </div>
 </div>
 
@@ -51,31 +51,38 @@ layout: default
     <h2 class="text-center">Skills</h2>
     <div class="row">
       <div class="col-sm-12">
-        <h3>Languages and libraries <small> some of the languages and libraries I've been working with.</small></h3>
-        <p> list di linguaggi con cui ho lavorato in ordine </p>
-        <ul>
-          <li> <b>C++</b> and <b>Python</b></li>
+        <h3>Languages and libraries</h3>
+        <p>These are some of the languages I've been working with.</p>
+        <ul class="text-justify">
+          <li> <b>C++</b> and <b>Python</b> are the languages I prefer and I have more experience with.</li>
           <li> <b>Java</b> and <b>C#</b></li>
-          <li> <b>full stack web development</b></li>
+          <li> I have some experience in <b>full stack web development</b>, but I would consider myself more of a user of these technologies.</li>
         </ul>
 
-        <p> lista di librerie con cui ho lavorato </p>
-        <ul>
-          <li> C++, qt4 qt5 boost opengl</li>
-          <li> python, numpy matplotlib</li>
+        <p>Languages are not everything, these are some of the libraries I have been working with.</p>
+        <ul class="text-justify">
+          <li> <b>Qt4</b>, <b>Qt5</b>, <b>Boost</b> and <b>OpenGL</b> in C++</li>
+          <li> <b>numpy</b> and <b>matplotlib</b> in Python</li>
         </ul>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <h3>Software <small> some of the languages and libraries I've been working with.</small></h3>
-        <p> list di linguaggi con cui ho lavorato in ordine </p>
-        <ul>
-          <li><b>Blender</b></li>
+        <h3>Software </h3>
+        <p> Some of the software I use for developing. </p>
+        <ul clas="text-justify">
+          <li>I regullary use <b>CLion</b> and <b>PyCharm</b> while working on my projects, but I have also experience using <b>Visual Studio</b>.</li>
+          <li><b>git</b> is a must for every developer and I use it for every projects. </li>
+        </ul>
+        <p> Some of the software I use on my free time. </p>
+        <ul class="text-justify">
+          <li>I use <b>Blender</b> on my free time for 3d solid modelling and some basic animation.</li>
+          <li>When working on my DIY projects I use <b>AutoCAD</b> for 2d technical drawing.</li>
+          <li>Sometimes I experiment with <b>GIMP</b> and <b>Inkscape</b>.</li>
         </ul>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-sm-12">
         <h3>Statistics <small> because at the end of the day we all care about how much code we write</small></h3>
         <ul>
@@ -83,11 +90,27 @@ layout: default
         </ul>
         <p> * these data is generated automatically with only the help of <b>python</b>, learn more</p>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div class="col-sm-4">
-    <h2 class="text-center">Title</h2>
+    <h2 class="text-center">Programming stuff</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Scripts <small> some of the projects I am working on</small></h3>
+        <ul>
+          {% for project in site.projects %}
+            <li>
+              <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
+            </li>
+          {% endfor %}
+          <li><b>torus</b> a simple offline rendering engine. </li>
+          <li><b>dds</b> a simple offline rendering engine. </li>
+          <li><b>bc</b> a simple offline rendering engine. </li>
+          <li><b>bc</b> a simple offline rendering engine. </li>
+        </ul>
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm-12">
         <h3>Projects <small> some of the projects I am working on</small></h3>
@@ -111,12 +134,11 @@ layout: default
       <div class="col-sm-12">
         <h3>Making</h3>
         <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
-        <ul>
-          <li><b>torus</b> a simple offline rendering engine. </li>
-          <img src="http://placehold.it/350x150" class="center-block img-responsive" alt="Cinque Terre">
+        <ul class="list-unstyled">
           {% for making in site.making %}
             <li>
               <a href="{{ making.url }}">{{ making.title }}</a> {{ making.name }} {{ making.description }}
+              <img src="{{site.path}}/assets/glados_preview.png" class="img-responsive">
             </li>
           {% endfor %}
         </ul>
@@ -126,27 +148,15 @@ layout: default
       <div class="col-sm-12">
         <h3>Modelling</h3>
         <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
-        <ul>
-          <li><b>torus</b> a simple offline rendering engine. </li>
-          <img src="http://placehold.it/350x150" class="center-block img-responsive" alt="Cinque Terre">
+        <ul class="list-unstyled">
           {% for modelling in site.modelling %}
-            <li>
-              <a href="{{ modelling.url }}">{{ modelling.title }}</a> {{ modelling.name }} {{ modelling.description }}
+            <li class="text-justify" style="margin-bottom: 1em;">
+              <b>{{modelling.title}}</b>, {{ modelling.description }}
+              <img src="{{site.path}}/assets/{{modelling.preview}}" class="img-responsive">
             </li>
           {% endfor %}
         </ul>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-12">
-    <h3> Sezione temporanea per appunti </h3>
-    <ul>
-      <li>Skills, linguaggi di programmazione librerie e programmi</li>
-      <li>Projects, progetti software che sto realizzando</li>
-      <li>Altre cose, progetti di making, progetti di rendering</li>
-    </ul>
   </div>
 </div>
