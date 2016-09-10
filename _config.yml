@@ -24,10 +24,11 @@ url: "https://destro.me" # the base hostname & protocol for your site
 gravatar: b0fdc38f853e5fc1809a209f6caaf0f9
 email:
 web: http://www.bbqcode.it
-google_plus:
-linkedin:
-twitter:
-github:
+google_plus: 106300469229847540771
+linkedin: fdestro
+#twitter:
+github: dexpota
+
 
 collections:
   projects:

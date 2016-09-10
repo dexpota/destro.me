@@ -12,21 +12,27 @@ layout: default
 <div class="row" style="margin-top: 1.5em">
   <div class="col-sm-12 text-center">
     <ul class="list-inline">
+      {% if site.linkedin %}
       <li>
-        <a href="https://linkedin.com/" target="_blank">
+        <a href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
           <i style="color: #0077b5" class="fa fa-linkedin fa-3x"></i>
         </a>
       </li>
+      {% endif %}
+      {% if site.github %}
       <li>
-        <a href="https://www.github.com/" target="_blank">
+        <a href="https://www.github.com/{{site.github}}" target="_blank">
           <i style="color: #000" class="fa fa-github fa-3x"></i>
         </a>
       </li>
+      {% endif %}
+      {% if site.google_plus %}
       <li>
-        <a href="https://plus.google.com/" target="_blank">
+        <a href="https://plus.google.com/{{site.google_plus}}" target="_blank">
           <i style="color: #d34836" class="fa fa-google fa-3x"></i>
         </a>
       </li>
+      {% endif %}
     </ul>
   </div>
 </div>
@@ -37,17 +43,6 @@ layout: default
       I enjoy programming in <b>C++</b> and <b>Python</b>, but I am always looking forward to experiment with new stuff.
       I am gonna use this site to post about some personal projects and stuff I enjoy.
       You can contact me on linkedin, github or google, your call.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-12">
-    <h3> Sezione temporanea per appunti </h3>
-    <ul>
-      <li>Skills, linguaggi di programmazione librerie e programmi</li>
-      <li>Projects, progetti software che sto realizzando</li>
-      <li>Altre cose, progetti di making, progetti di rendering</li>
-    </ul>
   </div>
 </div>
 
@@ -142,5 +137,16 @@ layout: default
         </ul>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <h3> Sezione temporanea per appunti </h3>
+    <ul>
+      <li>Skills, linguaggi di programmazione librerie e programmi</li>
+      <li>Projects, progetti software che sto realizzando</li>
+      <li>Altre cose, progetti di making, progetti di rendering</li>
+    </ul>
   </div>
 </div>
