@@ -138,7 +138,7 @@ layout: default
           {% for making in site.making %}
             <li>
               <a href="{{ making.url }}">{{ making.title }}</a> {{ making.name }} {{ making.description }}
-              <img src="{{site.path}}/assets/glados_preview.png" class="img-responsive">
+              <img src="{{site.path}}/{{making.preview}}" class="img-responsive">
             </li>
           {% endfor %}
         </ul>
@@ -152,7 +152,7 @@ layout: default
           {% for modelling in site.modelling %}
             <li class="text-justify" style="margin-bottom: 1em;">
               <b>{{modelling.title}}</b>, {{ modelling.description }}
-              <img src="{{site.path}}/assets/{{modelling.preview}}" class="img-responsive">
+              <img src="{{site.path}}/{{modelling.preview}}" class="img-responsive">
             </li>
           {% endfor %}
         </ul>
