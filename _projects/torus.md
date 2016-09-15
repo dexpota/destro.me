@@ -2,6 +2,8 @@
 layout: posts
 title: torus
 description: a simple rendering engine I am working on.
+#published: false
+ready: false
 ---
 
 # Arce rupit saevarum promisitque omnes de Venerem

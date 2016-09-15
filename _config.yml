@@ -33,6 +33,7 @@ github: dexpota
 collections:
   projects:
     output: true
+    permalink: /:collection/:path/
 
   making:
     output: true

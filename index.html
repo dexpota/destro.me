@@ -133,7 +133,7 @@ layout: default
         <ul class="list-unstyled">
           {% for making in site.making %}
             <li>
-              <b>{{ making.title }}</b> {{ making.description }}
+              <a href="{{ making.url }}">{{ making.title }}</a> {{ making.description }}
               <img src="{{site.path}}/{{making.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
             </li>
           {% endfor %}
@@ -147,7 +147,7 @@ layout: default
         <ul class="list-unstyled">
           {% for modelling in site.modelling %}
             <li class="text-justify" style="margin-bottom: 1em;">
-              <b>{{modelling.title}}</b> {{ modelling.description }}
+              <a href="{{ modelling.url }}">{{ modelling.title }}</a> {{ modelling.description }}
               <img src="{{site.path}}/{{modelling.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
             </li>
           {% endfor %}
