@@ -96,35 +96,30 @@ layout: default
 
   <div class="col-sm-4">
     <h2 class="text-center">Programming stuff</h2>
-    <div class="row">
+
+    <div class="row"> <!-- Projects -->
       <div class="col-sm-12">
-        <h3>Scripts <small> some of the projects I am working on</small></h3>
+        <h3>Projects</h3>
+        <p>These are some of the projects I am working on, some of them are hosted on github, the others are not ready yet.</p>
         <ul>
           {% for project in site.projects %}
             <li>
               <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
             </li>
           {% endfor %}
-          <li><b>torus</b> a simple offline rendering engine. </li>
-          <li><b>dds</b> a simple offline rendering engine. </li>
-          <li><b>bc</b> a simple offline rendering engine. </li>
-          <li><b>bc</b> a simple offline rendering engine. </li>
         </ul>
       </div>
-    </div>
+    </div> <!-- Projects -->
     <div class="row">
       <div class="col-sm-12">
-        <h3>Projects <small> some of the projects I am working on</small></h3>
+        <h3>Scripts</h3>
+        <p>Some of the scripts I use on a day per day basis and I think they are worth sharing.</p>
         <ul>
           {% for project in site.projects %}
             <li>
               <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
             </li>
           {% endfor %}
-          <li><b>torus</b> a simple offline rendering engine. </li>
-          <li><b>dds</b> a simple offline rendering engine. </li>
-          <li><b>bc</b> a simple offline rendering engine. </li>
-          <li><b>bc</b> a simple offline rendering engine. </li>
         </ul>
       </div>
     </div>

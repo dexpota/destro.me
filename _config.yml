@@ -40,6 +40,9 @@ collections:
   modelling:
     output: true
 
+  scripts:
+    output: true
+
 
 
 # Build settings
