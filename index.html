@@ -61,8 +61,8 @@ layout: default
 
         <p>Languages are not everything, these are some of the libraries I have been working with:</p>
         <ul class="text-justify">
-          <li> <b>Qt4</b>, <b>Qt5</b>, <b>Boost</b> and <b>OpenGL</b> with C++.</li>
-          <li> <b>jupyter</b>, <b>numpy</b> and <b>matplotlib</b> with Python</li>
+          <li><b>Qt4</b>, <b>Qt5</b>, <b>Boost</b> and <b>OpenGL</b> with C++.</li>
+          <li><b>jupyter</b>, <b>numpy</b> and <b>matplotlib</b> with Python</li>
         </ul>
       </div>
     </div>
@@ -75,7 +75,7 @@ layout: default
           <li>I have some experience with <b>Android Studio</b> and <b>Unity</b></li>
           <li><b>git</b> is a must for every developer and I use it for every projects. </li>
         </ul>
-        <p> Some of the software I use on my free time. </p>
+        <p>Some of the software I use on my free time. </p>
         <ul class="text-justify">
           <li>I use <b>Blender</b> for 3d solid modelling and some basic animation.</li>
           <li>When working on my DIY projects I use <b>AutoCAD</b> for 2d technical drawing.</li>
@@ -138,8 +138,8 @@ layout: default
         <ul class="list-unstyled">
           {% for making in site.making %}
             <li>
-              <a href="{{ making.url }}">{{ making.title }}</a> {{ making.name }} {{ making.description }}
-              <img src="{{site.path}}/{{making.preview}}" class="img-responsive">
+              <b>{{ making.title }}</b> {{ making.description }}
+              <img src="{{site.path}}/{{making.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
             </li>
           {% endfor %}
         </ul>
@@ -152,8 +152,8 @@ layout: default
         <ul class="list-unstyled">
           {% for modelling in site.modelling %}
             <li class="text-justify" style="margin-bottom: 1em;">
-              <b>{{modelling.title}}</b>, {{ modelling.description }}
-              <img src="{{site.path}}/{{modelling.preview}}" class="img-responsive">
+              <b>{{modelling.title}}</b> {{ modelling.description }}
+              <img src="{{site.path}}/{{modelling.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
             </li>
           {% endfor %}
         </ul>
