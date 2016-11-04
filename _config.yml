@@ -29,6 +29,14 @@ linkedin: fdestro
 #twitter:
 github: dexpota
 
+t:
+  en:
+    language: "english"
+    not_available: "not available in"
+  it:
+    language: "italiano"
+    not_available: "non disponibile in"
+    alternative: "en"
 
 collections:
   projects:

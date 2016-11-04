@@ -9,6 +9,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+{% for post in posts %}
+  <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+{% endfor %}
+
+{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% for page in pages %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+{% endfor %}
+
+{% assign projects=site.projects | where:"ref", page.ref | sort: 'lang' %}
+{% for project in projects %}
+  <link rel="alternate" hreflang="{{ projects.lang }}" href="{{ projects.url }}" />
+{% endfor %}
+
+{% assign scripts=site.scripts | where:"ref", page.ref | sort: 'lang' %}
+{% for script in scripts %}
+  <link rel="alternate" hreflang="{{ script.lang }}" href="{{ script.url }}" />
+{% endfor %}
+
+{% assign making=site.making | where:"ref", page.ref | sort: 'lang' %}
+{% for make in making %}
+  <link rel="alternate" hreflang="{{ make.lang }}" href="{{ make.url }}" />
+{% endfor %}
+
+{% assign modelling=site.modelling | where:"ref", page.ref | sort: 'lang' %}
+{% for model in modelling %}
+  <link rel="alternate" hreflang="{{ model.lang }}" href="{{ model.url }}" />
+{% endfor %}
   </head>
   <body>
     <div class="container">
@@ -37,6 +67,13 @@
             </li>
           {% endfor %}
 
+          {% assign scripts=site.scripts | where:"ref", page.ref | sort: 'lang' %}
+          {% for script in scripts %}
+            <li>
+              <a href="{{ script.url }}" class="{{ script.lang }}">{{ project.lang }}</a>
+            </li>
+          {% endfor %}
+
           {% assign making=site.making | where:"ref", page.ref | sort: 'lang' %}
           {% for make in making %}
             <li>
@@ -44,7 +81,7 @@
             </li>
           {% endfor %}
 
-          {% assign making=site.modelling | where:"ref", page.ref | sort: 'lang' %}
+          {% assign modelling=site.modelling | where:"ref", page.ref | sort: 'lang' %}
           {% for model in modelling %}
             <li>
               <a href="{{ model.url }}" class="{{ model.lang }}">{{ model.lang }}</a>

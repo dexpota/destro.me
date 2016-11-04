@@ -113,15 +113,17 @@ ref: homepage
           {% endfor %}
         </ul>
       </div>
-    </div> <!-- Projects -->
+    </div>
+    <!-- Scripts -->
     <div class="row">
       <div class="col-sm-12">
         <h3>Scripts</h3>
         <p>Some of the scripts I use on a day per day basis and I think they are worth sharing.</p>
         <ul>
-          {% for project in site.projects %}
+          {% assign scripts=site.scripts | where:"lang", page.lang %}
+          {% for script in scripts %}
             <li>
-              <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
+              <a href="{{ script.url }}">{{ script.title }}</a> {{ script.name }} {{ script.description }}
             </li>
           {% endfor %}
         </ul>

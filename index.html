@@ -100,7 +100,8 @@ ref: homepage
   <div class="col-sm-4">
     <h2 class="text-center">Programming stuff</h2>
 
-    <div class="row"> <!-- Projects -->
+    <div class="row">
+      <!-- Projects -->
       <div class="col-sm-12">
         <h3>Projects</h3>
         <p>These are some of the projects I am working on, some of them are hosted on github, the others are not ready yet.</p>
@@ -113,15 +114,17 @@ ref: homepage
           {% endfor %}
         </ul>
       </div>
-    </div> <!-- Projects -->
+    </div>
+    <!-- Scripts -->
     <div class="row">
       <div class="col-sm-12">
         <h3>Scripts</h3>
         <p>Some of the scripts I use on a day per day basis and I think they are worth sharing.</p>
         <ul>
-          {% for project in site.projects %}
+          {% assign scripts=site.scripts | where:"lang", page.lang %}
+          {% for script in scripts %}
             <li>
-              <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
+              <a href="{{ script.url }}">{{ script.title }}</a> {{ script.name }} {{ script.description }}
             </li>
           {% endfor %}
         </ul>
@@ -135,10 +138,11 @@ ref: homepage
         <h3>Making</h3>
         <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
         <ul class="list-unstyled">
-          {% for making in site.making %}
+          {% assign making_posts=site.making | where:"lang", page.lang %}
+          {% for making in making_posts %}
             <li>
-              <a href="{{ making.url }}">{{ making.title }}</a> {{ making.description }}
-              <img src="{{site.path}}/{{making.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
+                <a href="{{ making.url }}">{{ making.title }}</a> {{ making.description }}
+                <img src="{{site.path}}/{{making.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
             </li>
           {% endfor %}
         </ul>
@@ -149,7 +153,8 @@ ref: homepage
         <h3>Modelling</h3>
         <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
         <ul class="list-unstyled">
-          {% for modelling in site.modelling %}
+          {% assign modelling_posts=site.modelling | where:"lang", page.lang %}
+          {% for modelling in modelling_posts %}
             <li class="text-justify" style="margin-bottom: 1em;">
               <a href="{{ modelling.url }}">{{ modelling.title }}</a> {{ modelling.description }}
               <img src="{{site.path}}/{{modelling.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
