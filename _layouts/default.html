@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang }}">
   <head>
     <title> {{ site.title }} </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -11,6 +12,47 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <ul class="list-inline" style="font-size: 1.3em; align: right;">
+            <li>Language:</li>
+          {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+          {% for post in posts %}
+            <li>
+              <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+            </li>
+          {% endfor %}
+
+          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+          {% for page in pages %}
+            <li>
+              <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+            </li>
+          {% endfor %}
+
+          {% assign projects=site.projects | where:"ref", page.ref | sort: 'lang' %}
+          {% for project in projects %}
+            <li>
+              <a href="{{ project.url }}" class="{{ project.lang }}">{{ project.lang }}</a>
+            </li>
+          {% endfor %}
+
+          {% assign making=site.making | where:"ref", page.ref | sort: 'lang' %}
+          {% for make in making %}
+            <li>
+              <a href="{{ make.url }}" class="{{ make.lang }}">{{ make.lang }}</a>
+            </li>
+          {% endfor %}
+
+          {% assign making=site.modelling | where:"ref", page.ref | sort: 'lang' %}
+          {% for model in modelling %}
+            <li>
+              <a href="{{ model.url }}" class="{{ model.lang }}">{{ model.lang }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
 {{ content }}
       <div class="row">
         <div class="col-sm-12 text-right">

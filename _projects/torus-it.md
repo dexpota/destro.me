@@ -1,10 +1,10 @@
 ---
 layout: posts
-title: torus
+title: pippa
 description: a simple rendering engine I am working on.
 #published: false
 ready: false
-lang: en
+lang: it
 ref: torus
 ---
 

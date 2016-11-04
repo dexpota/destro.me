@@ -35,5 +35,9 @@ $on-laptop:        800px;
 //     }
 // }
 
+.en:lang(en), .it:lang(it){
+    font-weight: bold;
+}
+
 // Import partials from the `minima` theme.
 @import "minima";
