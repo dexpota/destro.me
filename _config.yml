@@ -45,12 +45,15 @@ collections:
 
   making:
     output: true
+    permalink: /:collection/:slug/
 
   modelling:
     output: true
+    permalink: /:collection/:path/
 
   scripts:
     output: true
+    permalink: /:collection/:path/
 
 
 
