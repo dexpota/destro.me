@@ -141,7 +141,7 @@ ref: homepage
           {% assign making_posts=site.making | where:"lang", page.lang %}
           {% for making in making_posts %}
             <li>
-                <a href="{{ making.url }}">{{ making.title }}</a> {{ making.description }}
+                <a href="{{ making.url }}">{{ making.title }}</a>, {{ making.description }}
                 <img src="{{site.path}}/{{making.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
             </li>
           {% endfor %}

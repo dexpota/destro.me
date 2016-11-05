@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="row">
+  <div class="col-sm-12">
+    <h1>{{ page.title }}</h1>
+    <small style="color: #777;"> {{ page.description }}</small>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    {{content}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    {% for image in page.gallery %}
+      <a href="{{image}}" style="margin-bottom: 1em;" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+        <img src="{{image}}" class="img-fluid">
+      </a>
+    {% endfor %}
+  </div>
+</div>
