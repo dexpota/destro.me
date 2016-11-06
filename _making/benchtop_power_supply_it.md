@@ -23,10 +23,14 @@ lang: it
 ref: making_benchtop
 slug: alimentatore_da_banco
 ---
+
+
 # {{ page.title }}
 {:.class1}
 {:.no_toc}
 {{ page.description }}
+
+{% include link_github.html buttons="watch star fork" user="dexpota" repository="type-do-get" watch_count=true %}
 
 ## {{site.t[page.lang].toc}}
 {:.no_toc}

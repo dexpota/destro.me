@@ -1,0 +1,99 @@
+{% assign repo = include.user | append: "/" | append: include.repository %}
+{% assign url = "https://github.com/" | append: repo %}
+{% assign buttons = include.buttons | split: ' ' %}
+
+<ul class="list-inline">
+
+  {% if buttons contains "follow" %}
+  <li>
+    {% if include.follow_count %}
+      {% assign follow_count_attributes = "data-count-href='/{{include.user}}/followers' data-count-api='/users/{{include.user}}#followers' data-count-aria-label='# followers on GitHub'" %}
+    {% endif %}
+
+    {% if include.follow_large %}
+      {% assign follow_large = "data-style=\'mega\'" %}
+    {% endif %}
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/{{include.user}}" {{follow_large}} {{follow_count_attributes}} aria-label="Follow @{{include.user}} on GitHub">
+      Follow @{{include.user}}
+    </a>
+  </li>
+  {% endif %}
+
+  {% if buttons contains "watch" %}
+  <li>
+    {% if include.watch_count %}
+      {% assign watch_count_attributes = "data-count-href='/{{repo}}/watchers' data-count-api='/repos/{{repo}}#subscribers_count' data-count-aria-label='# watchers on GitHub'" %}
+    {% endif %}
+
+    {% if include.watch_large %}
+      {% assign watch_large = "data-style=\'mega\'" %}
+    {% endif %}
+
+    <a class="github-button" href="{{url}}" data-icon="octicon-eye" {{watch_count_attributes}} {{watch_large}}  aria-label="Watch {{repo}} on GitHub">
+      Watch
+    </a>
+  </li>
+  {% endif %}
+
+  {% if buttons contains "star" %}
+  <li>
+    {% if include.star_count %}
+      {% assign star_count_attributes = "data-count-href='/{{repo}}/stargazers' data-count-api='/repos/{{repo}}#stargazers_count' data-count-aria-label='# stargazers on GitHub'" %}
+    {% endif %}
+
+    {% if include.star_large %}
+      {% assign star_large = "data-style=\'mega\'" %}
+    {% endif %}
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="{{url}}" data-icon="octicon-star"{{star_large}} {{star_count_attributes}} aria-label="Star {{repo}} on GitHub">
+      Star
+    </a>
+  </li>
+  {% endif %}
+
+  {% if buttons contains "fork" %}
+  <li>
+    {% if include.fork_count %}
+      {% assign fork_count_attributes = "data-count-href='/{{repo}}/network' data-count-api='/repos/{{repo}}#forks_count' data-count-aria-label='# forks on GitHub'" %}
+    {% endif %}
+
+    {% if include.fork_large %}
+      {% assign fork_large = "data-style=\'mega\'" %}
+    {% endif %}
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="{{url}}/fork" data-icon="octicon-repo-forked" {{fork_large}} {{fork_count_attributes}} aria-label="Fork {{repo}} on GitHub">
+      Fork
+    </a>
+  </li>
+  {% endif %}
+
+  {% if buttons contains "issues" %}
+  <li>
+    {% if include.issues_count %}
+      {% assign issues_count_attributes = "data-count-api='/repos/{{repo}}#open_issues_count' data-count-aria-label='# issues on GitHub'" %}
+    {% endif %}
+
+    {% if include.issue_large %}
+      {% assign issue_large = "data-style=\'mega\'" %}
+    {% endif %}
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="{{url}}/issues" data-icon="octicon-issue-opened" {{issue_large}} {{issues_count_attributes}}  aria-label="Issue {{repo}} on GitHub">
+      Issue
+    </a>
+  </li>
+  {% endif %}
+
+  {% if buttons contains "download" %}
+  <li>
+    {% if include.download_large %}
+      {% assign download_large = "data-style=\'mega\'" %}
+    {% endif %}
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="{{url}}/archive/master.zip" data-icon="octicon-cloud-download" {{download_large}} aria-label="Download {{repo}} on GitHub">
+      Download
+    </a>
+  </li>
+  {% endif %}
+</ul>
