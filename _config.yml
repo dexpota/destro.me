@@ -55,7 +55,9 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
 
 # Build settings
 markdown: kramdown
