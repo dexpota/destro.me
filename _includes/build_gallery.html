@@ -1,0 +1,5 @@
+{% for image in include.gallery %}
+  <a href="{{image}}" style="margin-bottom: 1em;" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+    <img src="{{image}}" class="img-fluid">
+  </a>
+{% endfor %}

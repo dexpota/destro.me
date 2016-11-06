@@ -31,12 +31,21 @@ github: dexpota
 
 t:
   en:
+    toc: "Table of contents"
     language: "english"
     not_available: "not available in"
+    making:
+      tools: "Tools"
+      materials: "Materials"
+      gallery: "Gallery"
   it:
+    toc: "Indice"
     language: "italiano"
     not_available: "non disponibile in"
-    alternative: "en"
+    making:
+      tools: "Strumentazioni"
+      materials: "Materiali"
+      gallery: "Galleria"
 
 collections:
   projects:

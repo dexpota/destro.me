@@ -1,5 +1,5 @@
 ---
-layout: making_post
+layout: posts
 title: Benchtop power supply
 description: is a wooden frame I made for a spare ATX power supply.
 preview: /assets/atx_case_preview.jpg
