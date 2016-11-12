@@ -19,42 +19,42 @@ digraph G {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        is_global -> "try_builtin";
+        is_global;
+        try_builtin;
     }
 
+    is_global -> try_builtin  [xlabel="False"];
     {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
         v11 [width=0, 
              shape=point];
-        is_local -> gather_modpac;
-        gather_modpac -> v11  [dir=none];
+        is_local -> if_is_package;
+        if_is_package -> list_package  [label="True"];
+        list_package -> v11  [dir=none];
     }
 
+    if_is_package [shape=diamond, 
+                   label="if is package"];
+    dir_module;
+    if_is_package -> vv0  [dir=none, 
+                           label="False"];
+    dir_module [label="List module's attributes.\ndir(module)"];
+    {
+        rank=same;
+        edge [comment="Wildcard node added automatic in EG."];
+        node [comment="Wildcard node added automatic in EG."];
+        vv0 [width=0, 
+             shape=point];
+        vv00 [width=0, 
+              shape=point];
+        vv0 -> dir_module;
+        dir_module -> vv00  [dir=none];
+    }
+
+    list_package [label="List modules inside package"];
     gather_modpac [label="Gather information about\nmodule/package's attributes."];
-    {
-        rank=same;
-        edge [comment="Wildcard node added automatic in EG."];
-        node [comment="Wildcard node added automatic in EG."];
-        gather_class_info [label="Gather class' attributes."];
-        is_class -> gather_class_info;
-        gather_class_info -> v22  [dir=none];
-        v22 [width=0, 
-             shape=point];
-    }
-
-    {
-        rank=same;
-        edge [comment="Wildcard node added automatic in EG."];
-        node [comment="Wildcard node added automatic in EG."];
-        v33 [width=0, 
-             shape=point];
-        gather_function_info [label="Gather information about the function."];
-        is_function -> gather_function_info;
-        gather_function_info -> v33  [dir=none];
-    }
-
     start [shape="hexagon"];
     split_path [label="Split path between global and local.\n(using import on substrings)"];
     is_global [shape=diamond, 
@@ -62,31 +62,21 @@ digraph G {
     try_builtin [label="Try importing path from __builtin__."];
     is_local [shape=diamond, 
               label="if local_path"];
-    is_class [shape=diamond, 
-              label="if attribute is class"];
-    is_function [shape=diamond, 
-                 label="if attribute is function"];
+    is_local -> get_attribute;
     print_info [label="Print gathered information."];
     get_attribute [label="Get attribute from module/package."];
     end [shape="hexagon"];
     try_import_mp [label="Try import module/package global_path."];
     start -> split_path;
     split_path -> is_global;
-    is_global -> try_import_mp;
+    is_global -> try_import_mp  [label="False"];
     try_import_mp -> is_local;
-    is_local -> get_attribute;
-    get_attribute -> is_class;
-    is_class -> is_function;
-    is_function -> "cannot_handle_this";
     v00 -> v11  [dir=none];
-    v11 -> v22  [dir=none];
-    v22 -> v33  [dir=none];
-    v33 -> print_info;
+    v11 -> vv00  [dir=none];
+    vv00 -> print_info  [dir=none];
     print_info -> end;
     try_builtin -> import_attribute_builtin;
     import_attribute_builtin -> gather_attribute_info;
-    gather_attribute_info [label="Gather information from attribute."];
-    import_attribute_builtin [label="Import attribute from builtin."];
     {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
