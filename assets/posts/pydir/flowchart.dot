@@ -30,7 +30,7 @@ digraph G {
         node [comment="Wildcard node added automatic in EG."];
         v11 [width=0, 
              shape=point];
-        is_local -> if_is_package;
+        is_local -> if_is_package  [label="False"];
         if_is_package -> list_package  [label="True"];
         list_package -> v11  [dir=none];
     }
@@ -53,23 +53,30 @@ digraph G {
         dir_module -> vv00  [dir=none];
     }
 
+    start [shape=hexagon];
     list_package [label="List modules inside package"];
-    gather_modpac [label="Gather information about\nmodule/package's attributes."];
-    start [shape="hexagon"];
     split_path [label="Split path between global and local.\n(using import on substrings)"];
     is_global [shape=diamond, 
                label="if global_path"];
     try_builtin [label="Try importing path from __builtin__."];
     is_local [shape=diamond, 
               label="if local_path"];
-    is_local -> get_attribute;
+    is_local -> get_attribute  [label="True"];
+    get_attribute -> gather_from_attribute;
+    {
+        rank=same;
+        edge [comment="Wildcard node added automatic in EG."];
+        node [comment="Wildcard node added automatic in EG."];
+        gather_from_attribute -> print_info;
+    }
+
     print_info [label="Print gathered information."];
     get_attribute [label="Get attribute from module/package."];
     end [shape="hexagon"];
     try_import_mp [label="Try import module/package global_path."];
     start -> split_path;
     split_path -> is_global;
-    is_global -> try_import_mp  [label="False"];
+    is_global -> try_import_mp  [label="True"];
     try_import_mp -> is_local;
     v00 -> v11  [dir=none];
     v11 -> vv00  [dir=none];
