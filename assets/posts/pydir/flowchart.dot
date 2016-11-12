@@ -19,53 +19,57 @@ digraph G {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        v0 [shape=point];
-        is_global -> v0;
-        v0 -> "try_builtin";
+        is_global -> "try_builtin";
     }
 
     {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        v1 [shape=point];
-        v11 [shape=point];
-        is_local -> v1;
-        v1 -> "gather_info_about_module/package's_attributes";
-        "gather_info_about_module/package's_attributes" -> v11;
+        v11 [width=0, 
+             shape=point];
+        is_local -> gather_modpac;
+        gather_modpac -> v11  [dir=none];
+    }
+
+    gather_modpac [label="Gather information about\nmodule/package's attributes."];
+    {
+        rank=same;
+        edge [comment="Wildcard node added automatic in EG."];
+        node [comment="Wildcard node added automatic in EG."];
+        gather_class_info [label="Gather class' attributes."];
+        is_class -> gather_class_info;
+        gather_class_info -> v22  [dir=none];
+        v22 [width=0, 
+             shape=point];
     }
 
     {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        v2 [shape=point];
-        is_class -> v2;
-        v2 -> "gather_info_about_class'_attributes";
-        "gather_info_about_class'_attributes" -> v22;
-        v22 [shape=point];
-    }
-
-    {
-        rank=same;
-        edge [comment="Wildcard node added automatic in EG."];
-        node [comment="Wildcard node added automatic in EG."];
-        v3 [shape=point];
-        v33 [shape=point];
-        is_function -> v3;
-        v3 -> "gather_info_about_the_function";
-        "gather_info_about_the_function" -> v33;
+        v33 [width=0, 
+             shape=point];
+        gather_function_info [label="Gather information about the function."];
+        is_function -> gather_function_info;
+        gather_function_info -> v33  [dir=none];
     }
 
     start [shape="hexagon"];
-    split_path [label="Split path between global and local. (using import on substrings)"];
+    split_path [label="Split path between global and local.\n(using import on substrings)"];
     is_global [shape=diamond, 
                label="if global_path"];
     try_builtin [label="Try importing path from __builtin__."];
-    is_local [shape=diamond];
-    is_class [shape=diamond];
-    is_function [shape=diamond];
+    is_local [shape=diamond, 
+              label="if local_path"];
+    is_class [shape=diamond, 
+              label="if attribute is class"];
+    is_function [shape=diamond, 
+                 label="if attribute is function"];
+    print_info [label="Print gathered information."];
+    get_attribute [label="Get attribute from module/package."];
     end [shape="hexagon"];
+    try_import_mp [label="Try import module/package global_path."];
     start -> split_path;
     split_path -> is_global;
     is_global -> try_import_mp;
@@ -74,19 +78,22 @@ digraph G {
     get_attribute -> is_class;
     is_class -> is_function;
     is_function -> "cannot_handle_this";
-    v00 -> v11;
-    v11 -> v22;
-    v22 -> v33;
-    v33 -> "print gathered info";
-    "print gathered info" -> end;
-    try_builtin -> "import_attribute_from_builtin";
-    "import_attribute_from_builtin" -> "gather_information_from_attribute";
+    v00 -> v11  [dir=none];
+    v11 -> v22  [dir=none];
+    v22 -> v33  [dir=none];
+    v33 -> print_info;
+    print_info -> end;
+    try_builtin -> import_attribute_builtin;
+    import_attribute_builtin -> gather_attribute_info;
+    gather_attribute_info [label="Gather information from attribute."];
+    import_attribute_builtin [label="Import attribute from builtin."];
     {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        v00 [shape=point];
-        "gather_information_from_attribute" -> v00;
+        v00 [width=0, 
+             shape=point];
+        gather_attribute_info -> v00  [dir=none];
     }
 
 }
