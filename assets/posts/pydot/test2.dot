@@ -1,0 +1,85 @@
+digraph G {
+  start -> p1
+  p1 -> if1
+  // if1 -> p2_true
+  // if1 -> p2_false
+
+  // start if1 code
+  {
+    node [shape=point, width=0]
+    edge [dir=none]
+    rank=same
+    node_if1_true -> if1 [dir=none]
+    if1 -> node_if1_false [dir=none]
+  }
+  node_if1_true -> p2_true
+  node_if1_false -> p2_false
+  // end if1 code
+
+  // start if2 code
+  p2_false -> if2
+  {
+    node [shape=point, width=0]
+    edge [dir=none]
+    rank=same
+    node_if2_true -> if2 [dir=none]
+    if2 -> node_if2_false [dir=none]
+  }
+  node_if2_true -> p3_true
+  node_if2_false -> p3_false
+  // end if2 code
+
+  // start if3 code
+  // right_same_level
+  p3_true -> if3
+  {
+    node_if3_true[shape=point, width=0]
+    rank=same
+    node_if3_true -> if3 [dir=none]
+    if3 -> p4_false
+  }
+  node_if3_true -> p4_true
+  // end if3 code
+
+  // start if4 code
+  // right_same_level left_right_below
+  p4_true -> if4
+  {
+    rank=same
+    if4 -> p5_false
+  }
+  if4 -> p5_true
+  // end if4 code
+
+  // start if5 code
+  // right_same_level left_right_below
+  {
+    rank=same
+    p5_false -> if5
+  }
+  {
+    rank=same
+    if5 -> p6_false
+  }
+  if5 -> p6_true
+  // end if5 code
+
+  // start if6 code
+  // right_same_level left_right_below
+  {
+    rank=same
+    p6_false -> if6
+  }
+  {
+    node_if6_true[shape=point, width=0]
+    rank=same
+    node_if6_true -> if6 [dir=none]
+    if6 -> p7_false
+  }
+  node_if6_true -> p7_true
+  // end if6 code
+
+  start[xlabel="start"]
+  p1[xlabel="p1"]
+
+}

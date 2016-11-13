@@ -1,0 +1,21 @@
+digraph G {
+  start -> p1
+  p1 -> if1
+  // if1 -> p2_true
+  // if1 -> p2_false
+
+  {
+    node [shape=point, width=0]
+    edge [dir=none]
+    rank=same
+    node_if1_true -> if1 [dir=none]
+    if1 -> node_if1_false [dir=none]
+  }
+
+  node_if1_true -> p2_true
+  node_if1_false -> p2_false
+
+  start[xlabel="start"]
+  p1[xlabel="p1"]
+
+}

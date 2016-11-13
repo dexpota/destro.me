@@ -1,0 +1,16 @@
+digraph G {
+  // if, false and true nodes
+  // possible configurations
+
+  // first parameter: node level: same, below
+  // left <- if -> right
+  // second parameter: node position: right, left
+
+
+  // nl     np
+  // same   right
+  // same   left
+  // below  right
+  // below  left
+
+}

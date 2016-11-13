@@ -1,19 +1,20 @@
 digraph G {
     fontname="sans-serif";
-    splines="ortho";
+    splines="line";
     penwidth="0.1";
-    edge [comment="Wildcard edge", 
-          fontname="sans-serif", 
-          fontsize=10, 
-          colorscheme="blues3", 
-          color=2, 
+    forcelabels=true;
+    edge [comment="Wildcard edge",
+          fontname="sans-serif",
+          fontsize=10,
+          colorscheme="blues3",
+          color=2,
           fontcolor=3];
-    node [shape="plain", 
-          fontname="Helvetica", 
-          fontsize=12, 
-          fillcolor="#006699", 
-          color="white", 
-          fontcolor="white", 
+    node [shape="box",
+          fontname="Helvetica",
+          fontsize=12,
+          fillcolor="#006699",
+          color="white",
+          fontcolor="white",
           style="filled"];
     {
         rank=same;
@@ -23,43 +24,45 @@ digraph G {
         try_builtin;
     }
 
-    is_global -> try_builtin  [xlabel="False"];
+    is_global -> try_builtin  [label="False"];
     {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        v11 [width=0, 
+        v11 [width=0,
              shape=point];
         is_local -> if_is_package  [label="False"];
         if_is_package -> list_package  [label="True"];
         list_package -> v11  [dir=none];
     }
 
-    if_is_package [shape=diamond, 
-                   label="if is package"];
+    if_is_package [shape=diamond,
+                  xlabel="is_is_package",
+                   label=" "
+                   ];
     dir_module;
-    if_is_package -> vv0  [dir=none, 
+    if_is_package -> vv0  [dir=none,
                            label="False"];
     dir_module [label="List module's attributes.\ndir(module)"];
     {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        vv0 [width=0, 
+        vv0 [width=0,
              shape=point];
-        vv00 [width=0, 
+        vv00 [width=0,
               shape=point];
         vv0 -> dir_module;
         dir_module -> vv00  [dir=none];
     }
 
-    start [shape=hexagon];
+    start [shape=hexagon, xlabel="start"];
     list_package [label="List modules inside package"];
     split_path [label="Split path between global and local.\n(using import on substrings)"];
-    is_global [shape=diamond, 
+    is_global [shape=diamond,
                label="if global_path"];
     try_builtin [label="Try importing path from __builtin__."];
-    is_local [shape=diamond, 
+    is_local [shape=diamond,
               label="if local_path"];
     is_local -> get_attribute  [label="True"];
     get_attribute -> gather_from_attribute;
@@ -88,7 +91,7 @@ digraph G {
         rank=same;
         edge [comment="Wildcard node added automatic in EG."];
         node [comment="Wildcard node added automatic in EG."];
-        v00 [width=0, 
+        v00 [width=0,
              shape=point];
         gather_attribute_info -> v00  [dir=none];
     }
