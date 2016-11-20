@@ -33,6 +33,7 @@ t:
   en:
     toc: "Table of contents"
     language: "english"
+    license: "License"
     not_available: "not available in"
     making:
       tools: "Tools"
@@ -41,6 +42,7 @@ t:
   it:
     toc: "Indice"
     language: "italiano"
+    license: "Licenza"
     not_available: "non disponibile in"
     making:
       tools: "Strumentazioni"

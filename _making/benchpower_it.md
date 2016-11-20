@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: Alimentatore da banco
-description: un semplice dispositivo per dare vita ai tuoi progetti elettronici.
+title: benchpower
+description: un semplice alimentatore da banco per dare vita ai tuoi progetti elettronici.
 preview: /assets/atx_case_preview.jpg
 gallery:
   - /assets/atx_case_preview.jpg
@@ -30,7 +30,7 @@ slug: alimentatore_da_banco
 {:.no_toc}
 {{ page.description }}
 
-{% include link_github.html buttons="watch star fork" user="dexpota" repository="type-do-get" watch_count=true %}
+{% include link_github.html buttons="watch star fork" user="dexpota" repository="benchpower" watch_count=true %}
 
 ## {{site.t[page.lang].toc}}
 {:.no_toc}
@@ -38,6 +38,9 @@ slug: alimentatore_da_banco
 {:toc}
 
 {% assign title_ref = page.title | downcase | replace: ' ', '-' %}
+
+## {{site.t[page.lang].license}}
+{% include cc_license.html %}
 
 ## {{site.t[page.lang].making.tools}} e {{site.t[page.lang].making.materials}}
 <small style="color: #777;" style="margin-top: 0;"> <a href="#{{title_ref}}"> ritorna </a> </small>
