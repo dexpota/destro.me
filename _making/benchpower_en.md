@@ -7,6 +7,7 @@ gallery:
   - /assets/atx_case_preview.jpg
   - /assets/atx_case_preview.jpg
 ready: false
+published: false
 lang: en
 ref: making_benchtop
 slug: benchtop_power_supply
