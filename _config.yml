@@ -32,7 +32,7 @@ github: dexpota
 t:
   en:
     toc: "Table of contents"
-    language: "english"
+    language: "language"
     license: "License"
     not_available: "not available in"
     making:
@@ -41,7 +41,7 @@ t:
       gallery: "Gallery"
   it:
     toc: "Indice"
-    language: "italiano"
+    language: "lingua"
     license: "Licenza"
     not_available: "non disponibile in"
     making:

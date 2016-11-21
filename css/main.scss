@@ -4,15 +4,15 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
+$base-font-family: 'Lato', Verdana, sans-serif;
+$base-font-size:   1.5em;
+$base-font-weight: normal;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #555;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -37,6 +37,15 @@ $on-laptop:        800px;
 
 .en:lang(en), .it:lang(it){
     font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crete Round', serif;
+  font-weight: "normal";
+}
+
+ul.list-inline > li {
+  margin-bottom: 0;
 }
 
 // Import partials from the `minima` theme.

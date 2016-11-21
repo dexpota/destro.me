@@ -7,11 +7,11 @@ layout: compress
     <title> {{ site.title }} </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700|Crete+Round" rel="stylesheet" type="text/css">
 {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
 {% for post in posts %}
   <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
@@ -45,9 +45,12 @@ layout: compress
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 text-right">
+        <div class="col-sm-6 text-left">
+            <a href="/">&lt {{page.url}}</a>
+        </div>
+        <div class="col-sm-6 text-right">
           <ul class="list-inline" style="font-size: 1.3em; align: right;">
-            <li>Language:</li>
+            <li>{{site.t[page.lang].language}}:</li>
           {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
           {% for post in posts %}
             <li>
