@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: benchpower
-description: un semplice alimentatore da banco per dare vita ai tuoi progetti elettronici.
+description: è un semplice alimentatore da banco per dare vita ai tuoi progetti elettronici.
 preview: /assets/atx_case_preview.jpg
 gallery:
   - /assets/atx_case_preview.jpg

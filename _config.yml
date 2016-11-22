@@ -31,6 +31,7 @@ github: dexpota
 
 t:
   en:
+    back: "Back"
     toc: "Table of contents"
     language: "language"
     license: "License"
@@ -40,6 +41,7 @@ t:
       materials: "Materials"
       gallery: "Gallery"
   it:
+    back: "Indietro"
     toc: "Indice"
     language: "lingua"
     license: "Licenza"
@@ -52,7 +54,7 @@ t:
 collections:
   projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:slug/
 
   making:
     output: true
@@ -60,11 +62,12 @@ collections:
 
   modelling:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:slug/
 
   scripts:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:slug/
+
 
 compress_html:
   clippings: all

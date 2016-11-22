@@ -2,10 +2,11 @@
 layout: posts
 title: Script
 description: a simple rendering engine I am working on.
-#published: false
+published: false
 ready: false
 lang: it
 ref: script01
+slug: script01
 ---
 
 # Arce rupit saevarum promisitque omnes de Venerem

@@ -46,7 +46,9 @@ layout: compress
     <div class="container">
       <div class="row">
         <div class="col-sm-6 text-left">
-            <a href="/">&lt {{page.url}}</a>
+            {% if page.url != "/"  %}
+              <a href="/">&lt {{site.t[page.lang].back}}</a>
+            {% endif %}
         </div>
         <div class="col-sm-6 text-right">
           <ul class="list-inline" style="font-size: 1.3em; align: right;">
@@ -97,7 +99,7 @@ layout: compress
       </div>
 {{ content }}
       <div class="row">
-        <div class="col-sm-12 text-right">
+        <div class="col-sm-12 text-right" style="margin-top: 1em; margin-bottom: 0.5em">
           <small>A personal website made with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</small>
         </div>
       </div>
