@@ -2,7 +2,7 @@
 layout: default
 title: Glados
 description: è un modello 3D che ho realizzato per un progetto universitario.
-preview: assets/glados_preview.png
+preview: /assets/glados_preview.png
 output: false
 ready: false
 slug: glados

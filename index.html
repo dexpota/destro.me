@@ -107,63 +107,26 @@ ref: homepage
   <div class="col-sm-4">
     <h3>Software</h3>
     <p> Questi sono alcuni dei progetti su cui ho lavorato, alcuni sono disponibili su github altri non sono ancora pronti ad essere condivisi.</p>
-    <ul>
-      {% assign projects=site.projects | where:"lang", page.lang %}
-      {% for project in projects %}
-        <li>
-          <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
-        </li>
-      {% endfor %}
-    </ul>
+    {% assign projects=site.projects | where:"lang", page.lang %}
+    {% include build_list_with_preview.html posts=projects %}
     <p> Questi sono solo alcuni dei progetti software in evidenza, per un elenco completo <a href="/repositories/">clicca qui</a></p>
   </div>
   <!-- Scripts -->
   <div class="col-sm-4">
     <h3>Scripts</h3>
     <p>Questi sono alcuni degli script che utilizzo per automatizzare operazioni tediose e penso siano interessati da condividere.</p>
-    <ul>
-      {% assign scripts=site.scripts | where:"lang", page.lang %}
-      {% for script in scripts %}
-        <li>
-          <a href="{{ script.url }}">{{ script.title }}</a> {{ script.name }} {{ script.description }}
-        </li>
-      {% endfor %}
-    </ul>
+    {% assign scripts=site.scripts | where:"lang", page.lang %}
+    {% include build_list_with_preview.html posts=scripts list_class="list-unstyled" %}
   </div>
   <div id="making-column" class="col-sm-4">
     <h3>Making</h3>
     <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
-    <ul class="list-unstyled">
-      {% assign making_posts=site.making | where:"lang", page.lang %}
-      {% for making in making_posts %}
-        {% if making.ready %}
-          {% capture making_title %}<a href="{{ making.url }}">{{ making.title }}</a>{% endcapture %}
-        {% else %}
-          {% capture making_title %}<b>{{making.title}}</b>{% endcapture %}
-        {% endif %}
-        <li>
-            {{making_title}} {{ making.description }}
-            <img src="{{making.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
-        </li>
-      {% endfor %}
-    </ul>
+    {% assign making_posts=site.making | where:"lang", page.lang %}
+    {% include build_list_with_preview.html posts=making_posts list_class="list-unstyled" %}
 
     <h3>Modellazione</h3>
     <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
-    <ul class="list-unstyled">
-      {% assign modelling_posts=site.modelling | where:"lang", page.lang %}
-      {% for modelling in modelling_posts %}
-        {% if modelling.ready %}
-          {% capture modelling_title %}<a href="{{ modelling.url }}">{{ modelling.title }}</a>{% endcapture %}
-        {% else %}
-          {% capture modelling_title %}<b>{{modelling.title}}</b>{% endcapture %}
-        {% endif %}
-
-        <li class="text-justify" style="margin-bottom: 1em;">
-          {{ modelling_title }} {{ modelling.description }}
-          <img src="{{site.path}}/{{modelling.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
-        </li>
-      {% endfor %}
-    </ul>
+    {% assign modelling_posts=site.modelling | where:"lang", page.lang %}
+    {% include build_list_with_preview.html posts=modelling_posts list_class="list-unstyled" %}
   </div>
 </div>

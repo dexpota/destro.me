@@ -1,0 +1,22 @@
+{% if include.list_class %}
+  {% capture list_class %}class="{{include.list_class}}"{% endcapture %}
+{% endif %}
+
+<ul {{list_class}}>
+  {% for post in include.posts %}
+    {% if post.ready %}
+      {% capture post_title %}<a href="{{ post.url }}">{{ post.title }}</a>{% endcapture %}
+    {% else %}
+      {% capture post_title %}<b>{{post.title}}</b>{% endcapture %}
+    {% endif %}
+
+    {% if post.preview %}
+      {% capture post_preview %}<img src="{{post.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">{% endcapture %}
+    {% endif %}
+
+    <li class="text-justify" style="margin-bottom: 1em;">
+      {{ post_title }} {{ post.description }}
+      {{ post_preview }}
+    </li>
+  {% endfor %}
+</ul>
