@@ -5,6 +5,16 @@ permalink: /repositories/
 ref: repositories
 ---
 
+## Progetti su Github
+
+- **fabtools**, una serie di strumenti utili per sopravvivere in un fablab.
+  - `git clone git@github.com:dexpota/fabtools.git`
+{: .list-margin}
+
+- **asciidoc-cheatsheet**, un provider per asciidoc per generare cheatsheet.
+  - `git clone git@github.com:dexpota/asciidoc-cheatsheet.git`
+{: .list-margin}
+
 ## Progetti personali
 
 - **dds-library**, libreria per la lettura e scrittura di file in formato DDS.
