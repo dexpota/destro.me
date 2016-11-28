@@ -7,6 +7,11 @@ layout: compress
     <title> {{ site.title }} </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% if page.ready == false %}
+      <meta name="robots" content="noindex, nofollow" />
+    {% endif %}
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css" rel="stylesheet">
@@ -77,7 +82,7 @@ layout: compress
           {% assign scripts=site.scripts | where:"ref", page.ref | sort: 'lang' %}
           {% for script in scripts %}
             <li>
-              <a href="{{ script.url }}" class="{{ script.lang }}">{{ project.lang }}</a>
+              <a href="{{ script.url }}" class="{{ script.lang }}">{{ script.lang }}</a>
             </li>
           {% endfor %}
 
