@@ -52,6 +52,12 @@ t:
       gallery: "Galleria"
 
 collections:
+  sw_projects:
+    output: false
+
+  hw_projects:
+    output: false
+
   projects:
     output: true
     permalink: /:collection/:slug/

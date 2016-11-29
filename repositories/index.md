@@ -1,9 +1,12 @@
 ---
 layout: default
 lang: it
-permalink: /repositories/
 ref: repositories
 ---
+
+# Repositories
+
+Una semplice lista di tutti i progetti su cui ho lavorato.
 
 ## Progetti su Github
 
@@ -40,7 +43,6 @@ ref: repositories
 - **destro.me**, sito web personale.
   - `git clone git@git.bbqcode.it:dex/destro.me.git`
 {: .list-margin}
-
 
 ## Progetti universitari
 
