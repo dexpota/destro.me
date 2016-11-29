@@ -51,28 +51,28 @@ t:
       materials: "Materiali"
       gallery: "Galleria"
 
-collections:
-  sw_projects:
-    output: false
+# collections:
+#   projects:
+#     output: false
 
-  hw_projects:
-    output: false
-
-  projects:
-    output: true
-    permalink: /:collection/:slug/
-
-  making:
-    output: true
-    permalink: /:collection/:slug/
-
-  modelling:
-    output: true
-    permalink: /:collection/:slug/
-
-  scripts:
-    output: true
-    permalink: /:collection/:slug/
+  # hw_projects:
+  #   output: false
+  #
+  # projects:
+  #   output: true
+  #   permalink: /:collection/:slug/
+  #
+  # making:
+  #   output: true
+  #   permalink: /:collection/:slug/
+  #
+  # modelling:
+  #   output: true
+  #   permalink: /:collection/:slug/
+  #
+  # scripts:
+  #   output: true
+  #   permalink: /:collection/:slug/
 
 
 compress_html:

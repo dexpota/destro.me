@@ -1,12 +1,19 @@
 ---
 layout: default
 lang: it
-ref: repositories
+ref: projects
 ---
 
-# Repositories
+# Progetti
 
 Una semplice lista di tutti i progetti su cui ho lavorato.
+
+{{site.categories.application}}
+
+{% for project in site.projects %}
+  {{ project.title }}
+  babba
+{% endfor %}
 
 ## Progetti su Github
 

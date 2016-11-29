@@ -17,35 +17,6 @@ layout: compress
     <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css" />
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700|Crete+Round" rel="stylesheet" type="text/css">
-{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-{% for post in posts %}
-  <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
-{% endfor %}
-
-{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-{% for page in pages %}
-  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
-{% endfor %}
-
-{% assign projects=site.projects | where:"ref", page.ref | sort: 'lang' %}
-{% for project in projects %}
-  <link rel="alternate" hreflang="{{ projects.lang }}" href="{{ projects.url }}" />
-{% endfor %}
-
-{% assign scripts=site.scripts | where:"ref", page.ref | sort: 'lang' %}
-{% for script in scripts %}
-  <link rel="alternate" hreflang="{{ script.lang }}" href="{{ script.url }}" />
-{% endfor %}
-
-{% assign making=site.making | where:"ref", page.ref | sort: 'lang' %}
-{% for make in making %}
-  <link rel="alternate" hreflang="{{ make.lang }}" href="{{ make.url }}" />
-{% endfor %}
-
-{% assign modelling=site.modelling | where:"ref", page.ref | sort: 'lang' %}
-{% for model in modelling %}
-  <link rel="alternate" hreflang="{{ model.lang }}" href="{{ model.url }}" />
-{% endfor %}
   </head>
   <body>
     <div class="container">
@@ -62,41 +33,6 @@ layout: compress
           {% for post in posts %}
             <li>
               <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-            </li>
-          {% endfor %}
-
-          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-          {% for page in pages %}
-            <li>
-              <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
-            </li>
-          {% endfor %}
-
-          {% assign projects=site.projects | where:"ref", page.ref | sort: 'lang' %}
-          {% for project in projects %}
-            <li>
-              <a href="{{ project.url }}" class="{{ project.lang }}">{{ project.lang }}</a>
-            </li>
-          {% endfor %}
-
-          {% assign scripts=site.scripts | where:"ref", page.ref | sort: 'lang' %}
-          {% for script in scripts %}
-            <li>
-              <a href="{{ script.url }}" class="{{ script.lang }}">{{ script.lang }}</a>
-            </li>
-          {% endfor %}
-
-          {% assign making=site.making | where:"ref", page.ref | sort: 'lang' %}
-          {% for make in making %}
-            <li>
-              <a href="{{ make.url }}" class="{{ make.lang }}">{{ make.lang }}</a>
-            </li>
-          {% endfor %}
-
-          {% assign modelling=site.modelling | where:"ref", page.ref | sort: 'lang' %}
-          {% for model in modelling %}
-            <li>
-              <a href="{{ model.url }}" class="{{ model.lang }}">{{ model.lang }}</a>
             </li>
           {% endfor %}
           </ul>
