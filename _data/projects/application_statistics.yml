@@ -1,0 +1,5 @@
+# YML generato automaticamente da uno script.
+
+- ref: mad01
+  languages:
+    - "Java"

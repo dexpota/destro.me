@@ -1,0 +1,17 @@
+- ref: mad01
+  title: MAD 01
+  description:
+    it: compito assegnato come prima esercitazione del corso di Mobile Application Development (MAD).
+  repository: git@git.bbqcode.it:dex/esercitazione01.git
+
+- ref: mad02
+  title: MAD 02
+  description:
+    it: compito assegnato come seconda esercitazione del corso di Mobile Application Development (MAD).
+  repository: git@git.bbqcode.it:dex/mad-ex02.git
+
+- ref: mad03
+  title: MAD 03
+  description:
+    it: compito assegnato come terza esercitazione del corso di Mobile Application Development (MAD).
+  repository: git@git.bbqcode.it:dex/mad-ex03.git
