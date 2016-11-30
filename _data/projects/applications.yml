@@ -15,3 +15,9 @@
   description:
     it: compito assegnato come terza esercitazione del corso di Mobile Application Development (MAD).
   repository: git@git.bbqcode.it:dex/mad-ex03.git
+
+- ref: torus
+  title: Torus
+  description:
+    it: un semplice motore di rendering a cui sto' lavorando.
+    en: a simple rendering engine I am working on.
