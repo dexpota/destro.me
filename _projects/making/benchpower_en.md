@@ -1,15 +1,15 @@
 ---
 layout: posts
 title: benchpower
+ref: benchpower
 description: is a wooden frame I made for a spare ATX power supply.
 preview: /assets/atx_case_preview.jpg
 gallery:
   - /assets/atx_case_preview.jpg
   - /assets/atx_case_preview.jpg
-ready: false
 published: false
 lang: en
-ref: making_benchtop
+
 slug: benchtop_power_supply
 ---
 

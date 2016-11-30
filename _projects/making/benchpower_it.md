@@ -1,34 +1,23 @@
 ---
 layout: posts
-title: benchpower
-description: è un semplice alimentatore da banco per dare vita ai tuoi progetti elettronici.
-preview: /assets/atx_case_preview.jpg
+project: benchpower
+ref: benchpower
+slug: alimentatore_da_banco
+category: making
 gallery:
   - /assets/atx_case_preview.jpg
-  - /assets/atx_case_preview.jpg
-  - /assets/atx_case_preview.jpg
-  - /assets/atx_case_preview.jpg
-  - /assets/atx_case_preview.jpg
 tools:
-  - dispositivo 1
-  - dispositivo 2
-  - dispositivo 3
   - laser cutter
 materials:
   - materiale 1
-  - materiale 2
-  - materiale 3
 ready: false
 lang: it
-ref: making_benchtop
-slug: alimentatore_da_banco
 ---
 
-
-# {{ page.title }}
+# {{ site.data.projects.making.benchpower.title }}
 {:.class1}
 {:.no_toc}
-{{ page.description }}
+{{ site.data.projects.making.benchpower.description.it }}
 
 {% include link_github.html buttons="watch star fork" user="dexpota" repository="benchpower" watch_count=true %}
 

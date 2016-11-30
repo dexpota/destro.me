@@ -3,7 +3,6 @@ layout: posts
 title: Script
 description: a simple rendering engine I am working on.
 published: false
-ready: false
 lang: en
 ref: dep.py
 ---

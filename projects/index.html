@@ -4,26 +4,47 @@ lang: it
 ref: projects
 ---
 
+{%include tag_gathering.html items=site.data.projects.applications %}
+
+{%comment%}
+TODO cercare le pagine per il progetto.
+{% assign projects=site.projects | where:"project", "benchpower"%}
+{% for project in projects %}
+	{{project | inspect}}
+{% endfor %}
+{%endcomment%}
+
 <div class="row">
   <div class="col-sm-12">
     <h1>Progetti</h1>
-    <p> Una semplice lista di tutti i progetti su cui ho lavorato. </p>
-
+    <p>Tags:</p>
     <ul>
-    {% for application in site.data.projects.applications %}
+      {% for tag in tags %}
+        <li>{{tag}}</li>
+      {% endfor %}
+    </ul>
+
+		<h2>Applicazioni</h2>
+		<p> Una semplice lista di tutti i progetti su cui ho lavorato. </p>
+    <ul>
+    {% for key_value in site.data.projects.applications %}
+			{% assign application = key_value[1] %}
       <li><strong>{{ application.title }}</strong>: {{ application.description[page.lang] }}
         {% if application.repository %}
-        <ul><li>git clone {{application.repository}}</ul></li>
+        <ul><li><code>git clone {{application.repository}}</code></ul></li>
         {% endif %}
-      </li >
+      </li>
     {% endfor %}
     </ul>
 
+		<h2>Making</h2>
     <ul>
-    {% for making in site.data.projects.making %}
+    {% for key_value in site.data.projects.making %}
+			{% assign making = key_value[1] %}
       <li><strong>{{ making.title }}</strong>: {{ making.description[page.lang] }}
         {% if making.repository %}
-        <ul><li>git clone {{making.repository}}</ul></li>
+				{{making.page}}
+        <ul><li><code>git clone {{making.repository}}</code></ul></li>
         {% endif %}
       </li >
     {% endfor %}

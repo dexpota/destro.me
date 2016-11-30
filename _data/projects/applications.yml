@@ -1,23 +1,27 @@
-- ref: mad01
+mad01:
   title: MAD 01
   description:
     it: compito assegnato come prima esercitazione del corso di Mobile Application Development (MAD).
   repository: git@git.bbqcode.it:dex/esercitazione01.git
+  tags: ["mobile application development"]
 
-- ref: mad02
+mad02:
   title: MAD 02
   description:
     it: compito assegnato come seconda esercitazione del corso di Mobile Application Development (MAD).
   repository: git@git.bbqcode.it:dex/mad-ex02.git
+  tags: ["mobile application development"]
 
-- ref: mad03
+mad03:
   title: MAD 03
   description:
     it: compito assegnato come terza esercitazione del corso di Mobile Application Development (MAD).
   repository: git@git.bbqcode.it:dex/mad-ex03.git
+  tags: ["mobile application development"]
 
-- ref: torus
+torus:
   title: Torus
   description:
     it: un semplice motore di rendering a cui sto' lavorando.
     en: a simple rendering engine I am working on.
+  tags: ["computer graphics"]

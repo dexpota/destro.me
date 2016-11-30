@@ -103,16 +103,17 @@ ref: homepage
 
 <div class="row">
   <h2 class="text-center" style="margin-top: 0.8em; margin-bottom: 1em">Progetti</h2>
+  <p> Questi sono solo alcuni dei progetti software in evidenza, per un elenco completo <a href="{{ site.baseurl }}{% link projects/index.html %}">clicca qui</a></p>
+
   <!-- Projects -->
-  <div class="col-sm-4">
+  <!-- <div class="col-sm-4">
     <h3>Software</h3>
     <p> Questi sono alcuni dei progetti su cui ho lavorato, alcuni sono disponibili su github altri non sono ancora pronti ad essere condivisi.</p>
-    {% assign projects=site.projects | where:"lang", page.lang %}
+    {% assign projects=site.data.projects.applications | where:"lang", page.lang %}
     {% include build_list_with_preview.html posts=projects %}
-    <p> Questi sono solo alcuni dei progetti software in evidenza, per un elenco completo <a href="{{ site.baseurl }}{% link projects/index.html %}">clicca qui</a></p>
-  </div>
+  </div> -->
   <!-- Scripts -->
-  <div class="col-sm-4">
+  <!-- <div class="col-sm-4">
     <h3>Scripts</h3>
     <p>Questi sono alcuni degli script che utilizzo per automatizzare operazioni tediose e penso siano interessati da condividere.</p>
     {% assign scripts=site.scripts | where:"lang", page.lang %}
@@ -120,13 +121,11 @@ ref: homepage
   </div>
   <div id="making-column" class="col-sm-4">
     <h3>Making</h3>
-    <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
     {% assign making_posts=site.making | where:"lang", page.lang %}
     {% include build_list_with_preview.html posts=making_posts list_class="list-unstyled" %}
 
     <h3>Modellazione</h3>
-    <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
     {% assign modelling_posts=site.modelling | where:"lang", page.lang %}
     {% include build_list_with_preview.html posts=modelling_posts list_class="list-unstyled" %}
-  </div>
+  </div> -->
 </div>

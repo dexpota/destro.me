@@ -1,12 +1,10 @@
 ---
 layout: posts
-title: depy.py
 description: uno script in python per analizzare le dipendenze di un modulo C/C++ e produrne una rappresentazione grafica.
 published: true
-ready: true
+ready: false
 lang: it
 ref: depy.py
-slug: depy.py
 ---
 
 # depy.py
