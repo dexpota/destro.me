@@ -38,12 +38,11 @@ asciidoc-cheatsheet:
     it: un provider per asciidoc per generare cheatsheet.
   repository: git@github.com:dexpota/asciidoc-cheatsheet.git
 
-
 dds-library:
   title: dds-library
   description:
     it: libreria per la lettura e scrittura di file in formato DDS.
-  repository: git clone git@git.bbqcode.it:3d-engine/dds-library.git
+  repository: git@git.bbqcode.it:3d-engine/dds-library.git
 
 block-compression:
   title: block-compression
