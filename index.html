@@ -105,6 +105,9 @@ ref: homepage
   <h2 class="text-center" style="margin-top: 0.8em; margin-bottom: 1em">Progetti</h2>
   <p> Questi sono solo alcuni dei progetti software in evidenza, per un elenco completo <a href="{{ site.baseurl }}{% link projects/index.html %}">clicca qui</a></p>
 
+  {% assign projects=site.projects | where:"lang", page.lang %}
+  {% include build_list_with_preview.html posts=projects %}
+
   <!-- Projects -->
   <!-- <div class="col-sm-4">
     <h3>Software</h3>

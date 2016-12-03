@@ -54,7 +54,7 @@ t:
 collections:
   projects:
     output: true
-    permalink: /:collection/:path/:slug/
+    permalink: /:collection/:path/
 
 
 compress_html:
