@@ -8,65 +8,36 @@ title: pystat.py
 ref: pystat.py
 ---
 
+[top]: #
+
 # {{ page.title }}
 {:.class1}
 {:.no_toc}
 {{ page.description }}
 
-## Formato
+Questo script permette di ricreare
 
-```json
-{
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-        "hashcode": {
-          "description": "last commit hash",
-          "type": "string"
-        },
-        "repository": {
-          "description": "repository url",
-          "type": "string"
-        },
-        "statistics": {
-          "type": "array"
-          "items": {
-            "anyOf": [
-                { "$ref": "#/definitions/C++" },
-                { "$ref": "#/definitions/C" },
-                { "$ref": "#/definitions/Python" },
-                { "$ref": "#/definitions/Java" }
-            ]
-          }
-        }
-    }
-  },
-  "definitions": {
-    "C++": {},
-    "C": {},
-    "Python": {},
-    "Java": {}
-  }
-}
-```
+This is a [reference style link][linkid] to a page. And [this]
+[linkid] is also a link. As is [this][] and [THIS].
 
-## Roadmap
+## Roadmap <small>| [ritorna][top]</small>
 
 - aggiungere i filtri sui file nel conteggio delle righe
 - aggiungere la capacità di determinare da quali moduli uno script python dipende
 
-## Linguaggi
+## Linguaggi <small>| [ritorna][top]</small>
 
 - python
 - C/C++
 
-## Statistiche <small style="color: #777;" style="margin-top: 0;"> | <a href="#{{title_ref}}"> ritorna </a></small>
-
+## Statistiche <small>| [ritorna][top]</small>
 - numero totale di linee
 - numero di linee per file
 - numero totale di file
 - lista dei moduli dal quale il progetto dipende (python)
   - i moduli sono presi dal repository PyPi (https://pypi.python.org/pypi)
 
-## Esempi di utilizzo <small style="color: #777;" style="margin-top: 0;"> | <a href="#{{title_ref}}"> ritorna </a></small>
+## Esempi di utilizzo <small>| [ritorna][top]</small>
+
+## Formato <small>| [ritorna][top]</small>
+{% gist 5ef2064b4bc4c09b77811e06cfebd0ff %}

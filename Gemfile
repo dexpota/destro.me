@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
+# gem 'jekyll-gist'
+
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -19,6 +21,7 @@ gem "minima"
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-# group :jekyll_plugins do
+group :jekyll_plugins do
+	gem 'jekyll-gist'
 #   gem "jekyll-github-metadata", "~> 1.0"
-# end
+end
