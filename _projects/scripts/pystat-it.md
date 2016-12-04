@@ -1,6 +1,6 @@
 ---
 layout: posts
-description: uno script in python che permette di calcolare le statistiche di una lista di repository.
+description: uno script in python per generare statistiche di pacchetti software.
 published: true
 ready: true
 lang: it
@@ -10,34 +10,48 @@ ref: pystat.py
 
 [top]: #
 
-# {{ page.title }}
+# {{ page.title }} <small>| {{ page.description }}</small>
 {:.class1}
 {:.no_toc}
-{{ page.description }}
 
-Questo script permette di ricreare
+{% include link_github.html buttons="watch star fork" user="dexpota" repository="type-do-get" watch_count=true %}
 
-This is a [reference style link][linkid] to a page. And [this]
-[linkid] is also a link. As is [this][] and [THIS].
+Questo script permette di calcolare le statistiche di un pacchetto applicativo,
+e di ciascun modulo presente. Lo script è pensato per leggere in ingresso una
+lista di *repository* **git** e per ciascuno di essi calcolarne le statistiche.
 
-## Roadmap <small>| [ritorna][top]</small>
+* TOC
+{:toc}
+
+## Scarica
+
+## Cose da fare
 
 - aggiungere i filtri sui file nel conteggio delle righe
 - aggiungere la capacità di determinare da quali moduli uno script python dipende
 
-## Linguaggi <small>| [ritorna][top]</small>
+[ritorna][top]
 
-- python
-- C/C++
+## Linguaggi & statistiche
 
-## Statistiche <small>| [ritorna][top]</small>
-- numero totale di linee
-- numero di linee per file
-- numero totale di file
-- lista dei moduli dal quale il progetto dipende (python)
+I linguaggi supportati fin'ora sono: Python, C/C++, Java, CMake; ma loo script è
+pensato per essere facilmente estendibile. Infatti in teoria è già possibile
+calcolare per ogni file testuale il numero di righe. Di seguito sono riportati
+i linguaggi con le statistiche supportate.
+
+- Python
+  - lista dei moduli dal quale il progetto dipende (python)
   - i moduli sono presi dal repository PyPi (https://pypi.python.org/pypi)
+- C/C++
+  - numero di linee per file
+  - numero totale di linee
 
-## Esempi di utilizzo <small>| [ritorna][top]</small>
+[ritorna][top]
 
-## Formato <small>| [ritorna][top]</small>
+## Esempi di utilizzo
+
+[ritorna][top]
+
+## Formato
 {% gist 5ef2064b4bc4c09b77811e06cfebd0ff %}
+[ritorna][top]
