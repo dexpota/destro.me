@@ -19,17 +19,36 @@ ref: pystat.py
 {
   "type": "array",
   "items": {
-    "type": "object"
+    "type": "object",
+    "properties": {
+        "hashcode": {
+          "description": "last commit hash",
+          "type": "string"
+        },
+        "repository": {
+          "description": "repository url",
+          "type": "string"
+        },
+        "statistics": {
+          "type": "array"
+          "items": {
+            "anyOf": [
+                { "$ref": "#/definitions/C++" },
+                { "$ref": "#/definitions/C" },
+                { "$ref": "#/definitions/Python" },
+                { "$ref": "#/definitions/Java" }
+            ]
+          }
+        }
+    }
+  },
+  "definitions": {
+    "C++": {},
+    "C": {},
+    "Python": {},
+    "Java": {}
   }
 }
-
-[
-  "hashcode": "d19ce07cc1653a0029f4c6926d5159b0bbc6a628",
-  "repository": "git@github.com:dexpota/type-do-get.git",
-  "statistics": {
-
-  }
-]
 ```
 
 ## Roadmap
