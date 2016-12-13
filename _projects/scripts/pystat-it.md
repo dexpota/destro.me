@@ -1,7 +1,7 @@
 ---
 layout: posts
 description: uno script in python per generare statistiche di pacchetti software.
-published: true
+published: false
 ready: true
 lang: it
 title: pystat.py
@@ -34,13 +34,12 @@ lista di *repository* **git** e per ciascuno di essi calcolarne le statistiche.
 
 ## Linguaggi & statistiche
 
-I linguaggi supportati fin'ora sono: Python, C/C++, Java, CMake; ma loo script è
-pensato per essere facilmente estendibile. Infatti in teoria è già possibile
-calcolare per ogni file testuale il numero di righe. Di seguito sono riportati
-i linguaggi con le statistiche supportate.
+I linguaggi supportati fin'ora sono: Python, C/C++, Java, CMake; ma lo script è
+pensato per essere facilmente estendibile. Infatti con poche semplici modifiche
+è possibile calcolare per ogni file testuale il numero di righe.
 
 - Python
-  - lista dei moduli dal quale il progetto dipende (python)
+  - lista dei moduli dal quale il progetto dipende
   - i moduli sono presi dal repository PyPi (https://pypi.python.org/pypi)
 - C/C++
   - numero di linee per file

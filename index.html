@@ -28,13 +28,13 @@ ref: homepage
         </a>
       </li>
       {% endif %}
-      {% if site.google_plus %}
+      <!--{% if site.google_plus %}
       <li>
         <a href="https://plus.google.com/{{site.google_plus}}" target="_blank">
           <i style="color: #d34836" class="fa fa-google fa-3x"></i>
         </a>
       </li>
-      {% endif %}
+      {% endif %}-->
     </ul>
   </div>
 </div>
@@ -43,7 +43,7 @@ ref: homepage
   <div class="col-sm-12">
     <p class="lead text-justify"> Ciao sono Fabrizio Destro un ingegnere che ama la <b>Computer Graphics</b> e la <b>Computer Vision</b>.
     Mi piace programmare in <b>C++</b> e <b>Python</b> ma non vedo l'ora di sperimentare sempre con nuove cose.
-    Utilizzero questo sito per pubblicare alcuni dei miei progetti personali. Puoi contattarmi su linkedin, github o google.</p>
+    Utilizzerò questo sito per pubblicare alcuni dei miei progetti personali. Se volete contattarmi potete farlo su <b>linkedin</b> o <b>github</b>.</p>
   </div>
 </div>
 
@@ -61,8 +61,8 @@ ref: homepage
 
     <p>I linguaggi di programmazione non sono tutto, queste sono alcune delle librerie con cui ho lavorato:</p>
     <ul class="text-justify">
-      <li><b>Qt4</b>, <b>Qt5</b>, <b>Boost</b> and <b>OpenGL</b> con C++.</li>
-      <li><b>jupyter</b>, <b>numpy</b> and <b>matplotlib</b> con Python</li>
+      <li><b>Qt4</b>, <b>Qt5</b>, <b>Boost</b> e <b>OpenGL</b> con C++.</li>
+      <li><b>jupyter</b>, <b>numpy</b> e <b>matplotlib</b> con Python</li>
     </ul>
   </div>
 
@@ -77,7 +77,7 @@ ref: homepage
     <p>Alcuni dei programmi che utilizzo nel mio tempo libero per lavorare su progetti personali. </p>
     <ul class="text-justify">
       <li>Utilizzo <b>Blender</b> per la modellazione solida 3D e per l'animazione.</li>
-      <li>Quando lavoro sui miei progetti Fai da te utilizzo AutoCAD per il disegno tecnico 2D e Autodesk Inventor per la modellazione 3D e l'assemblaggio di strutture.</li>
+      <li>Quando lavoro sui miei progetti Fai da te utilizzo <b>AutoCAD</b> per il disegno tecnico 2D e <b>Autodesk Inventor</b> per la modellazione 3D e l'assemblaggio di strutture.</li>
       <li>Quando posso mi piace sperimentare con <b>GIMP</b> e <b>Inkscape</b>.</li>
     </ul>
   </div>
@@ -86,7 +86,8 @@ ref: homepage
     <h3>Hardware</h3>
     <p>Alcuni dell'hardware che utilizzo nello sviluppo di progetti personali.</p>
     <ul clas="text-justify">
-      <li>Grazie al Fablab di Torino posso dire di saper utilizzare la <b>LASER CUT WL1290</b> per il taglio di materiali.</li>
+      <li><b>Laser Cut WL1290</b>: macchinario per il taglio al laser di materiali come compensati e plastiche.</li>
+      <li><b>Arduino Board</b>: dispositivo elettronico di facile utilizzo per la realizzazione di piccoli progetti elettronici.</li>
     </ul>
   </div>
 
@@ -101,6 +102,7 @@ ref: homepage
     </div> -->
 </div>
 
+<!--
 <div class="row">
   <h2 class="text-center" style="margin-top: 0.8em; margin-bottom: 1em">Progetti</h2>
   <p> Questi sono solo alcuni dei progetti software in evidenza, per un elenco completo <a href="{{ site.baseurl }}{% link projects/index.html %}">clicca qui</a></p>
@@ -108,15 +110,13 @@ ref: homepage
   {% assign projects=site.projects | where:"lang", page.lang %}
   {% include build_list_with_preview.html posts=projects %}
 
-  <!-- Projects -->
-  <!-- <div class="col-sm-4">
+  <div class="col-sm-4">
     <h3>Software</h3>
     <p> Questi sono alcuni dei progetti su cui ho lavorato, alcuni sono disponibili su github altri non sono ancora pronti ad essere condivisi.</p>
     {% assign projects=site.data.projects.applications | where:"lang", page.lang %}
     {% include build_list_with_preview.html posts=projects %}
-  </div> -->
-  <!-- Scripts -->
-  <!-- <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4">
     <h3>Scripts</h3>
     <p>Questi sono alcuni degli script che utilizzo per automatizzare operazioni tediose e penso siano interessati da condividere.</p>
     {% assign scripts=site.scripts | where:"lang", page.lang %}
@@ -130,5 +130,6 @@ ref: homepage
     <h3>Modellazione</h3>
     {% assign modelling_posts=site.modelling | where:"lang", page.lang %}
     {% include build_list_with_preview.html posts=modelling_posts list_class="list-unstyled" %}
-  </div> -->
+  </div>
 </div>
+-->
