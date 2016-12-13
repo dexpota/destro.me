@@ -3,4 +3,4 @@ benchpower:
   description:
     it: semplice alimentatore da banco per dare vita ai tuoi progetti elettronici.
   preview: /assets/atx_case_preview.jpg
-  repository: git@github.com:dexpota/benchpower.git
+  github: https://www.github.com/dexpota/benchpower

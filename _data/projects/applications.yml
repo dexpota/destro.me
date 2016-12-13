@@ -2,65 +2,65 @@ mad01:
   title: MAD 01
   description:
     it: compito assegnato come prima esercitazione del corso di Mobile Application Development (MAD).
-  repository: git@git.bbqcode.it:dex/esercitazione01.git
+  #repository: git@git.bbqcode.it:dex/esercitazione01.git
   tags: ["mobile application development"]
 
 mad02:
   title: MAD 02
   description:
     it: compito assegnato come seconda esercitazione del corso di Mobile Application Development (MAD).
-  repository: git@git.bbqcode.it:dex/mad-ex02.git
+  #repository: git@git.bbqcode.it:dex/mad-ex02.git
   tags: ["mobile application development"]
 
 mad03:
   title: MAD 03
   description:
     it: compito assegnato come terza esercitazione del corso di Mobile Application Development (MAD).
-  repository: git@git.bbqcode.it:dex/mad-ex03.git
+  #repository: git@git.bbqcode.it:dex/mad-ex03.git
   tags: ["mobile application development"]
 
-torus:
-  title: Torus
-  description:
-    it: un semplice motore di rendering a cui sto' lavorando.
-    en: a simple rendering engine I am working on.
-  tags: ["computer graphics"]
+#torus:
+#  title: Torus
+#  description:
+#    it: un semplice motore di rendering a cui sto' lavorando.
+#    en: a simple rendering engine I am working on.
+#  tags: ["computer graphics"]
 
 fabtools:
   title: fabtools
   description:
     it: una serie di strumenti utili per sopravvivere in un fablab.
-  repository: git@github.com:dexpota/fabtools.git
+  github: https://www.github.com/dexpota/fabtools
 
 asciidoc-cheatsheet:
   title: asciidoc-cheatsheet
   description:
     it: un provider per asciidoc per generare cheatsheet.
-  repository: git@github.com:dexpota/asciidoc-cheatsheet.git
+  #repository: git@github.com:dexpota/asciidoc-cheatsheet.git
 
 dds-library:
   title: dds-library
   description:
     it: libreria per la lettura e scrittura di file in formato DDS.
-  repository: git@git.bbqcode.it:3d-engine/dds-library.git
+  #repository: git@git.bbqcode.it:3d-engine/dds-library.git
 
 block-compression:
   title: block-compression
   description:
     it: questo programma implementa gli algoritmi di compressione BC.
-  repository: git@git.bbqcode.it:3d-engine/blockcompression-library.git
+  #repository: git@git.bbqcode.it:3d-engine/blockcompression-library.git
 
 obj-parser:
   title: obj-parser
   description:
     it: libreria per la lettura di file obj.
-  repository: git@git.bbqcode.it:3d-engine/obj-parser.git
+  #repository: git@git.bbqcode.it:3d-engine/obj-parser.git
 
 obj-ogre3d:
   title: obj-ogre3d
   description:
     it: esempio di utilizzo della libreria di lettura di file obj.
-  repository: git@git.bbqcode.it:3d-engine/obj-parser-ogre3d.git
+  #repository: git@git.bbqcode.it:3d-engine/obj-parser-ogre3d.git
 
 qt4-custom-widgets:
   title:
@@ -68,40 +68,40 @@ qt4-custom-widgets:
     en: Qt4 custom widgets
   description:
     it: alcuni widget custom per pyqt4.
-  repository: git@git.bbqcode.it:dex/pyqt4-custom-widgets.git
+  #repository: git@git.bbqcode.it:dex/pyqt4-custom-widgets.git
 
 destro-me:
   title: destro.me
   description:
     it: sito web personale.
-  repository: git@git.bbqcode.it:dex/destro.me.git
+  #repository: git@git.bbqcode.it:dex/destro.me.git
 
 dash:
   title: DASH traffic analysis
   description:
     it: progetto universitario per l'analisi del traffico generato da un riproduttore video che utilizza DASH come protocollo di trasferimento dati.
-  repository: git@git.bbqcode.it:dex/ETIM.git
+  #repository: git@git.bbqcode.it:dex/ETIM.git
 
 weather-station:
   title: Weather station
   description:
     it: progetto universitario di Programmazione di Sistema per la creazione di una stazione meteorologica.
-  repository: git@git.bbqcode.it:dex/PdS.git
+  #repository: git@git.bbqcode.it:dex/PdS.git
 
 ogre3d-tutorials:
   title: Ogre3D tutorials
   description:
     it: una serie di tutorial per la libreria Ogre3D.
-  repository: git@git.bbqcode.it:dex/Ogre3dTutorials.git
+  #repository: git@git.bbqcode.it:dex/Ogre3dTutorials.git
 
 boost-test:
   title: boost-test
   description:
     it: esempio di utilizzo della libreria boost.
-  repository: git@git.bbqcode.it:dex/cpptest.git
+  #repository: git@git.bbqcode.it:dex/cpptest.git
 
 boost-reading-test:
   title: boost-reading-test
   description:
     it: confronto di diverse tecniche per la lettura di file su disco.
-  repository: git@git.bbqcode.it:dex/cppreadingtests.git
+  #repository: git@git.bbqcode.it:dex/cppreadingtests.git

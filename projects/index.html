@@ -17,12 +17,12 @@ TODO cercare le pagine per il progetto.
 <div class="row">
   <div class="col-sm-12">
     <h1>Progetti</h1>
-    <p>Tags:</p>
+    <!--<p>Tags:</p>
     <ul>
       {% for tag in tags %}
         <li>{{tag}}</li>
       {% endfor %}
-    </ul>
+    </ul>-->
 
 		<h2>Applicazioni</h2>
 		<p> Una semplice lista di tutti i progetti su cui ho lavorato. </p>
@@ -34,9 +34,14 @@ TODO cercare le pagine per il progetto.
 			{% else %}
 				{% assign title = application.title %}
 			{% endif %}
-      <li><strong>{{ title }}</strong>: {{ application.description[page.lang] }}
-        {% if application.repository %}
-        <ul><li><code>git clone {{application.repository}}</code></ul></li>
+      <li>
+				<strong>{{ title }}</strong>: {{ application.description[page.lang] }}
+        {% if application.github %}
+					<ul>
+						<li>
+							Il progetto è disponibile su github, <a href="{{application.github}}" target="_blank">clicca qui</a>
+						</li>
+					</ul>
         {% endif %}
       </li>
     {% endfor %}
@@ -47,9 +52,12 @@ TODO cercare le pagine per il progetto.
     {% for key_value in site.data.projects.making %}
 			{% assign making = key_value[1] %}
       <li><strong>{{ making.title }}</strong>: {{ making.description[page.lang] }}
-        {% if making.repository %}
-				{{making.page}}
-        <ul><li><code>git clone {{making.repository}}</code></ul></li>
+        {% if making.github %}
+				<ul>
+					<li>
+						Il progetto è disponibile su github, <a href="{{making.github}}" target="_blank">clicca qui</a>
+					</li>
+				</ul>
         {% endif %}
       </li >
     {% endfor %}
