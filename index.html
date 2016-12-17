@@ -10,6 +10,7 @@ ref: homepage
   </div>
 </div> -->
 
+
 <div class="row" style="margin-top: 1.5em">
   <div class="col-sm-12 text-center">
     <h1>Destro Fabrizio</h1>
@@ -36,11 +37,6 @@ ref: homepage
       </li>
       {% endif %}-->
     </ul>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-12">
     <p class="lead text-justify"> Ciao sono Fabrizio Destro un ingegnere che ama la <b>Computer Graphics</b> e la <b>Computer Vision</b>.
     Mi piace programmare in <b>C++</b> e <b>Python</b> ma non vedo l'ora di sperimentare sempre con nuove cose.
     Utilizzerò questo sito per pubblicare alcuni dei miei progetti personali. Se volete contattarmi potete farlo su <b>linkedin</b> o <b>github</b>.</p>
@@ -103,6 +99,29 @@ ref: homepage
       </div>
     </div> -->
 </div>
+
+<!--<div class="row">
+  <div class="col-sm-12">
+    <h2 class="text-center">Blog</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <ul>
+        {% assign posts = (site.posts | where: "lang", page.lang) %}
+        {% for post in posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <p>{{post.description}}</p>
+            {% if post.preview %}
+              <img src="{{ post.preview }}">
+            {% endif %}
+            <small>{{ post.date | date: '%B %d, %Y' }}</small>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>-->
 
 <!--
 <div class="row">

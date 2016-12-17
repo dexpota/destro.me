@@ -56,5 +56,11 @@ div#making-column ul{
   margin-left: 0;
 }
 
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
 // Import partials from the `minima` theme.
 @import "minima";

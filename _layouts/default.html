@@ -16,11 +16,16 @@ layout: compress
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css" />
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700|Crete+Round" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700|Crete+Round" rel="stylesheet" type="text/css">
 
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
   {% for page in pages %}
     <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+  {% endfor %}
+
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% for post in posts %}
+    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
   {% endfor %}
 
   {% assign projects=site.projects | where:"ref", page.ref | sort: 'lang' %}
@@ -43,6 +48,13 @@ layout: compress
             {% for page in pages %}
             <li>
               <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+            </li>
+            {% endfor %}
+
+            {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+            {% for post in posts %}
+            <li>
+              <a href="{{ post.url }}" class="{{ post.lang }}">{{ page.lang }}</a>
             </li>
             {% endfor %}
 
