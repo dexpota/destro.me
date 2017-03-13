@@ -40,16 +40,43 @@ t:
       tools: "Tools"
       materials: "Materials"
       gallery: "Gallery"
+    footer:
+      built_with: "Built with Jekyll, theme based on <a href='https://github.com/nrandecker/particle'>particle</a> by <a href='https://nrandecker.github.io'>Nathan Randecker</a>"
+    homepage:
+      username: "Destro Fabrizio"
+      user_title: "Software engineer"
+      about_me: "About me"
+      projects: "Projects"
+      expertise: "Expertise"
+      user_description: "Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS."
+      languages: "Languages"
+      software: "Software"
+      hardware: "Hardware"
   it:
     back: "Indietro"
     toc: "Indice"
     language: "lingua"
     license: "Licenza"
     not_available: "non disponibile in"
+    about_me: "Su di me"
+    projects: "Progetti"
+    user_title: "Software engineer"
     making:
       tools: "Strumentazioni"
       materials: "Materiali"
       gallery: "Galleria"
+    footer:
+      built_with: "Costruito con Jekyll, tema basato su <a href='https://github.com/nrandecker/particle'>particle</a> di <a href='https://nrandecker.github.io'>Nathan Randecker</a>"
+    homepage:
+      username: "Destro Fabrizio"
+      user_title: "Software engineer"
+      about_me: "Su di me"
+      projects: "Progetti"
+      expertise: "Competenze"
+      user_description: "Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS."
+      languages: "Linguaggi"
+      software: "Software"
+      hardware: "Hardware"
 
 collections:
   projects:
@@ -60,6 +87,14 @@ collections:
 compress_html:
   clippings: all
   comments:  ["<!-- ", " -->"]
+
+# User settings
+username: Destro Fabrizio
+user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
 
 # Build settings
 markdown: kramdown

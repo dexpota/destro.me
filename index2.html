@@ -1,0 +1,107 @@
+---
+layout: default2
+lang: it
+---
+
+<div id="particles-js">
+  <div class="content">
+      <h1 class="site-title">{{site.username}}</h1>
+      <h2 class="site-description">{{site.t[page.lang].user_title}}</h2>
+      <div class="icons-header">
+          {% if site.linkedin %}
+            <a href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
+              <i class="my_icon fa fa-linkedin fa-3x"></i>
+            </a>
+          {% endif %}
+
+          {% if site.github %}
+            <a href="https://www.github.com/{{site.github}}" target="_blank">
+              <i class="my_icon fa fa-github fa-3x"></i>
+            </a>
+          {% endif %}
+
+          <a aria-label="Send email" href="mailto:{{site.email}}">
+            <i class="my_icon fa fa-envelope fa-3x"></i>
+          </a>
+
+          <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+            <i class="my_icon fa fa-twitter fa-3x" aria-hidden="true"></i>
+          </a>
+
+          <a aria-label="My Google Plus" target="_blank" href="https://plus.google.com/{{site.gplus_username}}/posts">
+            <i class="my_icon fa fa-google-plus fa-3x" aria-hidden="true"></i>
+          </a>
+      </div>
+      <a class="link" href="#about" data-scroll>{{site.t[page.lang].about_me}}</a>
+      <a class="link" href="#projects" data-scroll>{{site.t[page.lang].projects}}</a>
+  </div>
+  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+</div>
+
+<section id="about">
+  <div class="container">
+    <div class="user-details">
+      <h3> {{site.t[page.lang].homepage.expertise}} </h3>
+      <p> {{site.t[page.lang].homepage.user_description}} </p>
+    </div>
+    <div class="row user">
+      <div class="four columns">
+        <h4>{{site.t[page.lang].homepage.hardware}}</h4>
+        <i class="devicon-html5-plain-wordmark"></i>
+        <i class="devicon-bootstrap-plain-wordmark colored"></i>
+        <i class="devicon-sass-original colored"></i>
+        <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+          Vinyl XOXO lumbersexual</p>
+      </div>
+      <div class="four columns">
+        <h4>{{site.t[page.lang].homepage.languages}}</h4>
+        <i class="devicon-python-plain"></i>
+        <i class="devicon-cplusplus-plain"></i>
+        <i class="devicon-c-plain"></i>
+        <i class="devicon-java-plain"></i>
+        <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+          Vinyl XOXO lumbersexual</p>
+      </div>
+      <div class="four columns">
+        <h4>{{site.t[page.lang].homepage.software}}</h4>
+        <i class="devicon-git-plain"></i>
+        <i class="devicon-gulp-plain colored"></i>
+        <i class="devicon-atom-original-wordmark"></i>
+        <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+          Vinyl XOXO lumbersexual</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="user-details">
+      <h3>{{site.t[page.lang].homepage.projects}}</h3>
+    </div>
+    <div class="row user-projects">
+      <div class="six columns images">
+        <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | prepend: site.baseurl }}" />
+      </div>
+      <div class="six columns">
+        <h5> Project Title </h5>
+        <li> Featured Skills</li>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a class="project-link" href="#">Check it out</a>
+      </div>
+    </div>
+    <div class="row user-projects">
+      <div class="six columns">
+        <img alt="mountains" src="{{ "/assets/img/skate.jpg" | prepend: site.baseurl }}" />
+      </div>
+      <div class="six columns">
+        <h5> Project Title </h5>
+        <ul>
+          <li> Featured Skills</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a class="project-link" href="#">Check it out</a>
+      </div>
+    </div>
+  </div>
+</section>
