@@ -1,91 +1,50 @@
----
-layout: compress
----
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
-  <head>
-    <title> {{ site.title }} </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    {% if page.ready == false %}
-      <meta name="robots" content="noindex, nofollow" />
-    {% endif %}
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css" />
-    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700|Crete+Round" rel="stylesheet" type="text/css">
-
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-  {% for page in pages %}
-    <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
-  {% endfor %}
-
-  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-  {% for post in posts %}
-    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
-  {% endfor %}
-
-  {% assign projects=site.projects | where:"ref", page.ref | sort: 'lang' %}
-  {% for project in projects %}
-    <link rel="alternate" hreflang="{{ project.lang }}" href="{{ project.url }}" />
-  {% endfor %}
-  </head>
+<html lang="en">
+  {% include head.html %}
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 text-left">
-            {% if page.url != "/"  %}
-              <a href="/">&lt {{site.t[page.lang].back}}</a>
+    <header style="background-color: #1a222c; padding-top: 1em; padding-bottom: 1em;">
+      <div class="container">
+        <div class="row" style="color: #fff; text-align: center;">
+          <div class="twelve columns" style="margin-bottom: 1em;">
+            <h1 style="margin-bottom: 0em">Destro Fabrizio</h1>
+            <span style="font-size: 1.5em;"> Software engineer</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="twelve columns" style="text-align: center;">
+            {% if site.linkedin %}
+              <a style="color: #fff; text-decoration: none; margin-left: 0.5em;" href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
+                <i class="my_icon fa fa-linkedin fa-2x"></i>
+              </a>
             {% endif %}
-        </div>
-        <div class="col-sm-6 text-right">
-          <ul class="list-inline" style="font-size: 1.3em; align: right;">
-            <li>{{site.t[page.lang].language}}:</li>
-            {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-            {% for page in pages %}
-            <li>
-              <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
-            </li>
-            {% endfor %}
 
-            {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-            {% for post in posts %}
-            <li>
-              <a href="{{ post.url }}" class="{{ post.lang }}">{{ page.lang }}</a>
-            </li>
-            {% endfor %}
+            {% if site.github %}
+              <a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  href="https://www.github.com/{{site.github}}" target="_blank">
+                <i class="my_icon fa fa-github fa-2x"></i>
+              </a>
+            {% endif %}
 
-            {% assign projects=site.projects | where:"ref", page.ref | sort: 'lang' %}
-            {% for project in projects %}
-            <li>
-              <a href="{{ project.url }}" class="{{ project.lang }}">{{ project.lang }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-{{ content }}
-      <div class="row">
-        <div class="col-sm-12 text-right" style="margin-top: 1em; margin-bottom: 0.5em">
-          <small>A personal website made with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.</small>
+            {% if site.email %}
+            <a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  aria-label="Send email" href="mailto:{{site.email}}">
+              <i class="my_icon fa fa-envelope fa-2x"></i>
+            </a>
+            {% endif %}
+
+            {% if site.twitter %}
+            <a style="color: #fff; text-decoration: none; margin-left: .5em;"  aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+              <i class="my_icon fa fa-twitter fa-2x" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+
+            {% if site.google_plus %}
+            <a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  aria-label="My Google Plus" target="_blank" href="https://plus.google.com/{{site.google_plus}}/posts">
+              <i class="my_icon fa fa-google-plus fa-2x" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+          </div>
         </div>
       </div>
-    </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    <script type="text/javascript">
-      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-          event.preventDefault();
-          $(this).ekkoLightbox();
-      });
-    </script>
+    </header>
+      {{ content }}
+      {% include footer.html %}
   </body>
-</html>

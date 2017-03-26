@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://destro.me" # the base hostname & protocol for your site
 
 gravatar: b0fdc38f853e5fc1809a209f6caaf0f9
-email:
+#email:
 web: http://www.bbqcode.it
 google_plus: 106300469229847540771
 linkedin: fdestro
@@ -40,16 +40,48 @@ t:
       tools: "Tools"
       materials: "Materials"
       gallery: "Gallery"
+    footer:
+      built_with: "Built with Jekyll, theme based on <a href='https://github.com/nrandecker/particle'>particle</a> by <a href='https://nrandecker.github.io'>Nathan Randecker</a>"
+    homepage:
+      username: "Destro Fabrizio"
+      user_title: "Software engineer"
+      about_me: "About me"
+      projects: "Projects"
+      expertise: "Expertise"
+      user_description: "Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS."
+      languages: "Languages"
+      software: "Software"
+      hardware: "Hardware"
   it:
     back: "Indietro"
     toc: "Indice"
     language: "lingua"
     license: "Licenza"
     not_available: "non disponibile in"
+    about_me: "Su di me"
+    projects: "Progetti"
+    user_title: "Software engineer"
     making:
       tools: "Strumentazioni"
       materials: "Materiali"
       gallery: "Galleria"
+    footer:
+      built_with: "Costruito con Jekyll, tema basato su <a href='https://github.com/nrandecker/particle'>particle</a> di <a href='https://nrandecker.github.io'>Nathan Randecker</a>"
+    homepage:
+      username: "Destro Fabrizio"
+      user_title: "Software engineer"
+      about_me: "Su di me"
+      projects: "Progetti"
+      expertise: "Competenze"
+      user_description: "Sono Fabrizio Destro un ingegnere che ama la Computer Graphics e la Computer Vision. Mi piace programmare in C++ e Python ma non vedo l'ora di sperimentare sempre con nuove cose. Utilizzerò questo sito per pubblicare alcuni dei miei progetti personali. Se volete contattarmi potete farlo su linkedin o github."
+      languages: "Linguaggi e librerie"
+      languages_description: "Queste sono alcuni dei linguaggi con cui ho lavorato: C++ e Python sono i linguaggi che preferisco e con cui ho più esperienza. Ho anche esperienza nell'uso di Java su Android, e di C# su Unity. Altri linguaggi con cui ho lavorato sono javascript, html and css. I linguaggi di programmazione non sono tutto, queste sono alcune delle librerie con cui ho lavorato: Qt4, Qt5, Boost e OpenGL con C++. jupyter, numpy e matplotlib con Python Qui potete trovare un elenco di progetto a cui ho lavorato o contribuito."
+
+      software: "Software"
+      software_description: "Alcuni dei programmi che utilizzo per lo sviluppo. Uso regolarmente CLion e PyCharm per lavorare sui miei progetti, ho anche esperienza nell'utilizzo di Visual Studio. Ho anche utilizzato Android Studio e Unity Conoscere git è un dovere per ogni programmatore e lo uso per ogni progetto su cui lavoro. Alcuni dei programmi che utilizzo nel mio tempo libero per lavorare su progetti personali. Utilizzo Blender per la modellazione solida 3D e per l'animazione. Quando lavoro sui miei progetti Fai da te utilizzo AutoCAD per il disegno tecnico 2D e Autodesk Inventor per la modellazione 3D e l'assemblaggio di strutture. Quando posso mi piace sperimentare con GIMP e Inkscape."
+
+      hardware: "Hardware"
+      hardware_description: "Alcuni dell'hardware che utilizzo nello sviluppo di progetti personali. Laser Cut WL1290: macchinario per il taglio al laser di materiali come compensati e plastiche. Arduino Board: dispositivo elettronico di facile utilizzo per la realizzazione di piccoli progetti elettronici."
 
 collections:
   projects:
@@ -60,6 +92,10 @@ collections:
 compress_html:
   clippings: all
   comments:  ["<!-- ", " -->"]
+
+# User settings
+username: Destro Fabrizio
+user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
 
 # Build settings
 markdown: kramdown
