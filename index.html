@@ -1,156 +1,227 @@
 ---
 layout: default
 lang: it
-ref: homepage
 ---
 
-<!-- <div class="row">
-  <div class="col-sm-12 text-center">
-    <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre">
-  </div>
-</div> -->
-
-
-<div class="row" style="margin-top: 1.5em">
-  <div class="col-sm-12 text-center">
-    <h1>Destro Fabrizio</h1>
-    <ul class="list-inline">
-      {% if site.linkedin %}
-      <li>
-        <a href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
-          <i style="color: #0077b5" class="fa fa-linkedin fa-3x"></i>
-        </a>
-      </li>
-      {% endif %}
-      {% if site.github %}
-      <li>
-        <a href="https://www.github.com/{{site.github}}" target="_blank">
-          <i style="color: #000" class="fa fa-github fa-3x"></i>
-        </a>
-      </li>
-      {% endif %}
-      <!--{% if site.google_plus %}
-      <li>
-        <a href="https://plus.google.com/{{site.google_plus}}" target="_blank">
-          <i style="color: #d34836" class="fa fa-google fa-3x"></i>
-        </a>
-      </li>
-      {% endif %}-->
-    </ul>
-    <p class="lead text-justify"> Ciao sono Fabrizio Destro un ingegnere che ama la <b>Computer Graphics</b> e la <b>Computer Vision</b>.
-    Mi piace programmare in <b>C++</b> e <b>Python</b> ma non vedo l'ora di sperimentare sempre con nuove cose.
-    Utilizzerò questo sito per pubblicare alcuni dei miei progetti personali. Se volete contattarmi potete farlo su <b>linkedin</b> o <b>github</b>.</p>
-  </div>
-</div>
-
-<div class="row">
-  <h2 class="text-center" style="margin-top: 0.8em; margin-bottom: 1em">Capacità tecniche</h2>
-
-  <div class="col-sm-4">
-    <h3>Linguaggi e librerie</h3>
-    <p> Queste sono alcuni dei linguaggi con cui ho lavorato:</p>
-    <ul class="text-justify">
-      <li><b>C++</b> e <b>Python</b> sono i linguaggi che preferisco e con cui ho più esperienza.</li>
-      <li>Ho anche esperienza nell'uso di <b>Java</b> su <b>Android</b>, e di <b>C#</b> su <b>Unity</b>.</li>
-      <li>Altri linguaggi con cui ho lavorato sono <b>javascript</b>, <b>html</b> and <b>css</b>.</li>
-    </ul>
-
-    <p>I linguaggi di programmazione non sono tutto, queste sono alcune delle librerie con cui ho lavorato:</p>
-    <ul class="text-justify">
-      <li><b>Qt4</b>, <b>Qt5</b>, <b>Boost</b> e <b>OpenGL</b> con C++.</li>
-      <li><b>jupyter</b>, <b>numpy</b> e <b>matplotlib</b> con Python</li>
-    </ul>
-
-    <p> <a href="{{ site.baseurl }}{% link projects/index.html %}">Qui</a> potete trovare un elenco di progetto a cui ho lavorato o contribuito. <p>
-  </div>
-
-  <div class="col-sm-4">
-    <h3>Software</h3>
-    <p>Alcuni dei programmi che utilizzo per lo sviluppo.</p>
-    <ul clas="text-justify">
-      <li>Uso regolarmente <b>CLion</b> e <b>PyCharm</b> per lavorare sui miei progetti, ho anche esperienza nell'utilizzo di <b>Visual Studio</b>.</li>
-      <li>Ho anche utilizzato <b>Android Studio</b> e <b>Unity</b></li>
-      <li>Conoscere <b>git</b> è un dovere per ogni programmatore e lo uso per ogni progetto su cui lavoro. </li>
-    </ul>
-    <p>Alcuni dei programmi che utilizzo nel mio tempo libero per lavorare su progetti personali. </p>
-    <ul class="text-justify">
-      <li>Utilizzo <b>Blender</b> per la modellazione solida 3D e per l'animazione.</li>
-      <li>Quando lavoro sui miei progetti Fai da te utilizzo <b>AutoCAD</b> per il disegno tecnico 2D e <b>Autodesk Inventor</b> per la modellazione 3D e l'assemblaggio di strutture.</li>
-      <li>Quando posso mi piace sperimentare con <b>GIMP</b> e <b>Inkscape</b>.</li>
-    </ul>
-  </div>
-
-  <div class="col-sm-4">
-    <h3>Hardware</h3>
-    <p>Alcuni dell'hardware che utilizzo nello sviluppo di progetti personali.</p>
-    <ul clas="text-justify">
-      <li><b>Laser Cut WL1290</b>: macchinario per il taglio al laser di materiali come compensati e plastiche.</li>
-      <li><b>Arduino Board</b>: dispositivo elettronico di facile utilizzo per la realizzazione di piccoli progetti elettronici.</li>
-    </ul>
-  </div>
-
-    <!-- <div class="row">
-      <div class="col-sm-12">
-        <h3>Statistics <small> because at the end of the day we all care about how much code we write</small></h3>
-        <ul>
-          <li> <b>c++</b> 30.000 lines of code (30%). </li>
-        </ul>
-        <p> * these data is generated automatically with only the help of <b>python</b>, learn more</p>
+<div id="particles-js">
+  <div class="content" style="padding-bottom: 1em;">
+    <!--<div class="row">
+      <span class="flag-icon flag-icon-it"></span>
+      <span class="flag-icon flag-icon-gb"></span>
+    </div>-->
+    <!--<div class="row">
+      <div style="color: #fff; text-align: center;" class="twelve columns">
+        <h1 style="margin-bottom: 0">{{site.username}}</h1>
+        <p>{{site.t[page.lang].user_title}}</p>
       </div>
-    </div> -->
+    </div>-->
+
+    <!--<div class="icons-header">
+        {% if site.linkedin %}
+          <a href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
+            <i class="my_icon fa fa-linkedin fa-3x"></i>
+          </a>
+        {% endif %}
+
+        {% if site.github %}
+          <a href="https://www.github.com/{{site.github}}" target="_blank">
+            <i class="my_icon fa fa-github fa-3x"></i>
+          </a>
+        {% endif %}
+
+        {% if site.email %}
+        <a aria-label="Send email" href="mailto:{{site.email}}">
+          <i class="my_icon fa fa-envelope fa-3x"></i>
+        </a>
+        {% endif %}
+
+        {% if site.twitter %}
+        <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+          <i class="my_icon fa fa-twitter fa-3x" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+
+        {% if site.google_plus %}
+        <a aria-label="My Google Plus" target="_blank" href="https://plus.google.com/{{site.google_plus}}/posts">
+          <i class="my_icon fa fa-google-plus fa-3x" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+    </div>-->
+    <a class="link" href="#about" data-scroll>{{site.t[page.lang].homepage.about_me}}</a>
+    <a class="link" href="#skills" data-scroll>{{site.t[page.lang].homepage.expertise}}</a>
+    <!--<a class="link" href="#projects" data-scroll>{{site.t[page.lang].homepage.projects}}</a>
+    <a class="link" href="blog/">Blog</a>-->
+  </div>
 </div>
 
-<!--<div class="row">
-  <div class="col-sm-12">
-    <h2 class="text-center">Blog</h2>
+<div class="container">
+  <div id="about" class="row" style="padding-top: 1em; padding-bottom: .1em;">
+    <h3> {{site.t[page.lang].homepage.about_me}} </h3>
+    <p> {{site.t[page.lang].homepage.user_description}} </p>
   </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <ul>
-        {% assign posts = (site.posts | where: "lang", page.lang) %}
-        {% for post in posts %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <p>{{post.description}}</p>
-            {% if post.preview %}
-              <img src="{{ post.preview }}">
-            {% endif %}
-            <small>{{ post.date | date: '%B %d, %Y' }}</small>
-          </li>
-        {% endfor %}
-      </ul>
+</div>
+
+<section id="skills">
+  <div class="container">
+    <div class="row" style="padding-top: .1em; padding-bottom: .1em;">
+      <div class="twelve columns">
+        <h3> {{site.t[page.lang].homepage.expertise}} </h3>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1em;">
+      <div class="four columns">
+        <p style="margin-bottom: 0">Linguaggi di programmazione</p>
+      </div>
+      <div class="eight columns">
+        <ul style="margin-bottom: 0">
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-python-plain"></span> python </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-cplusplus-plain"></span> c++ </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-c-plain"></span> c </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-csharp-plain"></span> c# </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-java-plain"></span> java </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1em;">
+      <div class="four columns">
+        <p style="margin-bottom: 0">Linguaggi di programmazione web</p>
+      </div>
+      <div class="eight columns">
+        <ul style="margin-bottom: 0">
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-javascript-plain"></span> javascript </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-typescript-plain"></span> typescript </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-html5-plain"></span> html </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-css3-plain"></span> css </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1em;">
+      <div class="four columns">
+        <p style="margin-bottom: 0">Strumenti per la gestione del codice</p>
+      </div>
+      <div class="eight columns">
+        <ul style="margin-bottom: 0">
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-git-plain"></span> git </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-gitlab-plain"></span> gitlab </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1em;">
+      <div class="four columns">
+        <p style="margin-bottom: 0">Sistemi operativi</p>
+      </div>
+      <div class="eight columns">
+        <ul style="margin-bottom: 0">
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-ubuntu-plain"></span> ubuntu </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-windows8-plain"></span> windows </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-apple-plain"></span> macosx </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1em;">
+      <div class="four columns">
+        <p style="margin-bottom: 0">Ambienti di sviluppo</p>
+      </div>
+      <div class="eight columns">
+        <ul style="margin-bottom: 0">
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicons devicons-visualstudio"></span> vs2015 </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-jetbrains-plain"></span> pycharm </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-jetbrains-plain"></span> clion </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicons devicons-unity_small"></span> unity </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1em;">
+      <div class="four columns">
+        <p style="margin-bottom: 0">Programmi di modellazione</p>
+      </div>
+      <div class="eight columns">
+        <ul style="margin-bottom: 0">
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 blender </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 autodesk autocad </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 autodesk inventor </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1em;">
+      <div class="four columns">
+        <p style="margin-bottom: 0">Programmi di grafica</p>
+      </div>
+      <div class="eight columns">
+        <ul style="margin-bottom: 0">
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-gimp-plain"></span> gimp </li>
+          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-inkscape-plain"></span> inkscape </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>-->
+</section>
 
 <!--
-<div class="row">
-  <h2 class="text-center" style="margin-top: 0.8em; margin-bottom: 1em">Progetti</h2>
-  <p> Questi sono solo alcuni dei progetti software in evidenza, per un elenco completo <a href="{{ site.baseurl }}{% link projects/index.html %}">clicca qui</a></p>
-
-  {% assign projects=site.projects | where:"lang", page.lang %}
-  {% include build_list_with_preview.html posts=projects %}
-
-  <div class="col-sm-4">
-    <h3>Software</h3>
-    <p> Questi sono alcuni dei progetti su cui ho lavorato, alcuni sono disponibili su github altri non sono ancora pronti ad essere condivisi.</p>
-    {% assign projects=site.data.projects.applications | where:"lang", page.lang %}
-    {% include build_list_with_preview.html posts=projects %}
-  </div>
-  <div class="col-sm-4">
-    <h3>Scripts</h3>
-    <p>Questi sono alcuni degli script che utilizzo per automatizzare operazioni tediose e penso siano interessati da condividere.</p>
-    {% assign scripts=site.scripts | where:"lang", page.lang %}
-    {% include build_list_with_preview.html posts=scripts %}
-  </div>
-  <div id="making-column" class="col-sm-4">
-    <h3>Making</h3>
-    {% assign making_posts=site.making | where:"lang", page.lang %}
-    {% include build_list_with_preview.html posts=making_posts list_class="list-unstyled" %}
-
-    <h3>Modellazione</h3>
-    {% assign modelling_posts=site.modelling | where:"lang", page.lang %}
-    {% include build_list_with_preview.html posts=modelling_posts list_class="list-unstyled" %}
+<div class="container">
+  <div id="projects" class="row" style="padding-top: 1em; padding-bottom: .1em;">
+    <h3> {{site.t[page.lang].homepage.projects}} </h3>
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
   </div>
 </div>
+-->
+
+<!--
+<div class="container">
+  <div id="projects" class="row" style="padding-top: 1em; padding-bottom: .1em;">
+    <h3> Blog </h3>
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+    <img src="holder.js/200x100">
+  </div>
+</div>
+-->
+
+<!--
+<section id="projects">
+  <div class="container">
+    <div class="user-details">
+      <h3>{{site.t[page.lang].homepage.projects}}</h3>
+    </div>
+    <div class="row user-projects">
+      <div class="six columns images">
+        <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | prepend: site.baseurl }}" />
+      </div>
+      <div class="six columns">
+        <h5> Project Title </h5>
+        <li> Featured Skills</li>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a class="project-link" href="#">Check it out</a>
+      </div>
+    </div>
+    <div class="row user-projects">
+      <div class="six columns">
+        <img alt="mountains" src="{{ "/assets/img/skate.jpg" | prepend: site.baseurl }}" />
+      </div>
+      <div class="six columns">
+        <h5> Project Title </h5>
+        <ul>
+          <li> Featured Skills</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a class="project-link" href="#">Check it out</a>
+      </div>
+    </div>
+  </div>
+</section>
 -->
