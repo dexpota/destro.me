@@ -2,6 +2,7 @@
 layout: default
 lang: it
 ref: mobile
+published: false
 ---
 
 ## Applicazioni mobile

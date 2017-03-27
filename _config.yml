@@ -83,6 +83,7 @@ t:
       hardware: "Hardware"
       hardware_description: "Alcuni dell'hardware che utilizzo nello sviluppo di progetti personali. Laser Cut WL1290: macchinario per il taglio al laser di materiali come compensati e plastiche. Arduino Board: dispositivo elettronico di facile utilizzo per la realizzazione di piccoli progetti elettronici."
 
+# You can find these data inside _data.
 collections:
   projects:
     output: true
@@ -100,3 +101,6 @@ user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun 
 # Build settings
 markdown: kramdown
 theme: minima
+
+# Exclude these files
+exclude: ['Gemfile', 'Gemfile.lock', 'README.md']
