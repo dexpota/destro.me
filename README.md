@@ -1,4 +1,18 @@
-## Variabili YAML
+## Installazione e utilizzo
+
+`gem install bundler jekyll`
+
+`bundle install`
+`bundle exec jekyll serve`
+
+## Dettagli
+
+### Organizzazione delle cartelle
+
+- *_data*: tutti i file con estensione `.yml`, `.yaml`, `.json`, `.csv` o
+  `.tsv` sono caricati e disponibili attraverso la variable `site.data`;
+
+### Variabili YAML
 
 Ogni post o pagine del sito web definisce le seguenti variabili.
 
