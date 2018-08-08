@@ -1,50 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-    <header style="background-color: #1a222c; padding-top: 1em; padding-bottom: 1em;">
-      <div class="container">
-        <div class="row" style="color: #fff; text-align: center;">
-          <div class="twelve columns" style="margin-bottom: 1em;">
-            <h1 style="margin-bottom: 0em">Destro Fabrizio</h1>
-            <span style="font-size: 1.5em;"> Software engineer</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="twelve columns" style="text-align: center;">
-            {% if site.linkedin %}
-              <a style="color: #fff; text-decoration: none; margin-left: 0.5em;" href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
-                <i class="my_icon fa fa-linkedin fa-2x"></i>
-              </a>
-            {% endif %}
-
-            {% if site.github %}
-              <a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  href="https://www.github.com/{{site.github}}" target="_blank">
-                <i class="my_icon fa fa-github fa-2x"></i>
-              </a>
-            {% endif %}
-
-            {% if site.email %}
-            <a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  aria-label="Send email" href="mailto:{{site.email}}">
-              <i class="my_icon fa fa-envelope fa-2x"></i>
-            </a>
-            {% endif %}
-
-            {% if site.twitter %}
-            <a style="color: #fff; text-decoration: none; margin-left: .5em;"  aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
-              <i class="my_icon fa fa-twitter fa-2x" aria-hidden="true"></i>
-            </a>
-            {% endif %}
-
-            <!--{% if site.google_plus %}
-            <a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  aria-label="My Google Plus" target="_blank" href="https://plus.google.com/{{site.google_plus}}/posts">
-              <i class="my_icon fa fa-google-plus fa-2x" aria-hidden="true"></i>
-            </a>
-            {% endif %}-->
-          </div>
-        </div>
-      </div>
-    </header>
-      {{ content }}
-      {% include footer.html %}
-  </body>
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+		{{ content }}
+		{% include footer.html %}
+	</body>
+</html>
