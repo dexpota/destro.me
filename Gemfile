@@ -24,3 +24,5 @@ group :jekyll_plugins do
 	gem 'jekyll-gist'
 #   gem "jekyll-github-metadata", "~> 1.0"
 end
+
+gem "jekyll-minifier", "~> 0.1.6"

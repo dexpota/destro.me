@@ -1,43 +1,56 @@
-<header style="background-color: #1a222c; padding-top: 1em; padding-bottom: 1em;">
+<header class="header">
   <div class="container">
-	<div class="row" style="color: #fff; text-align: center;">
-	  <div class="twelve columns" style="margin-bottom: 1em;">
-		<h1 style="margin-bottom: 0em">Destro Fabrizio</h1>
-		<span style="font-size: 1.5em;"> Software engineer</span>
+    <!-- Language navigation -->
+	<!--<div class="row">-->
+      <!--<span class="flag-icon flag-icon-it"></span>-->
+      <!--<span class="flag-icon flag-icon-gb"></span>-->
+    <!--</div>-->
+
+	<div class="row">
+	  <div class="twelve columns">
+		<h1>{{site.username}}</h1>
+		<span>{{site.t[page.lang].user_title}}</span>
 	  </div>
 	</div>
+
 	<div class="row">
-	  <div class="twelve columns" style="text-align: center;">
+	  <div class="twelve columns icons-header">
 		{% if site.linkedin %}
-		  <a style="color: #fff; text-decoration: none; margin-left: 0.5em;" href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
-			<i class="my_icon fa fa-linkedin fa-2x"></i>
+		  <a href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
+			<i class="icon fa fa-linkedin fa-2x"></i>
 		  </a>
 		{% endif %}
 
 		{% if site.github %}
-		  <a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  href="https://www.github.com/{{site.github}}" target="_blank">
-			<i class="my_icon fa fa-github fa-2x"></i>
+		  <a href="https://www.github.com/{{site.github}}" target="_blank">
+			<i class="icon fa fa-github fa-2x"></i>
 		  </a>
 		{% endif %}
 
 		{% if site.email %}
-		<a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  aria-label="Send email" href="mailto:{{site.email}}">
-		  <i class="my_icon fa fa-envelope fa-2x"></i>
-		</a>
+			<a aria-label="Send email" href="mailto:{{site.email}}">
+			  <i class="icon fa fa-envelope fa-2x"></i>
+			</a>
 		{% endif %}
 
 		{% if site.twitter %}
-		<a style="color: #fff; text-decoration: none; margin-left: .5em;"  aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
-		  <i class="my_icon fa fa-twitter fa-2x" aria-hidden="true"></i>
-		</a>
+			<a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+			  <i class="icon fa fa-twitter fa-2x" aria-hidden="true"></i>
+			</a>
 		{% endif %}
 
 		{% if site.google_plus %}
-		<a style="color: #fff; text-decoration: none; margin-left: 0.5em;"  aria-label="My Google Plus" target="_blank" href="https://plus.google.com/{{site.google_plus}}/posts">
-		  <i class="my_icon fa fa-google-plus fa-2x" aria-hidden="true"></i>
-		</a>
+			<a aria-label="My Google Plus" target="_blank" href="https://plus.google.com/{{site.google_plus}}/posts">
+			  <i class="icon fa fa-google-plus fa-2x" aria-hidden="true"></i>
+			</a>
 		{% endif %}
 	  </div>
 	</div>
+	
+	<!-- Links to other sections -->
+	<!--<a class="link" href="#about" data-scroll>{{site.t[page.lang].homepage.about_me}}</a>-->
+    <!--<a class="link" href="#skills" data-scroll>{{site.t[page.lang].homepage.expertise}}</a>-->
+    <!--<a class="link" href="#projects" data-scroll>{{site.t[page.lang].homepage.projects}}</a>-->
+    <!--<a class="link" href="blog/">Blog</a>-->
   </div>
 </header>

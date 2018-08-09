@@ -9,8 +9,14 @@
 
 ### Organizzazione delle cartelle
 
-- *_data*: tutti i file con estensione `.yml`, `.yaml`, `.json`, `.csv` o
-  `.tsv` sono caricati e disponibili attraverso la variable `site.data`;
+- *_data*: tutti i file in questa cartella con estensione `.yml`, `.yaml`,
+  `.json`, `.csv` o `.tsv` sono caricati e disponibili attraverso la variable
+`site.data`;
+
+### Organizzazione layout.
+
+- `default.html` questo è il layout che definisce lo scheletro di ogni pagina,
+  si compone dei file `head.html`, `header.html` e `footer.html`.
 
 ### Variabili YAML
 

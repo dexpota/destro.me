@@ -112,17 +112,32 @@ body {
   }
 }
 
+.header {
+	background-color: $main; 
+	padding-top: 1.5em; 
+	padding-bottom: 1.5em;
+
+	color: #fff;
+	text-align: center;
+
+	h1 {
+		margin-bottom: 0em;
+	}
+	
+	span {
+		font-size: 1.5em;
+	}
+}
+
 .icons-header {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-bottom: 2em;
   .icon {
     text-align: center;
     color: #FFF;
     padding: 10px;
-    margin: 2px;
-    border-radius: 50%;
+    margin: .5em;
     border: 2px solid #FFF;
     transition: all .7s;
     &:hover {
@@ -138,23 +153,6 @@ body {
       height: 35px;
       font-size: 35px;
     }
-  }
-}
-
-.my_icon {
-  text-align: center;
-  color: #FFF;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-right: 10px;
-  transition: all .7s;
-  &:hover {
-    background: #FFF;
-    color: $main;
-  }
-  &:active {
-    color: $main;
-    background: #FFF;
   }
 }
 
@@ -264,23 +262,25 @@ body {
 }
 
 .footer {
-  background: $main;
+  //background: $main;
   padding: 10px 0;
-  margin-top: 100px;
   text-align: center;
-  color: #FFF;
+  //color: #FFF;
   .love {
     color: red;
   }
   a {
     text-decoration: none;
     margin: 0;
-    color: #FFF;
+    //color: #FFF;
     &:hover{
       color: $sec;
     }
     &:active {
       color: $sec;
     }
+  }
+  p {
+    margin-bottom: 0;
   }
 }
