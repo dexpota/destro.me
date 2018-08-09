@@ -92,7 +92,7 @@ collections:
 
 compress_html:
   clippings: all
-  comments: ["<!-- ", " -->"]
+  comments: ["<!--", "-->"]
 
 # User settings
 username: Destro Fabrizio
