@@ -18,6 +18,24 @@
 - `default.html` questo è il layout che definisce lo scheletro di ogni pagina,
   si compone dei file `head.html`, `header.html` e `footer.html`.
 
+### Plugins
+
+- `link_github.html`
+	- `<buttons>` può contenere uno o più tra i seguenti valori: follow, watch, star, fork, issues, download;
+	- `<user>`: utente del repository;
+	- `<repository>`: nome del repository;
+	- `<[follow|watch|star|fork|issues]_count>`: includi il numero di elementi;
+	- `<[follow|watch|star|fork|issues|download]_large>`: utilizza la versione larga dell'icona;
+
+```liquid
+{% include link_github.html 
+	buttons="watch star fork" 
+	user="dexpota" dexpota
+	repository="type-do-get" 
+	watch_count=true 
+%}
+```
+
 ### Variabili YAML
 
 Ogni post o pagine del sito web definisce le seguenti variabili.
