@@ -203,7 +203,7 @@ body {
 }
 
 .user-projects {
-  margin: 40px auto;
+  //margin: auto;
   img {
     max-width: 100%;
     height: auto;
@@ -212,12 +212,16 @@ body {
   h5 {
     margin: 0;
   }
+  ul {
+    margin-bottom: .5em;
+  }
   li {
-    color: $main;
+    // color: $main;
     font-size: 1.1rem;
   }
   p {
     margin-right: 5px;
+	margin-bottom: .5em;
   }
 }
 
@@ -284,3 +288,22 @@ body {
     margin-bottom: 0;
   }
 }
+
+.label {
+    color: #fff;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.label.color {
+	background-color: $main;
+}
+

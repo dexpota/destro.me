@@ -3,6 +3,62 @@ layout: default
 lang: it
 ---
 
+<section id="projects">
+  <div class="container">
+    <div class="row">
+	  <div class="twelve columns">
+        <h3>{{site.t[page.lang].homepage.projects}}</h3>
+	  </div>
+    </div>
+	
+	<h2>Applicazioni</h2>
+	<p> Una semplice lista di tutti i progetti su cui ho lavorato. </p>
+    <ul>
+    {% for key_value in site.data.projects.applications %}
+			{% assign application = key_value[1] %}
+			{% if application.title[page.lang] %}
+				{% assign title = application.title[page.lang] %}
+			{% else %}
+				{% assign title = application.title %}
+			{% endif %}
+      <li>
+				<strong>{{ title }}</strong>: {{ application.description[page.lang] }}
+        {% if application.github %}
+					<ul>
+						<li>
+							Il progetto è disponibile su github, <a href="{{application.github}}" target="_blank">clicca qui</a>
+						</li>
+					</ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+
+    <div class="row user-projects">
+     <div class="twelve columns">
+        <h5> Project Title </h5>
+        <ul>
+          <span class="label color" style="display:inline">Featured Skills</span>
+          <span class="label color" style="display:inline">Skills</span>
+          <span class="label color" style="display:inline">ddd Skills</span>
+          <span class="label color" style="display:inline">d</span>
+          <span class="label color" style="display:inline">dd Skills</span>
+          <span class="label color" style="display:inline">Skills</span>
+          <span class="label color" style="display:inline">Skills</span>
+          <span class="label color" style="display:inline">Featured Skills</span>
+          <span class="label color" style="display:inline">Featdsadured</span>
+          <span class="label color" style="display:inline">Skills</span>
+          <span class="label color" style="display:inline">sadsa</span>
+          <span class="label color" style="display:inline">Featured Skills</span>
+          <span class="label color" style="display:inline">Feat udsared aaaaaaaaaa</span>
+       </ul>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a class="project-link" href="#">Check it out</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!--<div class="container">
   <div id="about" class="row" style="padding-top: 1em; padding-bottom: .1em;">
     <h3> {{site.t[page.lang].homepage.about_me}} </h3>
@@ -135,64 +191,4 @@ lang: it
   </div>
 </section>-->
 
-<!--
-<div class="container">
-  <div id="projects" class="row" style="padding-top: 1em; padding-bottom: .1em;">
-    <h3> {{site.t[page.lang].homepage.projects}} </h3>
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-  </div>
-</div>
--->
 
-<!--
-<div class="container">
-  <div id="projects" class="row" style="padding-top: 1em; padding-bottom: .1em;">
-    <h3> Blog </h3>
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-    <img src="holder.js/200x100">
-  </div>
-</div>
--->
-
-<!--
-<section id="projects">
-  <div class="container">
-    <div class="user-details">
-      <h3>{{site.t[page.lang].homepage.projects}}</h3>
-    </div>
-    <div class="row user-projects">
-      <div class="six columns images">
-        <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | prepend: site.baseurl }}" />
-      </div>
-      <div class="six columns">
-        <h5> Project Title </h5>
-        <li> Featured Skills</li>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a class="project-link" href="#">Check it out</a>
-      </div>
-    </div>
-    <div class="row user-projects">
-      <div class="six columns">
-        <img alt="mountains" src="{{ "/assets/img/skate.jpg" | prepend: site.baseurl }}" />
-      </div>
-      <div class="six columns">
-        <h5> Project Title </h5>
-        <ul>
-          <li> Featured Skills</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a class="project-link" href="#">Check it out</a>
-      </div>
-    </div>
-  </div>
-</section>
--->
