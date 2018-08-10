@@ -1,0 +1,12 @@
+<div class="row user-projects" style="margin-bottom: .5em">
+ <div class="twelve columns">
+  <i style="vertical-align:middle;" class="icon fa fa-github fa-2x"></i>
+  <h4 style="display:inline-block; vertical-align: middle; margin-bottom: 0; margin-right:.5em; margin-left:.2em;"> 
+	<a href="{{ include.url }}">{{ include.title }}</a>
+  </h4>
+   {% if include.language %}
+	<span class="label color">{{ include.language }}</span>
+   {% endif %}
+   <p>{{ include.description }}</p>
+ </div>
+</div>

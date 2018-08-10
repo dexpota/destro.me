@@ -1,0 +1,121 @@
+[
+{
+  "name": ".cheat",
+  "description": "A bunch of cheat sheets.",
+  "fork": false,
+  "language": null,
+  "html_url": "https://github.com/dexpota/.cheat"
+},
+{
+  "name": ".dotfiles",
+  "description": "A bunch of configuration files I use, feel free to take inspiration by them",
+  "fork": false,
+  "language": "Shell",
+  "html_url": "https://github.com/dexpota/.dotfiles"
+},
+{
+  "name": ".notebooks",
+  "description": "A collection of notes about tech stuff.",
+  "fork": false,
+  "language": null,
+  "html_url": "https://github.com/dexpota/.notebooks"
+},
+{
+  "name": ".snippets",
+  "description": "A collection of code snippets.",
+  "fork": false,
+  "language": null,
+  "html_url": "https://github.com/dexpota/.snippets"
+},
+{
+  "name": "benchpower",
+  "description": "A DIY project to build a simple benchtop power supply using a PSU.",
+  "fork": false,
+  "language": null,
+  "html_url": "https://github.com/dexpota/benchpower"
+},
+{
+  "name": "boost-api-examples",
+  "description": "Some examples of using Boost C++ library.",
+  "fork": false,
+  "language": "C++",
+  "html_url": "https://github.com/dexpota/boost-api-examples"
+},
+{
+  "name": "cpp-library-project-template",
+  "description": "Automatically exported from code.google.com/p/cpp-library-project-template",
+  "fork": false,
+  "language": "CMake",
+  "html_url": "https://github.com/dexpota/cpp-library-project-template"
+},
+{
+  "name": "cpython-api-examples",
+  "description": "Some examples of using the C API of python 2.7.",
+  "fork": false,
+  "language": "C++",
+  "html_url": "https://github.com/dexpota/cpython-api-examples"
+},
+{
+  "name": "destro.me",
+  "description": "Sito web personale costruito con Jekyll",
+  "fork": false,
+  "language": "HTML",
+  "html_url": "https://github.com/dexpota/destro.me"
+},
+{
+  "name": "fabtools",
+  "description": "A python toolbox full of Fablab tools.",
+  "fork": false,
+  "language": "Python",
+  "html_url": "https://github.com/dexpota/fabtools"
+},
+{
+  "name": "gitfav",
+  "description": "An Android application to organize your starred repository on Github.",
+  "fork": false,
+  "language": "Java",
+  "html_url": "https://github.com/dexpota/gitfav"
+},
+{
+  "name": "latex-useful-commands",
+  "description": "A simple latex package with useful commands to easily write math formulas.",
+  "fork": false,
+  "language": "TeX",
+  "html_url": "https://github.com/dexpota/latex-useful-commands"
+},
+{
+  "name": "pyrenderer",
+  "description": "A python implementation of a Monte Carlo ray tracer.",
+  "fork": false,
+  "language": "Python",
+  "html_url": "https://github.com/dexpota/pyrenderer"
+},
+{
+  "name": "qmaven",
+  "description": "A command line utility to help you find java libraries on Maven central",
+  "fork": false,
+  "language": "Python",
+  "html_url": "https://github.com/dexpota/qmaven"
+},
+{
+  "name": "snip",
+  "description": null,
+  "fork": false,
+  "language": "Python",
+  "html_url": "https://github.com/dexpota/snip"
+},
+{
+  "name": "type-do-get",
+  "description": "A bunch of scripts written in Python to make my life a lot easier",
+  "fork": false,
+  "language": "Python",
+  "html_url": "https://github.com/dexpota/type-do-get"
+},
+{
+  "name": "uribuilder",
+  "description": "A small python package to build valid URIs",
+  "fork": false,
+  "language": "Python",
+  "html_url": "https://github.com/dexpota/uribuilder"
+}
+]

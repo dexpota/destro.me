@@ -6,16 +6,25 @@ lang: it
 <section id="projects">
   <div class="container">
     <div class="row">
-	  <div class="twelve columns">
+	  <div class="twelve columns" style="text-align:center; margin-top: 1em;">
         <h3>{{site.t[page.lang].homepage.projects}}</h3>
 	  </div>
     </div>
 	
-	<h2>Applicazioni</h2>
-	<p> Una semplice lista di tutti i progetti su cui ho lavorato. </p>
-    <ul>
-    {% for key_value in site.data.projects.applications %}
-			{% assign application = key_value[1] %}
+	{% for project in site.data.projects.projects %}
+		{% include light-projects.html 
+			title=project.name
+			description=project.description
+			url=project.html_url
+			language=project.language
+		 %}
+		<!--{{ project.name }}
+		{{ project.description }}
+		{{ project.fork }}
+		{{ project.language }}
+		{{ project.html_url }}-->
+
+<!--			{% assign application = key_value[1] %}
 			{% if application.title[page.lang] %}
 				{% assign title = application.title[page.lang] %}
 			{% else %}
@@ -30,32 +39,10 @@ lang: it
 						</li>
 					</ul>
         {% endif %}
-      </li>
+      </li>-->
     {% endfor %}
-    </ul>
 
-    <div class="row user-projects">
-     <div class="twelve columns">
-        <h5> Project Title </h5>
-        <ul>
-          <span class="label color" style="display:inline">Featured Skills</span>
-          <span class="label color" style="display:inline">Skills</span>
-          <span class="label color" style="display:inline">ddd Skills</span>
-          <span class="label color" style="display:inline">d</span>
-          <span class="label color" style="display:inline">dd Skills</span>
-          <span class="label color" style="display:inline">Skills</span>
-          <span class="label color" style="display:inline">Skills</span>
-          <span class="label color" style="display:inline">Featured Skills</span>
-          <span class="label color" style="display:inline">Featdsadured</span>
-          <span class="label color" style="display:inline">Skills</span>
-          <span class="label color" style="display:inline">sadsa</span>
-          <span class="label color" style="display:inline">Featured Skills</span>
-          <span class="label color" style="display:inline">Feat udsared aaaaaaaaaa</span>
-       </ul>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a class="project-link" href="#">Check it out</a>
-      </div>
-    </div>
+
   </div>
 </section>
 
