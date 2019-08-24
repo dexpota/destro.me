@@ -28,11 +28,11 @@
 	- `<[follow|watch|star|fork|issues|download]_large>`: utilizza la versione larga dell'icona;
 
 ```liquid
-{% include link_github.html 
-	buttons="watch star fork" 
+{% include link_github.html
+	buttons="watch star fork"
 	user="dexpota" dexpota
-	repository="type-do-get" 
-	watch_count=true 
+	repository="type-do-get"
+	watch_count=true
 %}
 ```
 
@@ -40,7 +40,7 @@
 
 Ogni post o pagine del sito web definisce le seguenti variabili.
 
-* `lang` specifica la lingua del post o della pagina, i due valori utilizzati 
+* `lang` specifica la lingua del post o della pagina, i due valori utilizzati
 sono `it` e `en`.
-* `ref` è un riferimento univoco al post o alla pagina, viene utilizzato nella 
+* `ref` è un riferimento univoco al post o alla pagina, viene utilizzato nella
 gestione di più versioni in diverse lingue della stessa pagina.
