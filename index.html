@@ -10,9 +10,9 @@ lang: it
         <h3>{{site.t[page.lang].homepage.projects}}</h3>
 	  </div>
     </div>
-	
+
 	{% for project in site.data.projects.projects %}
-		{% include light-projects.html 
+		{% include light-projects.html
 			title=project.name
 			description=project.description
 			url=project.html_url
