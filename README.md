@@ -2,59 +2,58 @@
 
 [![Deploy site to GitHub Pages](https://github.com/dexpota/destro.me/actions/workflows/pages.yml/badge.svg)](https://github.com/dexpota/destro.me/actions/workflows/pages.yml)
 
-## Installazione e utilizzo
+## Installation and Usage
 
 `gem install bundler jekyll`
 
 `bundle install`
 `bundle exec jekyll serve`
 
-## Dettagli
+## Details
 
-### Organizzazione delle cartelle
+### Folder Structure
 
-- *_data*: tutti i file in questa cartella con estensione `.yml`, `.yaml`,
-  `.json`, `.csv` o `.tsv` sono caricati e disponibili attraverso la variable
-`site.data`;
+- *_data*: all files in this folder with the `.yml`, `.yaml`, `.json`, `.csv`,
+  or `.tsv` extension are loaded and available through `site.data`;
 
-### Organizzazione layout.
+### Layout Structure
 
-- `default.html` questo è il layout che definisce lo scheletro di ogni pagina,
-  si compone dei file `head.html`, `header.html` e `footer.html`.
+- `default.html` is the layout that defines the skeleton of each page and is
+  composed of `head.html`, `header.html`, and `footer.html`.
 
 ### Plugins
 
 - `link_github.html`
-	- `<buttons>` può contenere uno o più tra i seguenti valori: follow, watch, star, fork, issues, download;
-	- `<user>`: utente del repository;
-	- `<repository>`: nome del repository;
-	- `<[follow|watch|star|fork|issues]_count>`: includi il numero di elementi;
-	- `<[follow|watch|star|fork|issues|download]_large>`: utilizza la versione larga dell'icona;
+  - `<buttons>` can contain one or more of the following values: follow, watch, star, fork, issues, download;
+  - `<user>`: repository owner;
+  - `<repository>`: repository name;
+  - `<[follow|watch|star|fork|issues]_count>`: include the count;
+  - `<[follow|watch|star|fork|issues|download]_large>`: use the large icon version;
 
 ```liquid
 {% include link_github.html
 	buttons="watch star fork"
-	user="dexpota" dexpota
+	user="dexpota"
 	repository="type-do-get"
 	watch_count=true
 %}
 ```
 
-### Variabili YAML
+### YAML Variables
 
-Ogni post o pagine del sito web definisce le seguenti variabili.
+Each post or page defines the following variables.
 
-* `lang` specifica la lingua del post o della pagina, i due valori utilizzati
-sono `it` e `en`.
-* `ref` è un riferimento univoco al post o alla pagina, viene utilizzato nella
-gestione di più versioni in diverse lingue della stessa pagina.
+* `lang` specifies the language of the post or page; the two supported values
+  are `it` and `en`.
+* `ref` is a unique reference for the post or page, used to manage multiple
+  language versions of the same page.
 
 ## Deploy
 
-Questo sito è pensato per essere pubblicato su **GitHub Pages** con deploy
-automatico da GitHub Actions.
+This site is published on **GitHub Pages** with automatic deployment from
+GitHub Actions.
 
-1. Imposta `Pages` nel repository su `GitHub Actions` come source.
-2. Punta il dominio `destro.me` al sito pubblicato su GitHub Pages.
-3. Se usi Cloudflare, lascia attivo il proxy come preferisci dopo aver verificato
-   che il record DNS punti al target di GitHub Pages configurato nel repository.
+1. Set the repository `Pages` source to `GitHub Actions`.
+2. Point the `destro.me` domain to the site published on GitHub Pages.
+3. If you use Cloudflare, verify the DNS record points to the GitHub Pages
+   target configured in the repository, then enable the proxy if desired.
