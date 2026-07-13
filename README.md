@@ -1,5 +1,7 @@
 # destro.me
 
+[![Deploy site to GitHub Pages](https://github.com/dexpota/destro.me/actions/workflows/pages.yml/badge.svg)](https://github.com/dexpota/destro.me/actions/workflows/pages.yml)
+
 ## Installazione e utilizzo
 
 `gem install bundler jekyll`
@@ -46,3 +48,13 @@ Ogni post o pagine del sito web definisce le seguenti variabili.
 sono `it` e `en`.
 * `ref` è un riferimento univoco al post o alla pagina, viene utilizzato nella
 gestione di più versioni in diverse lingue della stessa pagina.
+
+## Deploy
+
+Questo sito è pensato per essere pubblicato su **GitHub Pages** con deploy
+automatico da GitHub Actions.
+
+1. Imposta `Pages` nel repository su `GitHub Actions` come source.
+2. Punta il dominio `destro.me` al sito pubblicato su GitHub Pages.
+3. Se usi Cloudflare, lascia attivo il proxy come preferisci dopo aver verificato
+   che il record DNS punti al target di GitHub Pages configurato nel repository.
