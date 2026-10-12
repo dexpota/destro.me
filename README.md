@@ -2,12 +2,17 @@
 
 [![Deploy site to GitHub Pages](https://github.com/dexpota/destro.me/actions/workflows/pages.yml/badge.svg)](https://github.com/dexpota/destro.me/actions/workflows/pages.yml)
 
-## Installation and Usage
+## Build with Docker
 
-`gem install bundler jekyll`
+The site can be compiled in a container without installing Ruby or gems on the
+host. From the repository root, run:
 
-`bundle install`
-`bundle exec jekyll serve`
+```sh
+docker buildx build --output type=local,dest=_site .
+```
+
+The generated site is written to `_site/`. Docker Buildx downloads the Ruby
+base image and installs the gems from `Gemfile` during the build.
 
 ## Details
 
