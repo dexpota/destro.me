@@ -1,0 +1,12 @@
+{
+  "prompt": "Revise the referenced Color Block Index homepage for Fabrizio Destro, desktop 1505x1045. Keep the same asymmetric solid color-block identity (vermilion, dusty rose, deep plum, cream) and interest-led typography, but give Fabrizio's short bio substantially more space and visual weight. Use only the actual attached Benchpower, Glados, QApplication dependency-map images; preserve their contents. Exact text only: Fabrizio Destro, Software engineer, the complete existing bio: I'm Fabrizio Destro, an engineer who loves computer graphics and computer vision. I enjoy programming in C++ and Python, and sharing personal and professional projects here., Computer graphics, Computer vision, C++, Python, Experimenting with new ideas, Benchpower, Glados, QApplication dependency map, Projects, Notes, Connect on LinkedIn, Short notes, Longer articles. No invented project copy, dates, metrics, qualifications, or extra claims. Structural change: below a short masthead, make an expansive cream bio panel across the top right half, approximately 50% of page width and 32% of page height. Put the name and role in a separate small left header area, and set the full bio in the wide panel at large, comfortably readable size with generous line spacing, at least four short lines and ample internal padding; it must feel like a real introduction, not a caption. Keep interest blocks on the left beneath the name area, and arrange the three real project images in a clean asymmetrical gallery across the lower half. Color block framework stays vivid but the biography panel has quiet warm-paper grounding so long copy feels comfortable. Keep nav visible, project titles attached to images, Notes links in footer. This is a website interface; do not let blocks obscure words or photos, no poster, no clipped letters, no image cutouts, no generic cards.",
+  "generator": "image_gen",
+  "approved": true,
+  "revisionOf": ".impeccable/mocks/24-interest-index-blocks.png",
+  "imageReferences": [
+    ".impeccable/mocks/24-interest-index-blocks.png",
+    "assets/plates/benchpower-image-2x.png",
+    "assets/images/glados_preview.png",
+    "assets/images/qt4_qapplication.png"
+  ]
+}

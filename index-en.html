@@ -3,165 +3,70 @@ layout: default
 lang: en
 published: false
 ref: homepage
+title: Projects, experiments and notes
+description: "The personal portfolio of Fabrizio Destro: software projects, modeling and making."
 ---
 
+<div class="page-shell">
+  <section class="home-hero" aria-labelledby="home-title">
+    <h1 class="hero-title" id="home-title">Projects, experiments <em>& notes.</em></h1>
+    <div class="hero-note">
+      <p>I'm Fabrizio Destro, a Senior Software Engineer interested in <strong>Cyber Security</strong> and computer vision. I enjoy programming in <strong>C++</strong> and <strong>Python</strong>, and sharing personal and professional projects here.</p>
+      <div class="social-links" aria-label="Profiles">
+        <a href="https://github.com/{{ site.github }}">GitHub ↗</a>
+        <a href="https://linkedin.com/in/{{ site.linkedin }}">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
 
-<!-- <div class="row">
-  <div class="col-sm-12 text-center">
-    <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre">
-  </div>
-</div> -->
-
-<div class="row" style="margin-top: 1.5em">
-  <div class="col-sm-12 text-center">
-    <h1>Destro Fabrizio</h1>
-    <ul class="list-inline">
-      {% if site.linkedin %}
-      <li>
-        <a href="https://linkedin.com/in/{{site.linkedin}}" target="_blank">
-          <i style="color: #0077b5" class="fa fa-linkedin fa-3x"></i>
+  <section class="section-block" aria-labelledby="work-title">
+    <div class="section-heading">
+      <h2 id="work-title">Selected work</h2>
+      <a href="{{ '/projects/' | relative_url }}">All projects</a>
+    </div>
+    <div class="featured-grid">
+      <article class="feature-item">
+        <a href="https://github.com/{{ site.github }}/benchpower" aria-label="Benchpower on GitHub">
+          <div class="feature-image"><img src="{{ '/assets/images/atx_case_preview.jpg' | relative_url }}" alt="Bench power supply made from an ATX power supply" loading="lazy"></div>
+          <div class="feature-meta"><span>Making</span><span>Electronics</span></div>
+          <h3 class="feature-title">Benchpower</h3>
+          <p class="feature-description">A simple benchtop power supply to bring electronic projects to life.</p>
         </a>
-      </li>
-      {% endif %}
-      {% if site.github %}
-      <li>
-        <a href="https://www.github.com/{{site.github}}" target="_blank">
-          <i style="color: #000" class="fa fa-github fa-3x"></i>
+      </article>
+      <article class="feature-item">
+        <a href="{{ '/assets/images/glados_preview.png' | relative_url }}" aria-label="Open the Glados 3D model preview">
+          <div class="feature-image"><img src="{{ '/assets/images/glados_preview.png' | relative_url }}" alt="Preview of the Glados 3D model" loading="lazy"></div>
+          <div class="feature-meta"><span>Modeling</span><span>3D</span></div>
+          <h3 class="feature-title">Glados</h3>
+          <p class="feature-description">A 3D model made for a university project.</p>
         </a>
-      </li>
-      {% endif %}
-      {% if site.google_plus %}
-      <li>
-        <a href="https://plus.google.com/{{site.google_plus}}" target="_blank">
-          <i style="color: #d34836" class="fa fa-google fa-3x"></i>
-        </a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
+      </article>
+    </div>
+  </section>
 </div>
 
-<div class="row">
-  <div class="col-sm-12">
-    <p class="lead text-justify"> Hi! I am Fabrizio Destro, an engineer who loves <b>Computer Graphics</b> and Computer Vision.
-      I enjoy programming in <b>C++</b> and <b>Python</b>, but I am always looking forward to experiment with new stuff.
-      I am gonna use this site to post about some personal projects and stuff I enjoy.
-      You can contact me on linkedin, github or google.</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-4">
-    <h2 class="text-center">Skills</h2>
-    <div class="row">
-      <div class="col-sm-12">
-        <h3>Languages and libraries</h3>
-        <p>These are some of the languages I've been working with:</p>
-        <ul class="text-justify">
-          <li><b>C++</b> and <b>Python</b> are the languages I prefer and I have more experience with.</li>
-          <li>I have experience with <b>Java</b> on <b>Android</b>, and <b>C#</b> on <b>Unity</b>.</li>
-          <li>Other technologies I worked with are <b>javascript</b>, <b>html</b> and <b>css</b>.</li>
-        </ul>
-
-        <p>Languages are not everything, these are some of the libraries I have been working with:</p>
-        <ul class="text-justify">
-          <li><b>Qt4</b>, <b>Qt5</b>, <b>Boost</b> and <b>OpenGL</b> with C++.</li>
-          <li><b>jupyter</b>, <b>numpy</b> and <b>matplotlib</b> with Python</li>
-        </ul>
-      </div>
+<section class="archive-band" aria-labelledby="notes-title">
+  <div class="page-shell section-block archive-layout">
+    <div class="archive-intro">
+      <h2 class="page-title" id="notes-title">Notes from the process</h2>
+      <p>Notes, explanations and updates alongside the projects.</p>
+      <a class="text-link" href="{{ '/blog/en/' | relative_url }}">Browse notes ↗</a>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <h3>Software</h3>
-        <p>Some of the software I use for developing.</p>
-        <ul clas="text-justify">
-          <li>I regullary use <b>CLion</b> and <b>PyCharm</b> while working on my projects, but I have also experience using <b>Visual Studio</b>.</li>
-          <li>I have some experience with <b>Android Studio</b> and <b>Unity</b></li>
-          <li><b>git</b> is a must for every developer and I use it for every projects. </li>
-        </ul>
-        <p>Some of the software I use on my free time. </p>
-        <ul class="text-justify">
-          <li>I use <b>Blender</b> for 3d solid modelling and some basic animation.</li>
-          <li>When working on my DIY projects I use <b>AutoCAD</b> for 2d technical drawing.</li>
-          <li>Sometimes I experiment with <b>GIMP</b> and <b>Inkscape</b>.</li>
-        </ul>
-      </div>
-    </div>
-    <!-- <div class="row">
-      <div class="col-sm-12">
-        <h3>Statistics <small> because at the end of the day we all care about how much code we write</small></h3>
-        <ul>
-          <li> <b>c++</b> 30.000 lines of code (30%). </li>
-        </ul>
-        <p> * these data is generated automatically with only the help of <b>python</b>, learn more</p>
-      </div>
-    </div> -->
-  </div>
-
-  <div class="col-sm-4">
-    <h2 class="text-center">Programming stuff</h2>
-
-    <div class="row"> <!-- Projects -->
-      <div class="col-sm-12">
-        <h3>Projects</h3>
-        <p>These are some of the projects I am working on, some of them are hosted on github, the others are not ready yet.</p>
-        <ul>
-          {% assign projects=site.projects | where:"lang", page.lang %}
-          {% for project in projects %}
-            <li>
-              <a href="{{ project.url }}">{{ project.title }}</a> {{ project.name }} {{ project.description }}
-            </li>
+    <div>
+      {% assign localized_posts = site.posts | where: 'lang', page.lang %}
+      {% if localized_posts.size > 0 %}
+        <ul class="entry-list">
+          {% for post in localized_posts limit: 4 %}
+          <li class="entry-row">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="entry-kind">{{ post.category | default: 'Note' }}</span>
+          </li>
           {% endfor %}
         </ul>
-      </div>
-    </div>
-    <!-- Scripts -->
-    <div class="row">
-      <div class="col-sm-12">
-        <h3>Scripts</h3>
-        <p>Some of the scripts I use on a day per day basis and I think they are worth sharing.</p>
-        <ul>
-          {% assign scripts=site.scripts | where:"lang", page.lang %}
-          {% for script in scripts %}
-            <li>
-              <a href="{{ script.url }}">{{ script.title }}</a> {{ script.name }} {{ script.description }}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+      {% else %}
+        <p class="empty-note">No notes published yet. Drafts stay private until they are ready.</p>
+      {% endif %}
     </div>
   </div>
-  <div class="col-sm-4">
-    <h2 class="text-center">Other stuff</h2>
-    <div class="row">
-      <div class="col-sm-12">
-        <h3>Making</h3>
-        <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
-        <ul class="list-unstyled">
-          {% assign making_posts=site.making | where:"lang", page.lang %}
-          {% for making in making_posts %}
-            <li>
-              <a href="{{ making.url }}">{{ making.title }}</a> {{ making.description }}
-              <img src="{{making.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <h3>Modelling</h3>
-        <!-- <img src="https://www.gravatar.com/avatar/b0fdc38f853e5fc1809a209f6caaf0f9?r=pg&s=128" class="img-circle center-block" alt="Cinque Terre"> -->
-        <ul class="list-unstyled">
-          {% assign modelling_posts=site.modelling | where:"lang", page.lang %}
-          {% for modelling in modelling_posts %}
-            <li class="text-justify" style="margin-bottom: 1em;">
-              <a href="{{ modelling.url }}">{{ modelling.title }}</a> {{ modelling.description }}
-              <img src="{{site.path}}/{{modelling.preview}}" class="img-responsive" style="margin-top: 0.2em; margin-bottom: 1em;">
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+</section>

@@ -15,16 +15,16 @@ ref: depy.py
 python depy.py -i/usr/local/Cellar/qt/4.8.7/include/ /usr/local/Cellar/qt/4.8.7/include/QtGui/QApplication
 ```
 
-[![qt4_qapplication](/assets/posts/depy/qt4_qapplication_thumbnail.png)](/assets/posts/depy/qt4_qapplication.png)
+[![qt4_qapplication](/assets/images/qt4_qapplication_thumbnail.png)](/assets/images/qt4_qapplication.png)
 
 ```bash
 python depy.py -a -i/usr/local/Cellar/qt/4.8.7/include/ /usr/local/Cellar/qt/4.8.7/include/QtGui/QApplication
 ```
 
-[![qt4_qapplication](/assets/posts/depy/qt4_qapplication_all_thumbnail.png)](/assets/posts/depy/qt4_qapplication_all.png)
+[![qt4_qapplication](/assets/images/qt4_qapplication_all_thumbnail.png)](/assets/images/qt4_qapplication_all.png)
 
 ```bash
 python depy.py -a -l -i/usr/local/Cellar/qt/4.8.7/include/ /usr/local/Cellar/qt/4.8.7/include/QtGui/QApplication
 ```
 
-[![qt4_qapplication](/assets/posts/depy/qt4_qapplication_legend.png)](/assets/posts/depy/qt4_qapplication_legend.png)
+[![qt4_qapplication](/assets/images/qt4_qapplication_legend.png)](/assets/images/qt4_qapplication_legend.png)

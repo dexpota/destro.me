@@ -1,32 +1,6 @@
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns">
-        <p>&copy; {{site.username}}</p>
-        <p>{{site.t[page.lang].footer.built_with}}</p>
-      </div>
-    </div>
+<footer class="site-footer{% if page.lang == 'en' %} portfolio-archive-footer{% endif %}">
+  <div class="footer-inner">
+    <p>© {{ site.username }}</p>
+    <p>{{ site.t[page.lang].made_with }} <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
   </div>
 </footer>
-
-<!-- Github's buttons -->
-<script async defer src="//buttons.github.io/buttons.js"></script>
-
-<!--<script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js'></script>-->
-
-<!--
-<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.js"></script>
-
-<script type="text/javascript">
-  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-      event.preventDefault();
-      $(this).ekkoLightbox();
-  });
-</script>
--->

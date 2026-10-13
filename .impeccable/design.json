@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T19:58:58Z",
+  "title": "Design System: Destro.me",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Plum Ink", "canonical": "#160814", "tonalRamp": ["#160814", "#291d27", "#3d333c", "#514851", "#665e66", "#7c757b", "#938d92", "#aaa6aa"] },
+      "muted-ink": { "role": "neutral", "displayName": "Muted Plum", "canonical": "#51444f", "tonalRamp": ["#181317", "#282229", "#39333a", "#4b454c", "#5e585f", "#726c73", "#878188", "#9d979e"] },
+      "paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#f8f6e8", "tonalRamp": ["#26251d", "#3c3b32", "#535249", "#6b6a61", "#84837a", "#9e9d94", "#b9b8af", "#d4d3ca"] },
+      "fine-rule": { "role": "neutral", "displayName": "Warm Rule", "canonical": "#ddd4c6", "tonalRamp": ["#26231e", "#3c3832", "#534e47", "#6b665e", "#858077", "#9f9a91", "#bab5ac", "#d6d1c8"] },
+      "text-accent": { "role": "primary", "displayName": "Readable Red", "canonical": "#b5221d", "tonalRamp": ["#2b0706", "#410d0b", "#581411", "#711c18", "#8b241f", "#a72c26", "#c5352e", "#e4443c"] },
+      "vermilion": { "role": "secondary", "displayName": "Signal Vermilion", "canonical": "#ef2b23", "tonalRamp": ["#3b0907", "#57100d", "#741a15", "#92251f", "#b13129", "#cf3e36", "#ed4d44", "#ff7169"] },
+      "rose": { "role": "secondary", "displayName": "Warm Rose", "canonical": "#f89aa6", "tonalRamp": ["#3d1118", "#591d26", "#752b35", "#923b46", "#af4d58", "#cc616c", "#e97681", "#ff929d"] },
+      "focus-green": { "role": "tertiary", "displayName": "Garden Green", "canonical": "#506c58", "tonalRamp": ["#0c1b11", "#17291c", "#24382a", "#324838", "#405946", "#506c58", "#718a77", "#96aa9a"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Slab Display", "purpose": "Page, section, project, and note headings." },
+      "body": { "displayName": "Reading Sans", "purpose": "General interface copy and extended article text." },
+      "label": { "displayName": "Technical Mono", "purpose": "Dates, categories, and compact utility labels." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "image-hover", "value": "transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "Subtle image-link hover scale; disabled for reduced-motion users." },
+      { "name": "row-hover", "value": "background-color 0.16s ease-out", "purpose": "Soft tint on hovered repository rows." },
+      { "name": "contact-hover", "value": "color/background-color 0.18s ease-out", "purpose": "Fast color reversal on the contact action." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-layout", "value": "720px" },
+      { "name": "homepage-tablet", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Contact Link",
+      "kind": "button",
+      "refersTo": "contact-link",
+      "description": "High-contrast square contact action for prominent outbound contact.",
+      "html": "<a class=\"ds-contact\" href=\"#contact\">Connect</a>",
+      "css": ".ds-contact { display: inline-flex; align-items: center; min-height: 36.8px; padding: 6.4px 12.8px; color: var(--paper, #f8f6e8); background: var(--ink, #160814); border: 1px solid var(--ink, #160814); border-radius: 0; font: 500 0.85rem/1.2 'DM Sans', sans-serif; text-decoration: none; transition: color 0.18s ease-out, background-color 0.18s ease-out; } .ds-contact:hover { color: var(--ink, #160814); background: var(--paper, #f8f6e8); } .ds-contact:focus-visible { outline: 3px solid var(--green, #506c58); outline-offset: 3px; }"
+    },
+    {
+      "name": "Page Title Field",
+      "kind": "custom",
+      "description": "Short display heading on a vermilion field, used on archive pages.",
+      "html": "<h1 class=\"ds-page-title\">Projects</h1>",
+      "css": ".ds-page-title { display: inline-flex; width: fit-content; max-width: 100%; margin: 0; padding: 0.2rem 0.85rem 0.45rem; color: var(--paper, #f8f6e8); background: var(--accent, #b5221d); font: 400 clamp(3rem, 6.5vw, 6rem)/0.98 'Alfa Slab One', Georgia, serif; letter-spacing: -0.035em; }"
+    },
+    {
+      "name": "Ruled Repository Row",
+      "kind": "custom",
+      "description": "Open list entry with a fine top rule and faint rose hover tint.",
+      "html": "<li class=\"ds-repo-row\"><a href=\"#project\"><strong>Project name</strong><span>Project description</span></a></li>",
+      "css": ".ds-repo-row { border-top: 1px solid var(--line, #ddd4c6); transition: background-color 0.16s ease-out; } .ds-repo-row:hover { background: rgba(248, 154, 166, 0.16); } .ds-repo-row a { display: block; min-height: 6.5rem; padding: 1rem 0.8rem 1rem 0; color: var(--ink, #160814); text-decoration: none; } .ds-repo-row strong { display: block; font: 400 clamp(1.1rem, 1.75vw, 1.5rem)/1.15 'Alfa Slab One', Georgia, serif; } .ds-repo-row span { display: block; margin-top: 0.35rem; color: var(--muted, #51444f); font: 400 0.9rem/1.55 'DM Sans', sans-serif; }"
+    },
+    {
+      "name": "Article Code Block",
+      "kind": "custom",
+      "description": "Plum code surface with paper text and a readable-red top rule.",
+      "html": "<pre class=\"ds-code\"><code>const project = 'destro.me';</code></pre>",
+      "css": ".ds-code { overflow-x: auto; padding: 1.1rem; color: var(--paper, #f8f6e8); background: var(--ink, #160814); border: 0; border-top: 3px solid var(--accent, #b5221d); font: 400 0.86rem/1.6 'DM Mono', SFMono-Regular, Consolas, monospace; } .ds-code code { color: inherit; background: transparent; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Color Block Index",
+    "overview": "This visual system uses confident color fields, oversized display lettering, and a clear editorial hierarchy to bring software projects, hands-on work, and writing into one portfolio. Warm paper and plum ink ground the bright vermilion and rose; restrained dark red marks text links and interactive emphasis. Alfa Slab One gives short headings an expressive, crafted voice, while DM Sans keeps reading copy clear and DM Mono gives metadata a technical register.\n\nThe system carries that language across the homepage, project archive, notes index, and articles. It stays flat and square, using color, fine rules, imagery, and type hierarchy to distinguish content. Individual surfaces can arrange those ingredients to fit their material.",
+    "keyCharacteristics": [
+      "Plum ink, warm paper, muted text, and a fine warm rule support vermilion and rose fields.",
+      "Slab display type is paired with practical sans-serif body text and compact mono labels.",
+      "Square edges, precise rules, and minimal depth effects."
+    ],
+    "rules": [
+      { "name": "The Two Reds Rule", "body": "Use vermilion for large fields; use readable red for text-sized accents and rules that need stronger legibility.", "section": "colors" },
+      { "name": "The Short Display Rule", "body": "Reserve Alfa Slab One for headings and short labels; use DM Sans for paragraphs and extended reading.", "section": "typography" }
+    ],
+    "dos": [
+      "Do use vermilion for large color fields and readable red for smaller text accents.",
+      "Do pair display headings with DM Sans reading copy and DM Mono metadata.",
+      "Do preserve square edges, fine rules, and generous spacing across surfaces.",
+      "Do keep article copy within the established 68ch measure.",
+      "Do show keyboard focus clearly and respect reduced-motion preferences."
+    ],
+    "donts": [
+      "Don't use bright vermilion for small text where the darker text accent is established.",
+      "Don't add decorative shadows or rounded corners to the square, flat form language.",
+      "Don't set extended paragraphs in the display or mono face.",
+      "Don't let code blocks lose their plum ground and readable contrasting text."
+    ]
+  }
+}

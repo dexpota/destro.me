@@ -1,14 +1,7 @@
 ---
 layout: default
 ---
-<!--<div class="row">
-  <div class="col-sm-12">
-    <p>back</p>
-  </div>
-<div>-->
-
-<div class="row">
-  <div class="col-md-12">
-    {{content}}
-  </div>
-<div>
+<article class="article-shell">
+  <div class="article-body">{{ content }}</div>
+  <footer class="article-footer"><a class="text-link" href="{% if page.lang == 'en' %}{{ '/blog/en/' | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}">← {{ site.t[page.lang].back_to_notes }}</a></footer>
+</article>

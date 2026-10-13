@@ -15,9 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: destro.me
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal portfolio of Fabrizio Destro, featuring software projects, modeling,
+  making and notes.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://destro.me" # the base hostname & protocol for your site
 
@@ -31,6 +30,12 @@ github: dexpota
 
 t:
   en:
+    skip_to_content: "Skip to content"
+    navigation: "Main navigation"
+    projects: "Projects"
+    notes: "Notes"
+    made_with: "Built with Jekyll ·"
+    back_to_notes: "Back to notes"
     back: "Back"
     toc: "Table of contents"
     language: "language"
@@ -41,18 +46,24 @@ t:
       materials: "Materials"
       gallery: "Gallery"
     footer:
-      built_with: "Built with Jekyll, theme based on <a href='https://github.com/nrandecker/particle'>particle</a> by <a href='https://nrandecker.github.io'>Nathan Randecker</a>"
+      built_with: "Built with Jekyll"
     homepage:
       username: "Destro Fabrizio"
-      user_title: "Software engineer"
+      user_title: "Senior Software Engineer"
       about_me: "About me"
       projects: "Projects"
       expertise: "Expertise"
-      user_description: "Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS."
+      user_description: "I'm Fabrizio Destro, a Senior Software Engineer interested in Cyber Security and computer vision. I enjoy programming in C++ and Python, and sharing personal and professional projects here."
       languages: "Languages"
       software: "Software"
       hardware: "Hardware"
   it:
+    skip_to_content: "Vai al contenuto"
+    navigation: "Navigazione principale"
+    projects: "Progetti"
+    notes: "Appunti"
+    made_with: "Costruito con Jekyll ·"
+    back_to_notes: "Torna agli appunti"
     back: "Indietro"
     toc: "Indice"
     language: "lingua"
@@ -60,20 +71,20 @@ t:
     not_available: "non disponibile in"
     about_me: "Su di me"
     projects: "Progetti"
-    user_title: "Software engineer"
+    user_title: "Senior Software Engineer"
     making:
       tools: "Strumentazioni"
       materials: "Materiali"
       gallery: "Galleria"
     footer:
-      built_with: "Costruito con Jekyll, tema basato su <a href='https://github.com/nrandecker/particle'>particle</a> di <a href='https://nrandecker.github.io'>Nathan Randecker</a>"
+      built_with: "Costruito con Jekyll"
     homepage:
       username: "Destro Fabrizio"
-      user_title: "Software engineer"
+      user_title: "Senior Software Engineer"
       about_me: "Su di me"
       projects: "Progetti"
       expertise: "Competenze"
-      user_description: "Sono Fabrizio Destro un ingegnere che ama la Computer Graphics e la Computer Vision. Mi piace programmare in C++ e Python ma non vedo l'ora di sperimentare sempre con nuove cose. Utilizzerò questo sito per pubblicare alcuni dei miei progetti personali. Se volete contattarmi potete farlo su linkedin o github."
+      user_description: "Sono Fabrizio Destro, Senior Software Engineer interessato alla Cyber Security e alla Computer Vision. Mi piace programmare in C++ e Python e sperimentare con nuove idee. Utilizzerò questo sito per condividere alcuni dei miei progetti personali e professionali."
       languages: "Linguaggi e librerie"
       languages_description: "Queste sono alcuni dei linguaggi con cui ho lavorato: C++ e Python sono i linguaggi che preferisco e con cui ho più esperienza. Ho anche esperienza nell'uso di Java su Android, e di C# su Unity. Altri linguaggi con cui ho lavorato sono javascript, html and css. I linguaggi di programmazione non sono tutto, queste sono alcune delle librerie con cui ho lavorato: Qt4, Qt5, Boost e OpenGL con C++. jupyter, numpy e matplotlib con Python Qui potete trovare un elenco di progetto a cui ho lavorato o contribuito."
 
@@ -96,11 +107,10 @@ compress_html:
 
 # User settings
 username: Destro Fabrizio
-user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+user_description: Personal portfolio of software projects, modeling, making and technical notes.
 
 # Build settings
 markdown: kramdown
-theme: minima
 
 # Exclude these files
 exclude: ['Gemfile', 'Gemfile.lock', 'README.md']

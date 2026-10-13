@@ -1,0 +1,54 @@
+---
+layout: default
+lang: en
+title: Projects
+permalink: /projects/en/
+description: A collection of software and personal projects by Fabrizio Destro.
+---
+
+<div class="page-shell">
+  <header class="page-intro">
+    <h1 class="page-title">Projects</h1>
+    <p class="page-deck">A collection of software, experiments and personal work. The images show a few projects; the index gathers public repositories.</p>
+  </header>
+
+  <section class="section-block" aria-labelledby="artifacts-title">
+    <div class="section-heading"><h2 id="artifacts-title">From the bench and the screen</h2></div>
+    <div class="featured-grid">
+      <article class="feature-item">
+        <a href="https://github.com/{{ site.github }}/benchpower">
+          <div class="feature-image"><img src="{{ '/assets/images/atx_case_preview.jpg' | relative_url }}" alt="Bench power supply assembled from an ATX power supply"></div>
+          <div class="feature-meta"><span>Making</span><span>Repository</span></div>
+          <h3 class="feature-title">Benchpower</h3>
+          <p class="feature-description">A simple benchtop power supply to bring electronic projects to life.</p>
+        </a>
+      </article>
+      <article class="feature-item">
+        <a href="{{ '/assets/images/glados_preview.png' | relative_url }}">
+          <div class="feature-image"><img src="{{ '/assets/images/glados_preview.png' | relative_url }}" alt="Preview of the Glados 3D model"></div>
+          <div class="feature-meta"><span>Modeling</span><span>Image</span></div>
+          <h3 class="feature-title">Glados</h3>
+          <p class="feature-description">A 3D model made for a university project.</p>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block" id="projects-index" aria-labelledby="repositories-title">
+    <div class="section-heading">
+      <h2 id="repositories-title">Public repositories</h2>
+      <span class="text-link">{{ site.data.projects.projects.size }} projects</span>
+    </div>
+    <ul class="repo-list">
+      {% for project in site.data.projects.projects %}
+      <li>
+        <a href="{{ project.html_url }}">
+          <span class="repo-title">{{ project.name }}</span>
+          {% if project.language %}<span class="repo-language">{{ project.language }}</span>{% endif %}
+          {% if project.description %}<span class="repo-description">{{ project.description }}</span>{% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

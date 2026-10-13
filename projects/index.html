@@ -1,67 +1,53 @@
 ---
-published: false
 layout: default
 lang: it
-ref: projects
+title: Progetti
+description: Una raccolta di progetti software e personali di Fabrizio Destro.
 ---
 
-{%include tag_gathering.html items=site.data.projects.applications %}
+<div class="page-shell">
+  <header class="page-intro">
+    <h1 class="page-title">Progetti</h1>
+    <p class="page-deck">Una raccolta di software, esperimenti e lavori personali. Le immagini mostrano alcuni progetti; l’indice raccoglie i repository pubblici.</p>
+  </header>
 
-{%comment%}
-TODO cercare le pagine per il progetto.
-{% assign projects=site.projects | where:"project", "benchpower"%}
-{% for project in projects %}
-	{{project | inspect}}
-{% endfor %}
-{%endcomment%}
+  <section class="section-block" aria-labelledby="artifacts-title">
+    <div class="section-heading"><h2 id="artifacts-title">Dal banco e dallo schermo</h2></div>
+    <div class="featured-grid">
+      <article class="feature-item">
+        <a href="https://github.com/{{ site.github }}/benchpower">
+          <div class="feature-image"><img src="{{ '/assets/images/atx_case_preview.jpg' | relative_url }}" alt="Alimentatore da banco assemblato a partire da un alimentatore ATX"></div>
+          <div class="feature-meta"><span>Fai da te</span><span>Repository</span></div>
+          <h3 class="feature-title">Benchpower</h3>
+          <p class="feature-description">Un semplice alimentatore da banco per dare vita ai progetti elettronici.</p>
+        </a>
+      </article>
+      <article class="feature-item">
+        <a href="{{ '/assets/images/glados_preview.png' | relative_url }}">
+          <div class="feature-image"><img src="{{ '/assets/images/glados_preview.png' | relative_url }}" alt="Anteprima del modello 3D Glados"></div>
+          <div class="feature-meta"><span>Modellazione</span><span>Immagine</span></div>
+          <h3 class="feature-title">Glados</h3>
+          <p class="feature-description">Un modello 3D realizzato per un progetto universitario.</p>
+        </a>
+      </article>
+    </div>
+  </section>
 
-<div class="row">
-  <div class="col-sm-12">
-    <h1>Progetti</h1>
-    <!--<p>Tags:</p>
-    <ul>
-      {% for tag in tags %}
-        <li>{{tag}}</li>
-      {% endfor %}
-    </ul>-->
-
-		<h2>Applicazioni</h2>
-		<p> Una semplice lista di tutti i progetti su cui ho lavorato. </p>
-    <ul>
-    {% for key_value in site.data.projects.applications %}
-			{% assign application = key_value[1] %}
-			{% if application.title[page.lang] %}
-				{% assign title = application.title[page.lang] %}
-			{% else %}
-				{% assign title = application.title %}
-			{% endif %}
+  <section class="section-block" id="projects-index" aria-labelledby="repositories-title">
+    <div class="section-heading">
+      <h2 id="repositories-title">Repository pubblici</h2>
+      <span class="text-link">{{ site.data.projects.projects.size }} progetti</span>
+    </div>
+    <ul class="repo-list">
+      {% for project in site.data.projects.projects %}
       <li>
-				<strong>{{ title }}</strong>: {{ application.description[page.lang] }}
-        {% if application.github %}
-					<ul>
-						<li>
-							Il progetto è disponibile su github, <a href="{{application.github}}" target="_blank">clicca qui</a>
-						</li>
-					</ul>
-        {% endif %}
+        <a href="{{ project.html_url }}">
+          <span class="repo-title">{{ project.name }}</span>
+          {% if project.language %}<span class="repo-language">{{ project.language }}</span>{% endif %}
+          {% if project.description %}<span class="repo-description">{{ project.description }}</span>{% endif %}
+        </a>
       </li>
-    {% endfor %}
+      {% endfor %}
     </ul>
-
-		<h2>Making</h2>
-    <ul>
-    {% for key_value in site.data.projects.making %}
-			{% assign making = key_value[1] %}
-      <li><strong>{{ making.title }}</strong>: {{ making.description[page.lang] }}
-        {% if making.github %}
-				<ul>
-					<li>
-						Il progetto è disponibile su github, <a href="{{making.github}}" target="_blank">clicca qui</a>
-					</li>
-				</ul>
-        {% endif %}
-      </li >
-    {% endfor %}
-    </ul>
-  </div>
+  </section>
 </div>

@@ -1,178 +1,64 @@
 ---
 layout: default
-lang: it
+portfolio_home: true
+lang: en
+published: true
+title: Projects, experiments and notes
+description: Personal portfolio of Fabrizio Destro, featuring software projects, modeling, making and notes.
 ---
-<section id="projects">
-  <div class="container">
-    <div class="row">
-	  <div class="twelve columns" style="text-align:center; margin-top: 1em;">
-        <h3>{{site.t[page.lang].homepage.projects}}</h3>
-	  </div>
-    </div>
 
-	{% for project in site.data.projects.projects %}
-		{% include light-projects.html
-			title=project.name
-			description=project.description
-			url=project.html_url
-			language=project.language
-		 %}
-		<!--{{ project.name }}
-		{{ project.description }}
-		{{ project.fork }}
-		{{ project.language }}
-		{{ project.html_url }}-->
+<div class="portfolio-home">
+  <header class="portfolio-masthead">
+    <a class="portfolio-brand" href="{{ '/' | relative_url }}" aria-label="Destro Fabrizio — home">
+      <span class="portfolio-brand-name">Destro Fabrizio</span>
+    </a>
+    <nav class="portfolio-nav" aria-label="Main navigation">
+      <a href="{{ '/projects/en/' | relative_url }}">Projects</a>
+      <a href="{{ '/blog/en/' | relative_url }}">Notes</a>
+      <a class="portfolio-contact" href="https://linkedin.com/in/{{ site.linkedin }}">
+        <span class="linkedin-wordmark" aria-hidden="true">in</span>
+        <span>Connect on LinkedIn</span>
+      </a>
+    </nav>
+  </header>
 
-<!--			{% assign application = key_value[1] %}
-			{% if application.title[page.lang] %}
-				{% assign title = application.title[page.lang] %}
-			{% else %}
-				{% assign title = application.title %}
-			{% endif %}
-      <li>
-				<strong>{{ title }}</strong>: {{ application.description[page.lang] }}
-        {% if application.github %}
-					<ul>
-						<li>
-							Il progetto è disponibile su github, <a href="{{application.github}}" target="_blank">clicca qui</a>
-						</li>
-					</ul>
-        {% endif %}
-      </li>-->
-    {% endfor %}
+  <main class="portfolio-main">
+    <section class="portfolio-index" aria-labelledby="home-title">
+      <div class="index-role index-tile">
+        <h1 id="home-title" data-fit-title>Senior<br>Software<br>Engineer</h1>
+      </div>
+      <div class="index-bio">
+        <p>I'm Fabrizio Destro, a Senior Software Engineer interested in Cyber Security and computer vision. I enjoy programming in C++ and Python, and sharing personal and professional projects here.</p>
+      </div>
+      <div class="index-interest index-interest--cyber index-tile">
+        <h2 data-fit-text>Cyber<br>Security</h2>
+      </div>
+    </section>
 
+    <section class="portfolio-interests" aria-label="Interests">
+      <div class="index-interest index-interest--vision index-tile">
+        <h2 data-fit-text>Computer<br>vision</h2>
+      </div>
+      <div class="index-interest index-interest--cpp index-tile">
+        <h2>C++</h2>
+      </div>
+      <div class="index-interest index-interest--python index-tile">
+        <h2>Python</h2>
+        <p>Experimenting with new ideas</p>
+      </div>
+    </section>
 
-  </div>
-</section>
+  </main>
 
-<!--<div class="container">
-  <div id="about" class="row" style="padding-top: 1em; padding-bottom: .1em;">
-    <h3> {{site.t[page.lang].homepage.about_me}} </h3>
-    <p> {{site.t[page.lang].homepage.user_description}} </p>
-  </div>
+  <nav class="portfolio-notes-strip" aria-label="Writing formats">
+    <h2>Notes</h2>
+    <a class="portfolio-format-link" href="{{ '/blog/en/#short-notes' | relative_url }}">
+      <span>Short notes</span>
+      <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h13M10 4l6 6-6 6"/></svg>
+    </a>
+    <a class="portfolio-format-link" href="{{ '/blog/en/#longer-articles' | relative_url }}">
+      <span>Longer articles</span>
+      <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h13M10 4l6 6-6 6"/></svg>
+    </a>
+  </nav>
 </div>
-
-<section id="skills">
-  <div class="container">
-    <div class="row" style="padding-top: .1em; padding-bottom: .1em;">
-      <div class="twelve columns">
-        <h3> {{site.t[page.lang].homepage.expertise}} </h3>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Linguaggi di programmazione</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-python-plain"></span> python </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-cplusplus-plain"></span> c++ </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-c-plain"></span> c </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-csharp-plain"></span> c# </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-java-plain"></span> java </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Librerie e framework</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 qt4 </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 qt5 </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 boost </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 opengl </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 pyqt4 </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 pyqt5 </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 jupyter </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 numpy </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 matplotlib </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 android sdk </li>
-
-        </ul>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Linguaggi di programmazione web</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-javascript-plain"></span> javascript </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-typescript-plain"></span> typescript </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-html5-plain"></span> html </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-css3-plain"></span> css </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Strumenti per la gestione del codice</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-git-plain"></span> git </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-gitlab-plain"></span> gitlab </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Sistemi operativi</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-ubuntu-plain"></span> ubuntu </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-windows8-plain"></span> windows </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-apple-plain"></span> macosx </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Ambienti di sviluppo</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicons devicons-visualstudio"></span> vs2015 </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-jetbrains-plain"></span> pycharm </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-jetbrains-plain"></span> clion </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-jetbrains-plain"></span> android studio </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicons devicons-unity_small"></span> unity </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Programmi di modellazione</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 blender </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 autodesk autocad </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;">&#8226 autodesk inventor </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row" style="padding-bottom: 1em;">
-      <div class="four columns">
-        <p style="margin-bottom: 0">Programmi di grafica</p>
-      </div>
-      <div class="eight columns">
-        <ul style="margin-bottom: 0; font-size: 1.5em;">
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-gimp-plain"></span> gimp </li>
-          <li style="display: inline; margin: 0; padding: 0; padding-right:1em; list-style-type: none;"><span class="devicon-inkscape-plain"></span> inkscape </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>-->

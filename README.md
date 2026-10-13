@@ -62,3 +62,25 @@ GitHub Actions.
 2. Point the `destro.me` domain to the site published on GitHub Pages.
 3. If you use Cloudflare, verify the DNS record points to the GitHub Pages
    target configured in the repository, then enable the proxy if desired.
+
+## Add a note
+
+Create a dated Markdown file in `_posts/`, for example
+`_posts/2026-10-12-my-note.md`:
+
+```yaml
+---
+layout: posts
+lang: it
+format: short
+title: Titolo della nota
+description: Una breve descrizione.
+published: false
+---
+
+Il contenuto della nota in Markdown.
+```
+
+Use `format: short` for a short note or `format: article` for a longer entry.
+Keep `published: false` while drafting. Set it to `true` when the entry is
+ready; it then appears in the matching section and RSS feed.
