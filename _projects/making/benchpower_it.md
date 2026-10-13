@@ -5,7 +5,7 @@ ref: benchpower
 slug: alimentatore_da_banco
 category: making
 gallery:
-  - /assets/atx_case_preview.jpg
+  - /assets/images/atx_case_preview.jpg
 tools:
   - laser cutter
 materials:
@@ -44,7 +44,7 @@ Lorem ipsum dolor sit amet, ne ubique iudicabit voluptatibus eum, omnium prodess
 
 Eruditi feugait nostrum vis te, in quem civibus sea. Definiebas persequeris te vis, ut eam facete qualisque similique. No mei animal blandit, ex qui simul deterruisset. Vis cu ancillae indoctum partiendo, lorem luptatum ius id.
 
-![alt text](/assets/atx_case_preview.jpg "Logo Title Text 1"){:class="center-block img-responsive"}
+![Alimentatore da banco realizzato con un alimentatore ATX](/assets/images/atx_case_preview.jpg){:class="center-block img-responsive"}
 
 ### Sottotitolo 1
 <small style="color: #777;" style="margin-top: 0;"> <a href="#{{title_ref}}"> ritorna </a> </small>

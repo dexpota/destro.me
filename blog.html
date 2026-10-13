@@ -1,16 +1,52 @@
 ---
 layout: default
-published: false
+published: true
 lang: it
 permalink: /blog/
+title: Appunti
+description: Articoli, appunti e note sui progetti di Fabrizio Destro.
 ---
 
-<article>
-  <div class="container">
-    <div class="row">
-      <div class="twelve column">
-        <p>Some content</p>
-      </div>
-    </div>
-  </div>
-</article>
+<div class="page-shell">
+  <header class="page-intro">
+    <h1 class="page-title">Appunti</h1>
+    <p class="page-deck">Articoli e note che accompagnano i progetti: idee, passaggi tecnici e cose imparate lungo la strada.</p>
+  </header>
+
+  {% assign localized_posts = site.posts | where: 'lang', page.lang %}
+  <section class="writing-section" aria-labelledby="short-notes">
+    <div class="section-heading"><h2 id="short-notes">Note brevi</h2></div>
+    {% assign has_short_notes = false %}
+    {% for post in localized_posts %}
+      {% if post.format == 'short' %}
+        {% assign has_short_notes = true %}
+        <article class="post-list-item">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time>
+          <div>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}<p>{{ post.description }}</p>{% else %}<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>{% endif %}
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+    {% unless has_short_notes %}<p class="empty-note">Le note brevi arriveranno qui.</p>{% endunless %}
+  </section>
+
+  <section class="writing-section" aria-labelledby="longer-articles">
+    <div class="section-heading"><h2 id="longer-articles">Articoli</h2></div>
+    {% assign has_articles = false %}
+    {% for post in localized_posts %}
+      {% unless post.format == 'short' %}
+        {% assign has_articles = true %}
+        <article class="post-list-item">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time>
+          <div>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}<p>{{ post.description }}</p>{% else %}<p>{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>{% endif %}
+          </div>
+        </article>
+      {% endunless %}
+    {% endfor %}
+    {% unless has_articles %}<p class="empty-note">Gli articoli più lunghi appariranno qui.</p>{% endunless %}
+  </section>
+</div>

@@ -3,3 +3,22 @@ _site
 .jekyll-metadata
 *.lock
 *.DS_Store
+
+# Impeccable generated output and local runtime state
+.impeccable/build/
+.impeccable/live/server.json
+.impeccable/live/codex-worker.json
+.impeccable/live/codex-worker.log
+.impeccable/live/sessions/
+.impeccable/live/previews/
+.impeccable/live/annotations/
+.impeccable/live/artifacts/
+.impeccable/live/accept-receipts/
+.impeccable/live/locks/
+.impeccable/live/cache/
+.impeccable/live/benchmarks/
+.impeccable/history/
+.impeccable/config.local.json
+.impeccable/provider-smoke/
+**/.impeccable/hook.cache.json
+**/.impeccable/hook.pending.json

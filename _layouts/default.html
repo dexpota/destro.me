@@ -1,13 +1,14 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
-<html lang="en">
-	<!--aaa-->
-	{% include head.html %}
-	<body>
-		{% include header.html %}
-		{{ content }}
-		{% include footer.html %}
-	</body>
+<!doctype html>
+<html lang="{{ page.lang | default: 'it' }}">
+  {% include head.html %}
+  <body>
+    <a class="skip-link" href="#main">{{ site.t[page.lang].skip_to_content }}</a>
+    {% unless page.portfolio_home %}{% include header.html %}{% endunless %}
+    <main class="{% if page.portfolio_home %}portfolio-main{% else %}site-main{% if page.lang == 'en' %} portfolio-archive{% endif %}{% endif %}" id="main">{{ content }}</main>
+    {% unless page.portfolio_home %}{% include footer.html %}{% endunless %}
+    {% if page.portfolio_home %}<script src="{{ '/assets/js/home-title-fit.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
+  </body>
 </html>
