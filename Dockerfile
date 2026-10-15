@@ -12,6 +12,8 @@ COPY Gemfile ./
 RUN bundle install --jobs 4 --retry 3
 
 COPY . ./
+ARG JEKYLL_ENV=production
+ENV JEKYLL_ENV=${JEKYLL_ENV}
 RUN bundle exec jekyll build --destination /out
 
 FROM scratch AS artifact
