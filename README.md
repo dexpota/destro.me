@@ -8,7 +8,7 @@ The site can be compiled in a container without installing Ruby or gems on the
 host. From the repository root, run:
 
 ```sh
-docker buildx build --output type=local,dest=_site .
+make build
 ```
 
 The generated site is written to `_site/`. Docker Buildx downloads the Ruby
