@@ -14,6 +14,17 @@ make build
 The generated site is written to `_site/`. Docker Buildx downloads the Ruby
 base image and installs the gems from `Gemfile` during the build.
 
+## Develop with Docker
+
+Start Jekyll in a live development container from the repository root:
+
+```sh
+make serve
+```
+
+Open <http://localhost:4000>. Jekyll rebuilds when source files change and
+LiveReload refreshes the browser. Stop the container with `Ctrl+C`.
+
 ## Details
 
 ### Folder Structure
