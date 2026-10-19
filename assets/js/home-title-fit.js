@@ -4,13 +4,16 @@
   const fitText = (title, tile) => {
     title.style.removeProperty('font-size');
     const style = getComputedStyle(title);
-    const tileStyle = getComputedStyle(tile);
+    const box = title.closest('[data-fit-area]') || tile;
+    const boxStyle = getComputedStyle(box);
     const lines = title.innerText.split(/\n/).filter(Boolean);
     const baseSize = parseFloat(style.fontSize);
     const size = 192;
     const lineHeight = parseFloat(style.lineHeight) / baseSize;
-    const width = title.clientWidth;
-    const height = tile.clientHeight - parseFloat(tileStyle.paddingTop) - parseFloat(tileStyle.paddingBottom);
+    const titlePaddingX = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+    const titlePaddingY = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
+    const width = box.clientWidth - parseFloat(boxStyle.paddingLeft) - parseFloat(boxStyle.paddingRight) - titlePaddingX;
+    const height = box.clientHeight - parseFloat(boxStyle.paddingTop) - parseFloat(boxStyle.paddingBottom) - titlePaddingY;
     context.font = `${style.fontWeight} ${size}px ${style.fontFamily}`;
     const widestLine = Math.max(...lines.map(line => context.measureText(line).width));
     const fitByWidth = size * width / widestLine;
