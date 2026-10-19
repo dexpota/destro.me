@@ -618,51 +618,31 @@ img { display: block; max-width: 100%; }
 }
 .index-interest--cyber h2 { font-size: clamp(2.2rem, 4vw, 4rem); }
 .index-interest--native {
-  grid-column: 1 / 6;
+  grid-column: 1 / 13;
   grid-row: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  align-items: center;
+  gap: 2rem;
   color: var(--index-paper);
   background: var(--index-plum);
 }
-.index-interest--cpp {
-  grid-column: 6 / 9;
-  grid-row: 1;
-  align-items: center;
-  color: var(--index-ink);
-  background: var(--index-rose);
-}
-.index-interest--cpp h2 { font-size: clamp(3.8rem, 7.5vw, 7.5rem); }
-.index-interest--python {
-  grid-column: 9 / 13;
-  grid-row: 1;
-  color: var(--index-paper);
-  background: var(--index-red);
-}
-.index-interest--python h2 { font-size: clamp(3rem, 6.1vw, 6rem); }
-.index-interest--python p {
-  margin: .15rem 0 0;
-  color: var(--index-ink);
+.index-interest--native p {
+  margin: 0;
+  padding-left: clamp(1rem, 3vw, 3rem);
+  border-left: 1px solid rgba(248,246,232,.4);
+  color: var(--index-rose);
   font-family: $sans;
-  font-size: clamp(.9rem, 1.6vw, 1.35rem);
+  font-size: clamp(1.25rem, 2.3vw, 2rem);
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.35;
 }
-.index-interest--experimenting {
-  grid-column: auto;
-  grid-row: auto;
-  align-items: flex-start;
-  color: var(--index-ink);
-  background: transparent;
-}
-.index-interest--experimenting h2 { font-size: clamp(2rem, 3.65vw, 3.7rem); }
 .portfolio-interests {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: clamp(250px, 18vw, 280px);
 }
-.portfolio-interests .index-interest--native { grid-column: 1 / 6; grid-row: 1; }
-.portfolio-interests .index-interest--cpp { grid-column: 6 / 9; grid-row: 1; }
-.portfolio-interests .index-interest--python { grid-column: 9 / 13; grid-row: 1; }
-.index-interest--python h2 { margin-bottom: .2rem; }
+.portfolio-interests .index-interest--native { grid-column: 1 / 13; grid-row: 1; }
 
 .portfolio-projects {
   display: grid;
@@ -792,18 +772,19 @@ img { display: block; max-width: 100%; }
   .index-interest { min-height: 150px; padding: 1rem; }
   .index-interest--cyber { grid-column: 1 / 3; grid-row: 3; }
   .portfolio-interests {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
-  .portfolio-interests .index-interest--native { grid-column: 1 / 3; grid-row: 1; }
-  .portfolio-interests .index-interest--cpp { grid-column: 1 / 2; grid-row: 2; }
-  .portfolio-interests .index-interest--python { grid-column: 2 / 3; grid-row: 2; min-height: 135px; }
+  .portfolio-interests .index-interest--native {
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-columns: 1fr;
+    gap: .7rem;
+    min-height: 180px;
+  }
+  .index-interest--native p { padding: 0; border: 0; font-size: clamp(1.15rem, 4.5vw, 1.5rem); }
   .portfolio-index .index-interest--cyber { grid-column: 1 / 3; grid-row: 3; }
   .index-interest h2 { font-size: clamp(2.5rem, 9vw, 4rem); }
-  .index-interest--cpp h2 { font-size: clamp(3rem, 12vw, 5rem); }
-  .index-interest--python h2 { font-size: clamp(2.7rem, 9vw, 4rem); }
-  .index-interest--experimenting h2 { font-size: clamp(1.4rem, 5vw, 2rem); }
-  .index-interest--python p { font-size: .95rem; }
   .portfolio-projects {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
