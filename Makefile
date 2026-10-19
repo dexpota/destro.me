@@ -5,7 +5,7 @@ build:
 
 serve:
 	docker buildx build --load --target development --tag destro.me:dev .
-	docker run --rm --interactive --tty \
+	docker run --rm \
 		--publish 4000:4000 \
 		--publish 35729:35729 \
 		--volume "$(CURDIR):/site" \
