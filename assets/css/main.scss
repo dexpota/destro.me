@@ -504,6 +504,10 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
   min-height: 0;
 }
+.portfolio-home > .portfolio-main {
+  flex: 1 0 auto;
+  min-height: auto;
+}
 .portfolio-masthead {
   min-height: 3.35rem;
   padding: .45rem 2%;
