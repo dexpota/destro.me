@@ -24,7 +24,7 @@ The site is a Jekyll static site published through GitHub Pages at destro.me. Ex
 
 ## Evidence on Hand
 
-Existing project data in `_data/projects/`, project entries in `_projects/`, post files in `_posts/`, and preview images in `assets/images/`. The homepage introduces Fabrizio as a Senior Software Engineer interested in Cyber Security and native development on macOS, iOS, and Android. The first homepage version hides project tiles while project routes remain available. Existing draft posts remain unpublished; do not invent published entries, dates, clients, or project outcomes.
+Existing project data in `_data/projects/`, project entries in `_projects/`, post files in `_posts/`, and preview images in `assets/images/`. The homepage introduces Fabrizio as a Senior Software Engineer interested in Cyber Security, especially endpoint security. The first homepage version hides project tiles while project routes remain available. Existing draft posts remain unpublished; do not invent published entries, dates, clients, or project outcomes.
 
 ## Product Principles
 
