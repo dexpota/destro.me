@@ -14,7 +14,7 @@ Scope: the English homepage at `index.html`, the linked English projects and not
 Mode: Experience.
 Audience: potential clients and collaborators.
 Visitor job: understand Fabrizio's interests and see a mix of professional and personal work; follow project artifacts; find a way to connect on LinkedIn.
-Content: the first homepage version introduces Fabrizio as a Senior Software Engineer and foregrounds Cyber Security, computer vision, C++, Python, and experimentation. Project imagery is hidden on the homepage for this version; the Projects route remains available. The site supports short notes and longer articles. Existing assets and project descriptions are the source of truth. No published article titles or dates are invented.
+Content: the first homepage version introduces Fabrizio as a Senior Software Engineer and foregrounds Cyber Security, native development on macOS/iOS/Android, C++, Python, and experimentation. Project imagery is hidden on the homepage for this version; the Projects route remains available. The site supports short notes and longer articles. Existing assets and project descriptions are the source of truth. No published article titles or dates are invented.
 Constraints: use English on the root homepage; keep published copy grounded in the existing bio and project files; do not add client claims, credentials, metrics, or contact details not in the repository. The Italian project and writing routes remain available.
 
 ## Direction contract
@@ -23,9 +23,9 @@ THESIS: Introduce Fabrizio through his professional role and interests, then rou
 
 OWN-WORLD: A high-contrast color-block index: solid vermilion, dusty rose, deep plum, and warm cream fields; oversized bold interest typography; precise grid seams; and real project images. The bio panel gets quiet cream ground, generous width, and enough space for its full copy.
 
-STORY: A potential collaborator meets Fabrizio as a Senior Software Engineer, reads the Cyber Security and computer vision interests, finds the Projects and Notes routes, and can connect on LinkedIn.
+STORY: A potential collaborator meets Fabrizio as a Senior Software Engineer, reads about Cyber Security and native development on macOS/iOS/Android, finds the Projects and Notes routes, and can connect on LinkedIn.
 
-FIRST VIEWPORT: A narrow masthead with Destro Fabrizio at left and Projects, Notes, Connect on LinkedIn at right. Below, a compact identity block names Fabrizio as a Senior Software Engineer; the wide cream bio panel gives the complete Cyber Security and computer vision introduction room to read. Bold solid color blocks foreground Cyber Security, computer vision, C++, and Python, with an experimenting note. The first version omits projects from the homepage. A quiet footer links Short notes and Longer articles. English projects and notes routes reuse the same palette, type, square forms, rules, and color-block titles, with a quieter reading column in articles.
+FIRST VIEWPORT: A narrow masthead with Destro Fabrizio at left and Projects, Notes, Connect on LinkedIn at right. Below, a compact identity block names Fabrizio as a Senior Software Engineer; the wide cream bio panel gives the complete Cyber Security and native development introduction room to read. Bold solid color blocks foreground Cyber Security, native development on macOS/iOS/Android, C++, and Python, with an experimenting note. The first version omits projects from the homepage. A quiet footer links Short notes and Longer articles. English projects and notes routes reuse the same palette, type, square forms, rules, and color-block titles, with a quieter reading column in articles.
 
 FORM: Color Block Index, option 24 revised to give the bio more space. The user then requested a first version without homepage project tiles and asked to replace the Computer Graphics interest with Cyber Security. These copy and scope changes supersede project imagery in the previous comp.
 
