@@ -1,0 +1,9 @@
+{
+  "prompt": "Use case: product-mockup\nAsset type: portfolio homepage visual comp correction.\nInput images: Image 1 is the existing mockup to edit. Image 2 is the real Benchpower project photo and must be used as the first work image without alteration. Image 3 is the real QApplication dependency graph and must be used as the second work image without redrawing or changing it.\nPrimary request: Preserve Image 1's composition, type character, proportions, cream background, near-black ink, oxide-red accent, fine rules, and the editorial engineering field-log visual world. Make only these content corrections: replace the invented wooden supply photo in the left work area with the exact contents of Image 2; replace the invented dependency visualization on the right with the exact contents of Image 3; remove the five invented dated note titles in the left rail and instead show only two neutral labeled rows, \"Short notes\" and \"Longer articles\", under \"Notes\", with no dates or example titles.\nText (verbatim): keep \"Destro Fabrizio\", \"Projects, experiments & notes.\", \"Software projects, modeling, and things I enjoy making.\", \"Selected work\", \"Benchpower\", \"QApplication dependency map\", \"Notes\", \"Short notes\", \"Longer articles\", \"All notes\", and \"Connect on LinkedIn\".\nConstraints: Do not change the visual direction or layout. Do not add fabricated projects, notes, dates, article titles, customer claims, credentials, metrics, or image details. Use the two supplied real project images exactly as the mockup's content. Preserve sharp, readable text.",
+  "generator": "image_gen",
+  "approved": false,
+  "imageReferences": [
+    "Benchpower photo",
+    "QApplication dependency graph"
+  ]
+}

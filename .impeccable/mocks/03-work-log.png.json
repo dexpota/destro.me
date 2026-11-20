@@ -1,0 +1,11 @@
+{
+  "prompt": "Use case: product-mockup\nAsset type: third landscape desktop homepage comp for Destro Fabrizio's personal portfolio.\nInput images: Image 1 is the chosen visual world, palette and type reference. Image 2 is the real Benchpower photo. Image 3 is the real QApplication dependency graph. Image 4 is the real Glados preview. Use project images unchanged.\nPrimary request: Create option 3, \"The Work Log\": a structured editorial index rather than a hero plus gallery. Keep the warm mineral paper, dark ink, restrained oxide-red accent, fine rules, serif headlines, and small mono metadata from Image 1, but use a clearly different composition: a narrow full-width masthead; a quiet one-sentence intro; then a dense but breathable two-column work log with a large featured artifact image on the right and a vertical, typographic list of three project entries on the left, each carrying its actual title and category. Add a bottom strip for \"Notes\" with two neutral entry types, \"Short notes\" and \"Longer articles\", and a visible LinkedIn contact action in the top navigation. The professional purpose should read clearly within seconds.\nScene/backdrop: a real responsive website screenshot, 1440×1000 landscape, first viewport only, no fake browser frame.\nText (verbatim): \"Destro Fabrizio\"; \"Projects, experiments & notes.\"; \"Software projects, modeling, and things I enjoy making.\"; \"Work log\"; \"Benchpower\"; \"Glados\"; \"QApplication dependency map\"; \"Fai da te\"; \"Modeling\"; \"Software\"; \"Notes\"; \"Short notes\"; \"Longer articles\"; \"Connect on LinkedIn\".\nConstraints: use the supplied project images exactly; do not fabricate project imagery, article titles, dates, clients, credentials, metrics, or outcomes. Make the list and image part of one editorial index, not three identical cards. Keep text legible and correctly spelled. Do not copy the previous left-side notes rail or artifact-table gallery layout.",
+  "generator": "image_gen",
+  "approved": false,
+  "imageReferences": [
+    "Field-log world comp",
+    "Benchpower photo",
+    "QApplication dependency graph",
+    "Glados preview"
+  ]
+}

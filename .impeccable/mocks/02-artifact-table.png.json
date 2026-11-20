@@ -1,0 +1,11 @@
+{
+  "prompt": "Use case: product-mockup\nAsset type: approved portfolio homepage comp with a short personal introduction.\nInput images: Image 1 is the selected \"Artifact Table\" comp. Image 2 is the exact real Benchpower photo already used in the comp. Image 3 is the exact real QApplication dependency graph. Image 4 is the exact real Glados model preview.\nPrimary request: Keep the selected second composition, \"The Artifact Table\", as approved: same top navigation, cream field-log visual world, scale, asymmetrical gallery, project order, image crops, notes strip, and LinkedIn action. Only replace the generic sentence directly below the title with a concise first-person bio, set in the same quiet body-text style. The bio text must be exactly: \"I'm Fabrizio Destro, an engineer who loves computer graphics and computer vision. I enjoy programming in C++ and Python, and sharing personal and professional projects here.\" Reflow the space naturally so the title and introduction remain clear above the work.\nConstraints: Preserve all three supplied real project images without alteration or redrawing. Do not change any other text, layout, color, type, imagery, or visual hierarchy. Do not invent articles, dates, clients, credentials, metrics, or project outcomes. Keep the introduction legible and correctly spelled.",
+  "generator": "image_gen",
+  "approved": true,
+  "imageReferences": [
+    "/Users/fabrizio/developing/personal/destro.me/.impeccable/mocks/02-artifact-table.png",
+    "/Users/fabrizio/developing/personal/destro.me/assets/images/atx_case_preview.jpg",
+    "/Users/fabrizio/developing/personal/destro.me/assets/images/qt4_qapplication.png",
+    "/Users/fabrizio/developing/personal/destro.me/assets/images/glados_preview.png"
+  ]
+}
